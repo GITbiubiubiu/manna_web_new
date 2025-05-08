@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/prayers", "destination": "/prayers.html" },
+    { "source": "/prayers/healing", "destination": "/prayers/healing.html" },
+    { "source": "/prayers/strength", "destination": "/prayers/strength.html" },
+    { "source": "/prayers/protection", "destination": "/prayers/protection.html" },
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "trailingSlash": false
+}
