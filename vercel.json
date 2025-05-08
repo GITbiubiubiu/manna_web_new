@@ -4,6 +4,77 @@
     { "source": "/prayers/healing", "destination": "/prayers/healing.html" },
     { "source": "/prayers/strength", "destination": "/prayers/strength.html" },
     { "source": "/prayers/protection", "destination": "/prayers/protection.html" },
+    { "source": "/prayers/prayer-for-healing", "destination": "/prayers/prayer-for-healing.html" },
+    { "source": "/prayers/prayer-for-strength", "destination": "/prayers/prayer-for-strength.html" },
+    { "source": "/prayers/prayer-for-protection", "destination": "/prayers/prayer-for-protection.html" },
+    { "source": "/prayers/prayer-for-healing/gratitude", "destination": "/prayers/prayer-for-healing/gratitude.html" },
+    {
+      "source": "/prayers/prayer-for-healing/acute-illness",
+      "destination": "/prayers/prayer-for-healing/acute-illness.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/chronic-disease",
+      "destination": "/prayers/prayer-for-healing/chronic-disease.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/post-surgery",
+      "destination": "/prayers/prayer-for-healing/post-surgery.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/emotional-trauma",
+      "destination": "/prayers/prayer-for-healing/emotional-trauma.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/spiritual-rebellion",
+      "destination": "/prayers/prayer-for-healing/spiritual-rebellion.html"
+    },
+    { "source": "/prayers/prayer-for-healing/addiction", "destination": "/prayers/prayer-for-healing/addiction.html" },
+    {
+      "source": "/prayers/prayer-for-healing/family-support",
+      "destination": "/prayers/prayer-for-healing/family-support.html"
+    },
+    { "source": "/prayers/prayer-for-healing/pediatric", "destination": "/prayers/prayer-for-healing/pediatric.html" },
+    {
+      "source": "/prayers/prayer-for-healing/end-of-life",
+      "destination": "/prayers/prayer-for-healing/end-of-life.html"
+    },
+    { "source": "/prayers/prayer-for-strength/illness", "destination": "/prayers/prayer-for-strength/illness.html" },
+    { "source": "/prayers/prayer-for-strength/grief", "destination": "/prayers/prayer-for-strength/grief.html" },
+    {
+      "source": "/prayers/prayer-for-strength/financial",
+      "destination": "/prayers/prayer-for-strength/financial.html"
+    },
+    { "source": "/prayers/prayer-for-strength/faith", "destination": "/prayers/prayer-for-strength/faith.html" },
+    {
+      "source": "/prayers/prayer-for-strength/workplace",
+      "destination": "/prayers/prayer-for-strength/workplace.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/caregiver",
+      "destination": "/prayers/prayer-for-strength/caregiver.html"
+    },
+    { "source": "/prayers/prayer-for-strength/survivor", "destination": "/prayers/prayer-for-strength/survivor.html" },
+    {
+      "source": "/prayers/prayer-for-strength/social-justice",
+      "destination": "/prayers/prayer-for-strength/social-justice.html"
+    },
+    { "source": "/prayers/prayer-for-protection/travel", "destination": "/prayers/prayer-for-protection/travel.html" },
+    { "source": "/prayers/prayer-for-protection/home", "destination": "/prayers/prayer-for-protection/home.html" },
+    {
+      "source": "/prayers/prayer-for-protection/spiritual",
+      "destination": "/prayers/prayer-for-protection/spiritual.html"
+    },
+    { "source": "/prayers/prayer-for-protection/family", "destination": "/prayers/prayer-for-protection/family.html" },
+    { "source": "/prayers/prayer-for-protection/health", "destination": "/prayers/prayer-for-protection/health.html" },
+    {
+      "source": "/prayers/prayer-for-protection/environment",
+      "destination": "/prayers/prayer-for-protection/environment.html"
+    },
+    {
+      "source": "/prayers/prayer-for-protection/justice",
+      "destination": "/prayers/prayer-for-protection/justice.html"
+    },
+    { "source": "/prayers/prayer-for-protection/mental", "destination": "/prayers/prayer-for-protection/mental.html" },
     { "source": "/", "destination": "/index.html" }
   ],
   "trailingSlash": false
