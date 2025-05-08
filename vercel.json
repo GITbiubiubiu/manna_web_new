@@ -1,6 +1,9 @@
 {
   "rewrites": [
     { "source": "/prayers", "destination": "/prayers.html" },
+    { "source": "/prayers/healing", "destination": "/prayers/healing.html" },
+    { "source": "/prayers/strength", "destination": "/prayers/strength.html" },
+    { "source": "/prayers/protection", "destination": "/prayers/protection.html" },
     { "source": "/prayers/prayer-for-healing", "destination": "/prayers/prayer-for-healing.html" },
     { "source": "/prayers/prayer-for-strength", "destination": "/prayers/prayer-for-strength.html" },
     { "source": "/prayers/prayer-for-protection", "destination": "/prayers/prayer-for-protection.html" },
