@@ -72,6 +72,19 @@
       "destination": "/prayers/prayer-for-protection/justice.html"
     },
     { "source": "/prayers/prayer-for-protection/mental", "destination": "/prayers/prayer-for-protection/mental.html" },
+    { "source": "/resources", "destination": "/resources.html" },
+    { "source": "/resources/understanding-the-psalms", "destination": "/resources/understanding-the-psalms.html" },
+    { "source": "/resources/the-parables-of-jesus", "destination": "/resources/the-parables-of-jesus.html" },
+    {
+      "source": "/resources/navigating-the-old-testament",
+      "destination": "/resources/navigating-the-old-testament.html"
+    },
+    { "source": "/resources/the-meaning-of-advent", "destination": "/resources/the-meaning-of-advent.html" },
+    { "source": "/resources/holy-week-explained", "destination": "/resources/holy-week-explained.html" },
+    {
+      "source": "/resources/lenten-practices-for-modern-life",
+      "destination": "/resources/lenten-practices-for-modern-life.html"
+    },
     { "source": "/", "destination": "/index.html" }
   ],
   "trailingSlash": false
