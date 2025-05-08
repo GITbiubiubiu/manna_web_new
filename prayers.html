@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer for Today - Manna</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="public/images/icon.png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="public/images/icon.png" alt="Manna Icon">
+          <span>Manna</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#testimonials">Testimonials</a></li>
+            <li><a href="/prayers" class="active">Prayers</a></li>
+            <li><a href="/#download">Download</a></li>
+          </ul>
+        </nav>
+        <div class="social-header">
+          <a href="https://discord.gg/NbQVtWeNMa"><img src="public/images/discard.png" alt="Discord"></a>
+          <a href="https://www.instagram.com/the_manna_app"><img src="public/images/ins.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@manna.app"><img src="public/images/tt.png" alt="TikTok"></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Prayer Content -->
+  <section class="prayer-section">
+    <div class="container">
+      <h1>Prayer for Today</h1>
+      
+      <div class="prayer-content">
+        <div class="prayer-card">
+          <div class="prayer-date text-center">
+            <span class="calendar-icon">📅</span> <span id="current-date"></span>
+          </div>
+          <div class="prayer-text" id="daily-prayer">
+            <!-- Prayer content will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="prayer-categories-vertical">
+        <a href="/prayers/healing" class="prayer-category-item healing-gradient">
+          <div class="prayer-category-icon">❤️‍🩹</div>
+          <div class="prayer-category-content">
+            <h4>Prayers for Healing</h4>
+            <p>Find comfort and restoration through prayers focused on physical, emotional, and spiritual healing.</p>
+          </div>
+        </a>
+        
+        <a href="/prayers/strength" class="prayer-category-item strength-gradient">
+          <div class="prayer-category-icon">💪</div>
+          <div class="prayer-category-content">
+            <h4>Prayers for Strength</h4>
+            <p>Draw courage and resilience from these prayers during challenging times and difficult seasons.</p>
+          </div>
+        </a>
+        
+        <a href="/prayers/protection" class="prayer-category-item protection-gradient">
+          <div class="prayer-category-icon">🛡️</div>
+          <div class="prayer-category-content">
+            <h4>Prayers for Protection</h4>
+            <p>Seek God's shield and safeguarding presence over your life, family, and daily journey.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Links</h4>
+          <div class="social-links">
+            <a href="https://discord.gg/NbQVtWeNMa"><img src="public/images/discard.png" alt="Discord"></a>
+            <a href="https://www.instagram.com/the_manna_app"><img src="public/images/ins.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@manna.app"><img src="public/images/tt.png" alt="TikTok"></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:support@themanna.app">support@themanna.app</a></p>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="legal">
+            <a href="https://s.femometer.com/html_template/3027.html">Privacy Policy</a>
+            <a href="https://s.femometer.com/html_template/3028.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Baymed Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  // Array of prayers
+  const prayers = [
+    `Prince of Peace,
+Calm the storms within me and around me.
+Where there is division, let me sow unity;
+Where there is anger, let me bring understanding.
+Fill my heart and this world
+With the quiet assurance of Your presence.
+Amen.`,
+    `Merciful God,
+Open my eyes to the struggles of others.
+Teach me to listen with empathy,
+To speak with kindness,
+And to act with humility.
+May my life reflect Your grace
+In every interaction today.
+Amen.`,
+    `Divine Source of Power,
+When weariness or doubt cloud my spirit,
+Renew my strength and courage.
+Help me rise above fear and hesitation,
+And trust in Your plan for my life.
+Let perseverance anchor my soul.
+Amen.`,
+    `Heavenly Father,
+As I step into today's challenges and opportunities,
+Guide my thoughts, words, and actions.
+Light my path when I feel uncertain,
+And remind me to seek wisdom in stillness.
+May Your will be my compass in all I do.
+Amen.`,
+    `Loving Creator,
+Thank You for the gift of this new day.
+Help me to see Your blessings in every moment—
+In the warmth of the sun, the kindness of others,
+And the breath that fills my lungs.
+Teach me to walk with a grateful heart,
+And to share Your love with those around me.
+Amen.`
+  ];
+
+  // Function to get prayer based on day of year
+  function getDailyPrayer() {
+    // Get current date in New York timezone
+    const nyTime = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
+    
+    // Calculate day of year (1-365/366)
+    const start = new Date(nyTime.getFullYear(), 0, 0);
+    const diff = nyTime - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+    
+    // Use day of year to select prayer (ensures same prayer for same day)
+    const prayerIndex = dayOfYear % prayers.length;
+    
+    // Get the prayer element
+    const prayerElement = document.getElementById('daily-prayer');
+    
+    // Split the prayer into paragraphs and create HTML
+    const paragraphs = prayers[prayerIndex].split('\n');
+    let prayerHTML = '';
+    
+    paragraphs.forEach(paragraph => {
+      prayerHTML += `<p>${paragraph}</p>`;
+    });
+    
+    // Set the prayer content
+    prayerElement.innerHTML = prayerHTML;
+  }
+
+  // Function to display current date in New York time
+  function displayCurrentDate() {
+    const options = { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      timeZone: 'America/New_York'
+    };
+    
+    const nyDate = new Date().toLocaleDateString('en-US', options);
+    document.getElementById('current-date').textContent = nyDate;
+  }
+
+  // Initialize the page
+  document.addEventListener('DOMContentLoaded', function() {
+    displayCurrentDate();
+    getDailyPrayer();
+  });
+</script>
+</body>
+</html>
