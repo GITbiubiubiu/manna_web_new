@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/bible-lessons", "destination": "/bible-lessons.html" },
     { "source": "/prayers", "destination": "/prayers.html" },
     { "source": "/prayers/prayer-for-healing", "destination": "/prayers/prayer-for-healing.html" },
     { "source": "/prayers/prayer-for-strength", "destination": "/prayers/prayer-for-strength.html" },
