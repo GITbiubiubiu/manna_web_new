@@ -167,6 +167,15 @@ nav ul li a.active {
   text-align: left;
 }
 
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: -20px;
+  margin-right: -20px;
+}
+
 .gradient-title {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -177,6 +186,34 @@ nav ul li a.active {
   background-clip: text;
   text-fill-color: transparent;
   text-align: left;
+}
+
+.gradient-title {
+  text-align: center;
+}
+
+.centered-text {
+  display: block;
+  text-align: center;
+}
+
+.study-now-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 36px;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+  transition: all 0.3s ease;
+}
+
+.study-now-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
 }
 
 .benefits {
