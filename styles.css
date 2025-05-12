@@ -1088,3 +1088,246 @@ footer {
     padding: 25px;
   }
 }
+
+/* Add these styles at the end of the file */
+
+/* Bible Lessons Page Styles */
+.bible-lessons-section {
+  background-color: #f5f7fa;
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+.lessons-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.user-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #4fc3f7;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.current-part {
+  background-color: #9c64ff;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin: 0 auto 40px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(156, 100, 255, 0.3);
+}
+
+.current-part h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+}
+
+.lesson-path {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.lesson-card {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.lesson-image {
+  width: 120px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lesson-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.completion-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.lesson-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff5722;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lesson-lock {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+}
+
+.lesson-info {
+  padding: 15px;
+  flex: 1;
+}
+
+.lesson-info h3 {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.lesson-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.path-connector {
+  width: 3px;
+  height: 30px;
+  background-color: #9c64ff;
+  margin: 0 auto;
+}
+
+.lesson-card.completed {
+  border-left: 5px solid #4caf50;
+}
+
+.lesson-card.active {
+  border-left: 5px solid #ff5722;
+}
+
+.lesson-card.locked {
+  opacity: 0.7;
+  border-left: 5px solid #9e9e9e;
+}
+
+.lessons-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.download-app-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #4fc3f7, #2196f3);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+}
+
+.download-app-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(33, 150, 243, 0.4);
+}
+
+/* Responsive adjustments for Bible Lessons */
+@media (max-width: 768px) {
+  .current-part h2 {
+    font-size: 1.3rem;
+  }
+
+  .lesson-image {
+    width: 100px;
+    height: 70px;
+  }
+
+  .lesson-info h3 {
+    font-size: 1rem;
+  }
+
+  .lesson-info p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-progress {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .current-part {
+    padding: 12px 15px;
+  }
+
+  .current-part h2 {
+    font-size: 1.1rem;
+  }
+
+  .lesson-image {
+    width: 80px;
+    height: 60px;
+  }
+}
