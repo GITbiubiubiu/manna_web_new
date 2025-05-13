@@ -2633,8 +2633,41 @@ footer {
 
 .lesson-navigation-buttons {
   text-align: right; /* 将Continue按钮固定在右侧 */
+  display: flex;
+  justify-content: flex-end; /* 确保按钮靠右对齐 */
+  margin-top: 20px;
 }
 
 .lesson-card-header h2 {
   color: white !important; /* 确保所有标题为白色 */
+}
+
+/* 美化Key Points列表样式 */
+.key-points ul {
+  padding-left: 0; /* 移除默认的左边距 */
+  list-style-type: none; /* 移除默认的列表标记 */
+}
+
+.key-points li {
+  position: relative;
+  padding-left: 28px; /* 为自定义图标留出空间 */
+  margin-bottom: 12px; /* 增加列表项之间的间距 */
+  line-height: 1.5;
+}
+
+.key-points li:before {
+  content: "•"; /* 使用圆点作为列表标记 */
+  position: absolute;
+  left: 8px;
+  color: #9b59b6; /* 使用紫色，与标题颜色协调 */
+  font-size: 18px; /* 增大标记大小 */
+  font-weight: bold;
+}
+
+.key-points h3 {
+  color: #9b59b6; /* 与列表标记颜色一致 */
+  font-size: 1.2rem;
+  margin-bottom: 15px; /* 增加标题与列表之间的间距 */
+  border-bottom: 1px solid #f0f0f0; /* 添加下划线 */
+  padding-bottom: 8px;
 }
