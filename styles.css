@@ -2050,3 +2050,52 @@ footer {
 .lesson-card {
   margin-bottom: 15px; /* 减少卡片下边距 */
 }
+
+/* 在文件末尾添加以下代码 */
+
+/* 连接线样式 */
+.path-connector {
+  width: 2px;
+  height: 20px;
+  margin: -10px auto 10px;
+  background: repeating-linear-gradient(
+          to bottom,
+          rgba(142, 68, 173, 0.8) 0px,
+          rgba(142, 68, 173, 0.8) 4px,
+          transparent 4px,
+          transparent 8px
+  );
+  animation: dashFlow 1.5s linear infinite;
+}
+
+@keyframes dashFlow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 16px;
+  }
+}
+
+/* 课程卡片样式优化 */
+.lesson-card {
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 图片样式优化 */
+.lesson-image img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.lesson-card:hover .lesson-image img {
+  transform: scale(1.05);
+}
