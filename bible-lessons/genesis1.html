@@ -199,9 +199,16 @@
                     </div>
                     <div class="lesson-card-body">
                         <div class="quiz-container">
+                            <div class="quiz-progress">
+                                <span id="quiz-progress-text">Question 1 of 3</span>
+                                <div class="quiz-progress-bar">
+                                    <div class="quiz-progress-fill" style="width: 33%"></div>
+                                </div>
+                            </div>
+
                             <form id="quiz-form">
                                 <!-- Question 1 -->
-                                <div class="quiz-question">
+                                <div class="quiz-question" id="question1">
                                     <h3>1. What did God create on the first day?</h3>
                                     <div class="quiz-options">
                                         <div class="quiz-option">
@@ -214,20 +221,24 @@
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q1c" name="q1" value="C">
-                                            <label for="q1c">Animals and plants</label>
+                                            <label for="q1c">C. Animals and plants</label>
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q1d" name="q1" value="D">
-                                            <label for="q1d">Sun and moon</label>
+                                            <label for="q1d">D. Sun and moon</label>
                                         </div>
                                     </div>
                                     <div class="quiz-hint hidden">
                                         <p><strong>Hint:</strong> Read Genesis 1:3-5</p>
                                     </div>
+                                    <div class="quiz-feedback hidden"></div>
+                                    <div class="quiz-controls">
+                                        <button type="button" class="submit-question-btn" data-question="1" data-verses="3-5">Submit Answer</button>
+                                    </div>
                                 </div>
 
                                 <!-- Question 2 -->
-                                <div class="quiz-question">
+                                <div class="quiz-question hidden" id="question2">
                                     <h3>2. What purpose do the sun and moon serve?</h3>
                                     <div class="quiz-options">
                                         <div class="quiz-option">
@@ -236,24 +247,29 @@
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q2b" name="q2" value="B">
-                                            <label for="q2b">To rule over the animals</label>
+                                            <label for="q2b">B. To rule over the animals</label>
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q2c" name="q2" value="C">
-                                            <label for="q2c">To mark days, seasons, and years</label>
+                                            <label for="q2c">C. To mark days, seasons, and years</label>
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q2d" name="q2" value="D">
-                                            <label for="q2d">To separate the waters</label>
+                                            <label for="q2d">D. To separate the waters</label>
                                         </div>
                                     </div>
                                     <div class="quiz-hint hidden">
                                         <p><strong>Hint:</strong> Read Genesis 1:14-18</p>
                                     </div>
+                                    <div class="quiz-feedback hidden"></div>
+                                    <div class="quiz-controls">
+                                        <button type="button" class="prev-question-btn" data-prev="1">Previous</button>
+                                        <button type="button" class="submit-question-btn" data-question="2" data-verses="14-18">Submit Answer</button>
+                                    </div>
                                 </div>
 
                                 <!-- Question 3 -->
-                                <div class="quiz-question">
+                                <div class="quiz-question hidden" id="question3">
                                     <h3>3. What makes humans unique in creation?</h3>
                                     <div class="quiz-options">
                                         <div class="quiz-option">
@@ -276,11 +292,11 @@
                                     <div class="quiz-hint hidden">
                                         <p><strong>Hint:</strong> Read Genesis 1:26-27</p>
                                     </div>
-                                </div>
-
-                                <div class="quiz-controls">
-                                    <button type="button" id="show-hints-btn">Show Hints</button>
-                                    <button type="submit" id="submit-quiz-btn">Submit Answers</button>
+                                    <div class="quiz-feedback hidden"></div>
+                                    <div class="quiz-controls">
+                                        <button type="button" class="prev-question-btn" data-prev="2">Previous</button>
+                                        <button type="button" class="submit-question-btn" data-question="3" data-verses="26-27">Submit Answer</button>
+                                    </div>
                                 </div>
                             </form>
 
@@ -494,26 +510,113 @@
 
         // Quiz functionality
         const quizForm = document.getElementById('quiz-form');
-        const showHintsBtn = document.getElementById('show-hints-btn');
-        const quizHints = document.querySelectorAll('.quiz-hint');
+        const quizQuestions = document.querySelectorAll('.quiz-question');
         const quizResults = document.getElementById('quiz-results');
         const quizScore = document.getElementById('quiz-score');
         const quizFeedback = document.getElementById('quiz-feedback');
         const retryQuizBtn = document.getElementById('retry-quiz-btn');
         const completeLessonBtn = document.getElementById('complete-lesson-btn');
+        const quizProgressText = document.getElementById('quiz-progress-text');
+        const quizProgressFill = document.querySelector('.quiz-progress-fill');
+        const bibleTextSection = document.querySelector('.bible-text');
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let questionSubmitted = {};
 
-        // Show hints
-        showHintsBtn.addEventListener('click', function() {
-            quizHints.forEach(hint => {
-                hint.classList.remove('hidden');
+        // 初始化时隐藏圣经文本
+        function toggleBibleText(show) {
+            if (show) {
+                bibleTextSection.style.display = 'block';
+            } else {
+                bibleTextSection.style.display = 'none';
+            }
+        }
+
+        // 显示指定问题
+        function showQuestion(index) {
+            quizQuestions.forEach((question, i) => {
+                if (i === index) {
+                    question.classList.remove('hidden');
+                } else {
+                    question.classList.add('hidden');
+                }
             });
-            this.disabled = true;
-        });
 
-        // Submit quiz
-        quizForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // 更新进度条
+            currentQuestionIndex = index;
+            quizProgressText.textContent = `Question ${index + 1} of ${quizQuestions.length}`;
+            quizProgressFill.style.width = `${((index + 1) / quizQuestions.length) * 100}%`;
 
+            // 如果问题已提交，显示圣经文本，否则隐藏
+            toggleBibleText(questionSubmitted[index + 1]);
+        }
+
+        // 提交问题答案
+        function submitQuestion(questionNumber, verseRange) {
+            const questionIndex = questionNumber - 1;
+            const selectedOption = document.querySelector(`input[name="q${questionNumber}"]:checked`);
+            const feedbackElement = document.querySelector(`#question${questionNumber} .quiz-feedback`);
+            const hintElement = document.querySelector(`#question${questionNumber} .quiz-hint`);
+            const submitButton = document.querySelector(`#question${questionNumber} .submit-question-btn`);
+            const nextButton = document.createElement('button');
+            nextButton.type = 'button';
+            nextButton.className = 'next-question-btn';
+
+            const answers = {
+                q1: 'B',
+                q2: 'C',
+                q3: 'B'
+            };
+
+            if (!selectedOption) {
+                feedbackElement.innerHTML = '<p class="incorrect">Please select an answer.</p>';
+                feedbackElement.classList.remove('hidden');
+                return;
+            }
+
+            // 记录用户答案
+            userAnswers[`q${questionNumber}`] = selectedOption.value;
+            questionSubmitted[questionNumber] = true;
+
+            // 显示提示和反馈
+            hintElement.classList.remove('hidden');
+
+            // 禁用选项和提交按钮
+            document.querySelectorAll(`#question${questionNumber} input[type="radio"]`).forEach(input => {
+                input.disabled = true;
+            });
+            submitButton.disabled = true;
+
+            // 显示反馈
+            if (selectedOption.value === answers[`q${questionNumber}`]) {
+                feedbackElement.innerHTML = '<p class="correct">Correct!</p>';
+            } else {
+                feedbackElement.innerHTML = `<p class="incorrect">Incorrect. The correct answer is ${answers[`q${questionNumber}`]}.</p>`;
+            }
+            feedbackElement.classList.remove('hidden');
+
+            // 显示圣经文本并高亮相关经文
+            toggleBibleText(true);
+            highlightVerses(verseRange);
+
+            // 如果不是最后一个问题，添加下一题按钮
+            if (questionNumber < quizQuestions.length) {
+                nextButton.textContent = 'Next Question';
+                nextButton.setAttribute('data-next', questionNumber + 1);
+                nextButton.addEventListener('click', function() {
+                    showQuestion(parseInt(this.getAttribute('data-next')) - 1);
+                });
+                submitButton.parentNode.appendChild(nextButton);
+            } else {
+                // 如果是最后一个问题，添加查看结果按钮
+                nextButton.textContent = 'View Results';
+                nextButton.addEventListener('click', showResults);
+                submitButton.parentNode.appendChild(nextButton);
+            }
+        }
+
+        // 显示测验结果
+        function showResults() {
             const answers = {
                 q1: 'B',
                 q2: 'C',
@@ -523,46 +626,91 @@
             let score = 0;
             let feedback = '';
 
-            // Check answers
+            // 检查答案
             for (const question in answers) {
-                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-
-                if (selectedOption) {
-                    if (selectedOption.value === answers[question]) {
-                        score++;
-                        feedback += `<p class="correct">Question ${question.substring(1)}: Correct!</p>`;
-                    } else {
-                        feedback += `<p class="incorrect">Question ${question.substring(1)}: Incorrect. The correct answer is ${answers[question]}.</p>`;
-                    }
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                    feedback += `<p class="correct">Question ${question.substring(1)}: Correct!</p>`;
                 } else {
-                    feedback += `<p class="unanswered">Question ${question.substring(1)}: Not answered. The correct answer is ${answers[question]}.</p>`;
+                    feedback += `<p class="incorrect">Question ${question.substring(1)}: Incorrect. The correct answer is ${answers[question]}.</p>`;
                 }
             }
 
-            // Display results
+            // 显示结果
             quizScore.textContent = `You scored ${score} out of 3`;
             quizFeedback.innerHTML = feedback;
-            quizResults.classList.remove('hidden');
-            document.getElementById('submit-quiz-btn').classList.add('hidden');
-        });
 
-        // Retry quiz
+            // 隐藏问题，显示结果
+            quizQuestions.forEach(question => {
+                question.classList.add('hidden');
+            });
+            quizResults.classList.remove('hidden');
+        }
+
+        // 重置测验
         retryQuizBtn.addEventListener('click', function() {
             quizForm.reset();
             quizResults.classList.add('hidden');
-            document.getElementById('submit-quiz-btn').classList.remove('hidden');
-            quizHints.forEach(hint => {
-                hint.classList.add('hidden');
+            userAnswers = {};
+            questionSubmitted = {};
+
+            // 重置所有问题状态
+            document.querySelectorAll('.quiz-hint, .quiz-feedback').forEach(element => {
+                element.classList.add('hidden');
             });
-            showHintsBtn.disabled = false;
+
+            document.querySelectorAll('.quiz-question input[type="radio"]').forEach(input => {
+                input.disabled = false;
+            });
+
+            document.querySelectorAll('.submit-question-btn').forEach(button => {
+                button.disabled = false;
+            });
+
+            document.querySelectorAll('.next-question-btn').forEach(button => {
+                button.remove();
+            });
+
+            // 显示第一个问题
+            showQuestion(0);
+            toggleBibleText(false);
         });
 
-        // Complete lesson
+        // 完成课程
         completeLessonBtn.addEventListener('click', function() {
             document.getElementById('quiz').classList.add('hidden');
             document.getElementById('completion').classList.remove('hidden');
             progressBar.style.width = '100%';
             progressText.textContent = '100% Complete';
+            toggleBibleText(true);
+        });
+
+        // 上一题按钮
+        document.querySelectorAll('.prev-question-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const prevQuestionIndex = parseInt(this.getAttribute('data-prev')) - 1;
+                showQuestion(prevQuestionIndex);
+            });
+        });
+
+        // 提交答案按钮
+        document.querySelectorAll('.submit-question-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const questionNumber = parseInt(this.getAttribute('data-question'));
+                const verseRange = this.getAttribute('data-verses');
+                submitQuestion(questionNumber, verseRange);
+            });
+        });
+
+        // 初始化测验
+        function initQuiz() {
+            showQuestion(0);
+            toggleBibleText(false);
+        }
+
+        // 当进入测验部分时初始化
+        document.querySelector('[data-next="quiz"]').addEventListener('click', function() {
+            setTimeout(initQuiz, 100); // 给DOM更新一点时间
         });
 
         // Bible text font size controls
