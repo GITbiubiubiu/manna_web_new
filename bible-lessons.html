@@ -144,17 +144,9 @@
 
     <!-- Main Content Area -->
     <div class="bible-main-content">
-      <div class="user-progress">
-        <div class="progress-stats">
-          <div class="stat-item">
-            <img src="public/images/streak-icon.png" alt="Streak">
-            <span>1</span>
-          </div>
-          <div class="stat-item">
-            <img src="public/images/heart-icon.png" alt="Hearts">
-            <span>1</span>
-          </div>
-        </div>
+
+      <div class="current-part">
+        <h2 class="series-title">Genesis: The Dawn of Creation</h2>
       </div>
 
       <!-- Genesis Content (Default View) -->
@@ -435,8 +427,11 @@
 
       <!-- Coming Soon Template (For other books) -->
       <div id="coming-soon-template" class="book-content">
+        <div class="current-part">
+          <h2 class="series-title book-title">Book Title: Book Subtitle</h2>
+        </div>
+
         <div class="coming-soon-container">
-          <h2 class="book-title">Book Title</h2>
           <div class="chapters-list">
             <!-- Chapters will be dynamically inserted here -->
           </div>
@@ -450,15 +445,17 @@
                 <img src="public/images/qrcode.png" alt="QR Code to download Manna app">
                 <p>Scan to download</p>
               </div>
-              <a href="/#download" class="download-app-btn">Download Now</a>
+              <div class="app-store-links">
+                <a href="https://apps.apple.com/us/app/manna-daily-bible-study/id6450114007" class="app-store">
+                  <img src="public/images/download.png" alt="Download on App Store">
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="lessons-footer">
-        <a href="/#download" class="download-app-btn">Download the App for Full Experience</a>
-      </div>
+
     </div>
   </div>
 </section>
@@ -553,6 +550,76 @@
       '1 John': 5, '2 John': 1, '3 John': 1, 'Jude': 1, 'Revelation': 22
     };
 
+    // Bible book subtitles
+    const bibleSubtitles = {
+      'Genesis': 'The Dawn of Creation',
+      'Exodus': 'Journey to Freedom',
+      'Leviticus': 'Holy Living',
+      'Numbers': 'Wilderness Journey',
+      'Deuteronomy': 'Second Law',
+      'Joshua': 'Conquering the Land',
+      'Judges': 'Cycles of Rebellion',
+      'Ruth': 'Loyal Love',
+      '1 Samuel': 'Rise of Kings',
+      '2 Samuel': 'David\'s Reign',
+      '1 Kings': 'Kingdom Divided',
+      '2 Kings': 'Kingdom Falls',
+      '1 Chronicles': 'David\'s Legacy',
+      '2 Chronicles': 'Temple History',
+      'Ezra': 'Return from Exile',
+      'Nehemiah': 'Rebuilding Walls',
+      'Esther': 'Providence of God',
+      'Job': 'Faith Through Suffering',
+      'Psalms': 'Songs of Worship',
+      'Proverbs': 'Wisdom for Life',
+      'Ecclesiastes': 'Meaning of Life',
+      'Song of Solomon': 'Divine Love',
+      'Isaiah': 'Messiah Foretold',
+      'Jeremiah': 'Weeping Prophet',
+      'Lamentations': 'Tears for Jerusalem',
+      'Ezekiel': 'Visions of Glory',
+      'Daniel': 'Dreams and Kingdoms',
+      'Hosea': 'Faithful Love',
+      'Joel': 'Day of the Lord',
+      'Amos': 'Call for Justice',
+      'Obadiah': 'Pride Before Fall',
+      'Jonah': 'Reluctant Prophet',
+      'Micah': 'What God Requires',
+      'Nahum': 'Nineveh\'s Doom',
+      'Habakkuk': 'Faith and Doubt',
+      'Zephaniah': 'Day of Judgment',
+      'Haggai': 'Rebuild the Temple',
+      'Zechariah': 'Messiah Coming',
+      'Malachi': 'Return to Me',
+      'Matthew': 'King of Jews',
+      'Mark': 'Servant of All',
+      'Luke': 'Son of Man',
+      'John': 'Son of God',
+      'Acts': 'Church Begins',
+      'Romans': 'Righteousness by Faith',
+      '1 Corinthians': 'Church Problems',
+      '2 Corinthians': 'Ministry Defense',
+      'Galatians': 'Freedom in Christ',
+      'Ephesians': 'Unity in Christ',
+      'Philippians': 'Joy in Christ',
+      'Colossians': 'Supremacy of Christ',
+      '1 Thessalonians': 'Christ\'s Return',
+      '2 Thessalonians': 'Stand Firm',
+      '1 Timothy': 'Church Leadership',
+      '2 Timothy': 'Faithful Service',
+      'Titus': 'Sound Doctrine',
+      'Philemon': 'Christian Forgiveness',
+      'Hebrews': 'Better Covenant',
+      'James': 'Faith Works',
+      '1 Peter': 'Suffering Saints',
+      '2 Peter': 'False Teachers',
+      '1 John': 'Walking in Light',
+      '2 John': 'Truth and Love',
+      '3 John': 'Hospitality',
+      'Jude': 'Contend for Faith',
+      'Revelation': 'Final Victory'
+    };
+
     // Mobile sidebar toggle
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebarContent = document.querySelector('.sidebar-content');
@@ -574,6 +641,7 @@
         this.classList.add('active');
 
         const bookName = this.getAttribute('data-book');
+        const subtitle = bibleSubtitles[bookName] || 'Bible Study';
 
         if (bookName === 'Genesis') {
           // Show Genesis content
@@ -584,8 +652,8 @@
           genesisContent.classList.remove('active');
           comingSoonTemplate.classList.add('active');
 
-          // Update book title
-          bookTitle.textContent = bookName;
+          // Update book title with subtitle
+          bookTitle.textContent = `${bookName}: ${subtitle}`;
 
           // Generate chapters list
           const numChapters = bibleChapters[bookName] || 1;
