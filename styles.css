@@ -2016,3 +2016,37 @@ footer {
 .default-bg {
   background: linear-gradient(135deg, #9c64ff, #7c4dff);
 }
+
+/* 修改连接线样式，将其改为虚线并添加动画效果 */
+/* 找到 .path-connector 样式并替换为以下内容： */
+
+.path-connector {
+  width: 2px;
+  height: 20px; /* 减少高度 */
+  background: repeating-linear-gradient(to bottom, #9c64ff 0px, #9c64ff 4px, transparent 4px, transparent 8px);
+  margin: -10px auto 10px; /* 调整上下边距，使其更靠近卡片 */
+  position: relative;
+  animation: dashFlow 2s linear infinite;
+  opacity: 0.8;
+}
+
+/* 删除之前的 :before 和 :after 伪元素 */
+.path-connector:before,
+.path-connector:after {
+  display: none;
+}
+
+/* 添加动画关键帧 */
+@keyframes dashFlow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 16px; /* 虚线移动的距离 */
+  }
+}
+
+/* 调整课程卡片的下边距，为连接线留出空间 */
+.lesson-card {
+  margin-bottom: 15px; /* 减少卡片下边距 */
+}
