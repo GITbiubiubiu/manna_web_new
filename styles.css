@@ -1135,19 +1135,33 @@ footer {
 .current-part {
   background-color: #9c64ff;
   color: white;
-  padding: 25px 30px;
+  padding: 35px 30px;
   border-radius: 15px;
   margin: 60px auto 40px;
   max-width: 800px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(156, 100, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
 }
 
-.current-part h2 {
-  font-size: 2.2rem;
+.series-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+.series-title {
+  font-size: 2.5rem;
   margin: 0;
   color: white;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .lesson-path {
@@ -1282,8 +1296,8 @@ footer {
 
 /* Responsive adjustments for Bible Lessons */
 @media (max-width: 768px) {
-  .current-part h2 {
-    font-size: 1.8rem;
+  .series-title {
+    font-size: 2rem;
   }
 
   .lesson-image {
@@ -1307,12 +1321,16 @@ footer {
   }
 
   .current-part {
-    padding: 20px 15px;
+    padding: 25px 15px;
     margin-top: 40px;
   }
 
-  .current-part h2 {
-    font-size: 1.5rem;
+  .series-label {
+    font-size: 1rem;
+  }
+
+  .series-title {
+    font-size: 1.6rem;
   }
 
   .lesson-image {
