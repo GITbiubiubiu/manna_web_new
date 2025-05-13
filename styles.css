@@ -2285,6 +2285,11 @@ footer {
   margin-top: 20px;
 }
 
+/* 当只有一个按钮时（如Continue按钮），确保它靠右对齐 */
+.lesson-navigation-buttons:has(.next-section-btn:only-child) {
+  justify-content: flex-end;
+}
+
 .next-section-btn,
 .prev-section-btn {
   padding: 10px 20px;
@@ -2697,7 +2702,7 @@ footer {
   transition: width 0.3s ease;
 }
 
-/* 测验反���样式 */
+/* 测验反馈样式 */
 .quiz-feedback {
   margin: 15px 0;
   padding: 10px;
