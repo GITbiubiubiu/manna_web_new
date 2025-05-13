@@ -49,296 +49,416 @@
 
 <!-- Bible Lessons Section -->
 <section class="bible-lessons-section">
-  <div class="container">
+  <div class="bible-container">
+    <!-- Bible Books Sidebar -->
+    <div class="bible-sidebar">
+      <div class="sidebar-header">
+        <h3>Bible Books</h3>
+        <button class="mobile-toggle" id="sidebarToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-    <div class="user-progress">
-      <div class="progress-stats">
-        <div class="stat-item">
-          <img src="public/images/streak-icon.png" alt="Streak">
-          <span>1</span>
+      <div class="sidebar-content">
+        <div class="testament-section">
+          <h4>Old Testament</h4>
+          <ul class="book-list">
+            <li><a href="#" class="active" data-book="Genesis">Genesis</a></li>
+            <li><a href="#" data-book="Exodus">Exodus</a></li>
+            <li><a href="#" data-book="Leviticus">Leviticus</a></li>
+            <li><a href="#" data-book="Numbers">Numbers</a></li>
+            <li><a href="#" data-book="Deuteronomy">Deuteronomy</a></li>
+            <li><a href="#" data-book="Joshua">Joshua</a></li>
+            <li><a href="#" data-book="Judges">Judges</a></li>
+            <li><a href="#" data-book="Ruth">Ruth</a></li>
+            <li><a href="#" data-book="1 Samuel">1 Samuel</a></li>
+            <li><a href="#" data-book="2 Samuel">2 Samuel</a></li>
+            <li><a href="#" data-book="1 Kings">1 Kings</a></li>
+            <li><a href="#" data-book="2 Kings">2 Kings</a></li>
+            <li><a href="#" data-book="1 Chronicles">1 Chronicles</a></li>
+            <li><a href="#" data-book="2 Chronicles">2 Chronicles</a></li>
+            <li><a href="#" data-book="Ezra">Ezra</a></li>
+            <li><a href="#" data-book="Nehemiah">Nehemiah</a></li>
+            <li><a href="#" data-book="Esther">Esther</a></li>
+            <li><a href="#" data-book="Job">Job</a></li>
+            <li><a href="#" data-book="Psalms">Psalms</a></li>
+            <li><a href="#" data-book="Proverbs">Proverbs</a></li>
+            <li><a href="#" data-book="Ecclesiastes">Ecclesiastes</a></li>
+            <li><a href="#" data-book="Song of Solomon">Song of Solomon</a></li>
+            <li><a href="#" data-book="Isaiah">Isaiah</a></li>
+            <li><a href="#" data-book="Jeremiah">Jeremiah</a></li>
+            <li><a href="#" data-book="Lamentations">Lamentations</a></li>
+            <li><a href="#" data-book="Ezekiel">Ezekiel</a></li>
+            <li><a href="#" data-book="Daniel">Daniel</a></li>
+            <li><a href="#" data-book="Hosea">Hosea</a></li>
+            <li><a href="#" data-book="Joel">Joel</a></li>
+            <li><a href="#" data-book="Amos">Amos</a></li>
+            <li><a href="#" data-book="Obadiah">Obadiah</a></li>
+            <li><a href="#" data-book="Jonah">Jonah</a></li>
+            <li><a href="#" data-book="Micah">Micah</a></li>
+            <li><a href="#" data-book="Nahum">Nahum</a></li>
+            <li><a href="#" data-book="Habakkuk">Habakkuk</a></li>
+            <li><a href="#" data-book="Zephaniah">Zephaniah</a></li>
+            <li><a href="#" data-book="Haggai">Haggai</a></li>
+            <li><a href="#" data-book="Zechariah">Zechariah</a></li>
+            <li><a href="#" data-book="Malachi">Malachi</a></li>
+          </ul>
         </div>
-        <div class="stat-item">
-          <img src="public/images/heart-icon.png" alt="Hearts">
-          <span>1</span>
+
+        <div class="testament-section">
+          <h4>New Testament</h4>
+          <ul class="book-list">
+            <li><a href="#" data-book="Matthew">Matthew</a></li>
+            <li><a href="#" data-book="Mark">Mark</a></li>
+            <li><a href="#" data-book="Luke">Luke</a></li>
+            <li><a href="#" data-book="John">John</a></li>
+            <li><a href="#" data-book="Acts">Acts</a></li>
+            <li><a href="#" data-book="Romans">Romans</a></li>
+            <li><a href="#" data-book="1 Corinthians">1 Corinthians</a></li>
+            <li><a href="#" data-book="2 Corinthians">2 Corinthians</a></li>
+            <li><a href="#" data-book="Galatians">Galatians</a></li>
+            <li><a href="#" data-book="Ephesians">Ephesians</a></li>
+            <li><a href="#" data-book="Philippians">Philippians</a></li>
+            <li><a href="#" data-book="Colossians">Colossians</a></li>
+            <li><a href="#" data-book="1 Thessalonians">1 Thessalonians</a></li>
+            <li><a href="#" data-book="2 Thessalonians">2 Thessalonians</a></li>
+            <li><a href="#" data-book="1 Timothy">1 Timothy</a></li>
+            <li><a href="#" data-book="2 Timothy">2 Timothy</a></li>
+            <li><a href="#" data-book="Titus">Titus</a></li>
+            <li><a href="#" data-book="Philemon">Philemon</a></li>
+            <li><a href="#" data-book="Hebrews">Hebrews</a></li>
+            <li><a href="#" data-book="James">James</a></li>
+            <li><a href="#" data-book="1 Peter">1 Peter</a></li>
+            <li><a href="#" data-book="2 Peter">2 Peter</a></li>
+            <li><a href="#" data-book="1 John">1 John</a></li>
+            <li><a href="#" data-book="2 John">2 John</a></li>
+            <li><a href="#" data-book="3 John">3 John</a></li>
+            <li><a href="#" data-book="Jude">Jude</a></li>
+            <li><a href="#" data-book="Revelation">Revelation</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="current-part">
-      <div class="series-label">Series1:</div>
-      <h2 class="series-title">Genesis: The Dawn of Creation</h2>
-    </div>
-
-    <div class="lesson-path">
-      <!-- Lesson 1 -->
-      <div class="lesson-card completed">
-        <div class="lesson-main-content">
-          <div class="lesson-image">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course1_light-PnmJaaQmJrmWAP0hVZQx6G3llTDiW6.png" alt="Jesus on Earth">
-            <div class="completion-badge">✓</div>
+    <!-- Main Content Area -->
+    <div class="bible-main-content">
+      <div class="user-progress">
+        <div class="progress-stats">
+          <div class="stat-item">
+            <img src="public/images/streak-icon.png" alt="Streak">
+            <span>1</span>
           </div>
-          <div class="lesson-info">
-            <h3>Matthew 1-2</h3>
-            <p>The Birth of Jesus</p>
+          <div class="stat-item">
+            <img src="public/images/heart-icon.png" alt="Hearts">
+            <span>1</span>
           </div>
         </div>
-        <div class="lesson-subcards">
-          <a href="/bible-lessons/matthew1" class="subcard">
-            <div class="subcard-content">
-              <h4>Matthew 1</h4>
-              <p>Genealogy of Jesus</p>
+      </div>
+
+      <!-- Genesis Content (Default View) -->
+      <div id="genesis-content" class="book-content active">
+        <div class="current-part">
+          <div class="series-label">Series1:</div>
+          <h2 class="series-title">Genesis: The Dawn of Creation</h2>
+        </div>
+
+        <div class="lesson-path">
+          <!-- Lesson 1 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course1_light-PnmJaaQmJrmWAP0hVZQx6G3llTDiW6.png" alt="Jesus on Earth">
+                <div class="completion-badge">✓</div>
+              </div>
+              <div class="lesson-info">
+                <h3>Matthew 1-2</h3>
+                <p>The Birth of Jesus</p>
+              </div>
             </div>
-          </a>
-          <a href="/bible-lessons/matthew2" class="subcard">
-            <div class="subcard-content">
-              <h4>Matthew 2</h4>
-              <p>Wise Men Visit</p>
-            </div>
-          </a>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Final Thought</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/matthew1" class="subcard">
+                <div class="subcard-content">
+                  <h4>Matthew 1</h4>
+                  <p>Genealogy of Jesus</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/matthew2" class="subcard">
+                <div class="subcard-content">
+                  <h4>Matthew 2</h4>
+                  <p>Wise Men Visit</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Prayer</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 2 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course2_light-NwXN8oNhcUnNnyQsBRrc5jmG7FJwMu.png" alt="Jesus at the Well">
+                <div class="completion-badge">✓</div>
+              </div>
+              <div class="lesson-info">
+                <h3>John 4:1-26</h3>
+                <p>The Woman at the Well</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/john4-1" class="subcard">
+                <div class="subcard-content">
+                  <h4>John 4:1-15</h4>
+                  <p>Living Water</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/john4-2" class="subcard">
+                <div class="subcard-content">
+                  <h4>John 4:16-26</h4>
+                  <p>True Worship</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 3 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course3_light-9MyOMIaAOAdP4fhcgq6heoWCUyDsXc.png" alt="Jesus Walking on Water">
+                <div class="completion-badge">✓</div>
+              </div>
+              <div class="lesson-info">
+                <h3>Matthew 14:22-33</h3>
+                <p>Jesus Walks on Water</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/matthew14-1" class="subcard">
+                <div class="subcard-content">
+                  <h4>Matthew 14:22-27</h4>
+                  <p>The Storm</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/matthew14-2" class="subcard">
+                <div class="subcard-content">
+                  <h4>Matthew 14:28-33</h4>
+                  <p>Peter's Faith</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 4 -->
+          <div class="lesson-card active">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course4_light-I6Kkr0O0Olh1DgbnNJ6nUbjFIDx8X1.png" alt="Jesus Teaching">
+                <div class="lesson-badge">Start</div>
+              </div>
+              <div class="lesson-info">
+                <h3>John 8:1-11</h3>
+                <p>Jesus and the Accused Woman</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/john8-1" class="subcard">
+                <div class="subcard-content">
+                  <h4>John 8:1-6</h4>
+                  <p>The Accusation</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/john8-2" class="subcard">
+                <div class="subcard-content">
+                  <h4>John 8:7-11</h4>
+                  <p>Jesus's Response</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 5 -->
+          <div class="lesson-card locked">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course5_light-ug4NhFFEuhsX7ilIwA7C5i8pu48MwZ.png" alt="Jesus Healing">
+                <div class="lesson-lock">🔒</div>
+              </div>
+              <div class="lesson-info">
+                <h3>Mark 10:46-52</h3>
+                <p>Healing of Blind Bartimaeus</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <div class="subcard locked">
+                <div class="subcard-content">
+                  <h4>Mark 10:46-48</h4>
+                  <p>Bartimaeus Calls</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard locked">
+                <div class="subcard-content">
+                  <h4>Mark 10:49-52</h4>
+                  <p>The Healing</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium locked">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium locked">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 6 -->
+          <div class="lesson-card locked">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course6_light-A65stSGEMIHZlSm2HWVZ7Q80i7RP5I.png" alt="Jesus Entering Jerusalem">
+                <div class="lesson-lock">🔒</div>
+              </div>
+              <div class="lesson-info">
+                <h3>Matthew 21:1-11</h3>
+                <p>Triumphal Entry to Jerusalem</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <div class="subcard locked">
+                <div class="subcard-content">
+                  <h4>Matthew 21:1-5</h4>
+                  <p>The Preparation</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard locked">
+                <div class="subcard-content">
+                  <h4>Matthew 21:6-11</h4>
+                  <p>The Procession</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium locked">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium locked">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="path-connector"></div>
+      <!-- Coming Soon Template (For other books) -->
+      <div id="coming-soon-template" class="book-content">
+        <div class="coming-soon-container">
+          <h2 class="book-title">Book Title</h2>
+          <div class="chapters-list">
+            <!-- Chapters will be dynamically inserted here -->
+          </div>
+          <div class="coming-soon-content">
+            <h3>Coming Soon...</h3>
+            <p>We're working hard to bring you in-depth studies for this book of the Bible.</p>
+            <p>In the meantime, download our app for access to more Bible studies and resources.</p>
 
-      <!-- Lesson 2 -->
-      <div class="lesson-card completed">
-        <div class="lesson-main-content">
-          <div class="lesson-image">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course2_light-NwXN8oNhcUnNnyQsBRrc5jmG7FJwMu.png" alt="Jesus at the Well">
-            <div class="completion-badge">✓</div>
-          </div>
-          <div class="lesson-info">
-            <h3>John 4:1-26</h3>
-            <p>The Woman at the Well</p>
-          </div>
-        </div>
-        <div class="lesson-subcards">
-          <a href="/bible-lessons/john4-1" class="subcard">
-            <div class="subcard-content">
-              <h4>John 4:1-15</h4>
-              <p>Living Water</p>
-            </div>
-          </a>
-          <a href="/bible-lessons/john4-2" class="subcard">
-            <div class="subcard-content">
-              <h4>John 4:16-26</h4>
-              <p>True Worship</p>
-            </div>
-          </a>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Final Thought</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Prayer</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
+            <div class="download-app-section">
+              <div class="qr-code">
+                <img src="public/images/qrcode.png" alt="QR Code to download Manna app">
+                <p>Scan to download</p>
+              </div>
+              <a href="/#download" class="download-app-btn">Download Now</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="path-connector"></div>
-
-      <!-- Lesson 3 -->
-      <div class="lesson-card completed">
-        <div class="lesson-main-content">
-          <div class="lesson-image">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course3_light-9MyOMIaAOAdP4fhcgq6heoWCUyDsXc.png" alt="Jesus Walking on Water">
-            <div class="completion-badge">✓</div>
-          </div>
-          <div class="lesson-info">
-            <h3>Matthew 14:22-33</h3>
-            <p>Jesus Walks on Water</p>
-          </div>
-        </div>
-        <div class="lesson-subcards">
-          <a href="/bible-lessons/matthew14-1" class="subcard">
-            <div class="subcard-content">
-              <h4>Matthew 14:22-27</h4>
-              <p>The Storm</p>
-            </div>
-          </a>
-          <a href="/bible-lessons/matthew14-2" class="subcard">
-            <div class="subcard-content">
-              <h4>Matthew 14:28-33</h4>
-              <p>Peter's Faith</p>
-            </div>
-          </a>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Final Thought</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Prayer</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-        </div>
+      <div class="lessons-footer">
+        <a href="/#download" class="download-app-btn">Download the App for Full Experience</a>
       </div>
-
-      <div class="path-connector"></div>
-
-      <!-- Lesson 4 -->
-      <div class="lesson-card active">
-        <div class="lesson-main-content">
-          <div class="lesson-image">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course4_light-I6Kkr0O0Olh1DgbnNJ6nUbjFIDx8X1.png" alt="Jesus Teaching">
-            <div class="lesson-badge">Start</div>
-          </div>
-          <div class="lesson-info">
-            <h3>John 8:1-11</h3>
-            <p>Jesus and the Accused Woman</p>
-          </div>
-        </div>
-        <div class="lesson-subcards">
-          <a href="/bible-lessons/john8-1" class="subcard">
-            <div class="subcard-content">
-              <h4>John 8:1-6</h4>
-              <p>The Accusation</p>
-            </div>
-          </a>
-          <a href="/bible-lessons/john8-2" class="subcard">
-            <div class="subcard-content">
-              <h4>John 8:7-11</h4>
-              <p>Jesus's Response</p>
-            </div>
-          </a>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Final Thought</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium">
-            <div class="subcard-content">
-              <h4>Prayer</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="path-connector"></div>
-
-      <!-- Lesson 5 -->
-      <div class="lesson-card locked">
-        <div class="lesson-main-content">
-          <div class="lesson-image">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course5_light-ug4NhFFEuhsX7ilIwA7C5i8pu48MwZ.png" alt="Jesus Healing">
-            <div class="lesson-lock">🔒</div>
-          </div>
-          <div class="lesson-info">
-            <h3>Mark 10:46-52</h3>
-            <p>Healing of Blind Bartimaeus</p>
-          </div>
-        </div>
-        <div class="lesson-subcards">
-          <div class="subcard locked">
-            <div class="subcard-content">
-              <h4>Mark 10:46-48</h4>
-              <p>Bartimaeus Calls</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard locked">
-            <div class="subcard-content">
-              <h4>Mark 10:49-52</h4>
-              <p>The Healing</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium locked">
-            <div class="subcard-content">
-              <h4>Final Thought</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium locked">
-            <div class="subcard-content">
-              <h4>Prayer</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="path-connector"></div>
-
-      <!-- Lesson 6 -->
-      <div class="lesson-card locked">
-        <div class="lesson-main-content">
-          <div class="lesson-image">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/series1_course6_light-A65stSGEMIHZlSm2HWVZ7Q80i7RP5I.png" alt="Jesus Entering Jerusalem">
-            <div class="lesson-lock">🔒</div>
-          </div>
-          <div class="lesson-info">
-            <h3>Matthew 21:1-11</h3>
-            <p>Triumphal Entry to Jerusalem</p>
-          </div>
-        </div>
-        <div class="lesson-subcards">
-          <div class="subcard locked">
-            <div class="subcard-content">
-              <h4>Matthew 21:1-5</h4>
-              <p>The Preparation</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard locked">
-            <div class="subcard-content">
-              <h4>Matthew 21:6-11</h4>
-              <p>The Procession</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium locked">
-            <div class="subcard-content">
-              <h4>Final Thought</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-          <div class="subcard premium locked">
-            <div class="subcard-content">
-              <h4>Prayer</h4>
-              <p>Unlock in app</p>
-              <div class="lock-icon">🔒</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lessons-footer">
-      <a href="/#download" class="download-app-btn">Download the App for Full Experience</a>
     </div>
   </div>
 </section>
@@ -384,8 +504,8 @@
 </footer>
 
 <script>
-  // Modal functionality
   document.addEventListener('DOMContentLoaded', function() {
+    // Modal functionality
     const modal = document.getElementById('premium-modal');
     const premiumCards = document.querySelectorAll('.subcard.premium');
     const closeModal = document.querySelector('.close-modal');
@@ -404,6 +524,94 @@
     window.addEventListener('click', function(e) {
       if (e.target === modal) {
         modal.style.display = 'none';
+      }
+    });
+
+    // Bible books navigation
+    const bookLinks = document.querySelectorAll('.book-list a');
+    const genesisContent = document.getElementById('genesis-content');
+    const comingSoonTemplate = document.getElementById('coming-soon-template');
+    const bookTitle = comingSoonTemplate.querySelector('.book-title');
+    const chaptersList = comingSoonTemplate.querySelector('.chapters-list');
+
+    // Bible chapters data (simplified for demo)
+    const bibleChapters = {
+      'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34,
+      'Joshua': 24, 'Judges': 21, 'Ruth': 4, '1 Samuel': 31, '2 Samuel': 24,
+      '1 Kings': 22, '2 Kings': 25, '1 Chronicles': 29, '2 Chronicles': 36,
+      'Ezra': 10, 'Nehemiah': 13, 'Esther': 10, 'Job': 42, 'Psalms': 150,
+      'Proverbs': 31, 'Ecclesiastes': 12, 'Song of Solomon': 8, 'Isaiah': 66,
+      'Jeremiah': 52, 'Lamentations': 5, 'Ezekiel': 48, 'Daniel': 12,
+      'Hosea': 14, 'Joel': 3, 'Amos': 9, 'Obadiah': 1, 'Jonah': 4,
+      'Micah': 7, 'Nahum': 3, 'Habakkuk': 3, 'Zephaniah': 3, 'Haggai': 2,
+      'Zechariah': 14, 'Malachi': 4,
+      'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28,
+      'Romans': 16, '1 Corinthians': 16, '2 Corinthians': 13, 'Galatians': 6,
+      'Ephesians': 6, 'Philippians': 4, 'Colossians': 4, '1 Thessalonians': 5,
+      '2 Thessalonians': 3, '1 Timothy': 6, '2 Timothy': 4, 'Titus': 3,
+      'Philemon': 1, 'Hebrews': 13, 'James': 5, '1 Peter': 5, '2 Peter': 3,
+      '1 John': 5, '2 John': 1, '3 John': 1, 'Jude': 1, 'Revelation': 22
+    };
+
+    // Mobile sidebar toggle
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarContent = document.querySelector('.sidebar-content');
+
+    sidebarToggle.addEventListener('click', function() {
+      sidebarContent.classList.toggle('active');
+      sidebarToggle.classList.toggle('active');
+    });
+
+    // Handle book clicks
+    bookLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Remove active class from all links
+        bookLinks.forEach(l => l.classList.remove('active'));
+
+        // Add active class to clicked link
+        this.classList.add('active');
+
+        const bookName = this.getAttribute('data-book');
+
+        if (bookName === 'Genesis') {
+          // Show Genesis content
+          genesisContent.classList.add('active');
+          comingSoonTemplate.classList.remove('active');
+        } else {
+          // Show coming soon template with chapters
+          genesisContent.classList.remove('active');
+          comingSoonTemplate.classList.add('active');
+
+          // Update book title
+          bookTitle.textContent = bookName;
+
+          // Generate chapters list
+          const numChapters = bibleChapters[bookName] || 1;
+          let chaptersHTML = '<ul class="chapter-grid">';
+
+          for (let i = 1; i <= numChapters; i++) {
+            chaptersHTML += `<li><a href="#" class="chapter-link">${i}</a></li>`;
+          }
+
+          chaptersHTML += '</ul>';
+          chaptersList.innerHTML = chaptersHTML;
+
+          // Close mobile sidebar after selection on small screens
+          if (window.innerWidth < 768) {
+            sidebarContent.classList.remove('active');
+            sidebarToggle.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Handle chapter clicks
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('chapter-link')) {
+        e.preventDefault();
+        modal.style.display = 'flex';
       }
     });
   });

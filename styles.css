@@ -1098,6 +1098,226 @@ footer {
   min-height: 100vh;
 }
 
+/* Bible Container with Sidebar */
+.bible-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Bible Sidebar Styles */
+.bible-sidebar {
+  width: 250px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 30px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.mobile-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.mobile-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+.mobile-toggle span:nth-child(2) {
+  top: 9px;
+}
+
+.mobile-toggle span:nth-child(3) {
+  top: 18px;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  top: 9px;
+transform  {
+  opacity: 0;
+  left: -60px;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
+}
+
+.sidebar-content {
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.testament-section {
+  margin-bottom: 25px;
+}
+
+.testament-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book-list li a {
+  display: block;
+  padding: 8px 10px;
+  color: #555;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.book-list li a:hover {
+  background-color: #f5f7fa;
+  color: #0078d7;
+}
+
+.book-list li a.active {
+  background-color: #e6f0ff;
+  color: #0078d7;
+  font-weight: 500;
+}
+
+/* Bible Main Content Styles */
+.bible-main-content {
+  flex: 1;
+}
+
+.book-content {
+  display: none;
+}
+
+.book-content.active {
+  display: block;
+}
+
+/* Coming Soon Content Styles */
+.coming-soon-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.book-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.chapters-list {
+  margin-bottom: 40px;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.chapter-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.chapter-link:hover {
+  background-color: #e6f0ff;
+  color: #0078d7;
+  transform: translateY(-2px);
+}
+
+.coming-soon-content {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.coming-soon-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.coming-soon-content p {
+  color: #666;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-app-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .lessons-header {
   text-align: center;
   margin-bottom: 40px;
@@ -1107,7 +1327,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 0;
   gap: 20px;
 }
@@ -1137,7 +1357,7 @@ footer {
   color: white;
   padding: 35px 30px;
   border-radius: 15px;
-  margin: 60px auto 40px;
+  margin: 30px auto 40px;
   max-width: 800px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(156, 100, 255, 0.4);
@@ -1429,6 +1649,33 @@ footer {
 }
 
 /* Responsive adjustments for Bible Lessons */
+@media (max-width: 992px) {
+  .bible-container {
+    flex-direction: column;
+  }
+
+  .bible-sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+  }
+
+  .sidebar-content {
+    max-height: none;
+    display: none;
+  }
+
+  .sidebar-content.active {
+    display: block;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   .series-title {
     font-size: 2rem;
@@ -1441,6 +1688,10 @@ footer {
   .subcard {
     width: 100%;
     margin-bottom: 10px;
+  }
+
+  .chapter-grid {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
   }
 }
 
