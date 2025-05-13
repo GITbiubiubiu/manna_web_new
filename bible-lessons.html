@@ -145,14 +145,9 @@
     <!-- Main Content Area -->
     <div class="bible-main-content">
 
-      <div class="current-part">
-        <h2 class="series-title">Genesis: The Dawn of Creation</h2>
-      </div>
-
       <!-- Genesis Content (Default View) -->
       <div id="genesis-content" class="book-content active">
-        <div class="current-part">
-          <div class="series-label">Series1:</div>
+        <div class="current-part genesis-bg">
           <h2 class="series-title">Genesis: The Dawn of Creation</h2>
         </div>
 
@@ -432,9 +427,6 @@
         </div>
 
         <div class="coming-soon-container">
-          <div class="chapters-list">
-            <!-- Chapters will be dynamically inserted here -->
-          </div>
           <div class="coming-soon-content">
             <h3>Coming Soon...</h3>
             <p>We're working hard to bring you in-depth studies for this book of the Bible.</p>
@@ -454,7 +446,6 @@
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
@@ -529,26 +520,6 @@
     const genesisContent = document.getElementById('genesis-content');
     const comingSoonTemplate = document.getElementById('coming-soon-template');
     const bookTitle = comingSoonTemplate.querySelector('.book-title');
-    const chaptersList = comingSoonTemplate.querySelector('.chapters-list');
-
-    // Bible chapters data (simplified for demo)
-    const bibleChapters = {
-      'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34,
-      'Joshua': 24, 'Judges': 21, 'Ruth': 4, '1 Samuel': 31, '2 Samuel': 24,
-      '1 Kings': 22, '2 Kings': 25, '1 Chronicles': 29, '2 Chronicles': 36,
-      'Ezra': 10, 'Nehemiah': 13, 'Esther': 10, 'Job': 42, 'Psalms': 150,
-      'Proverbs': 31, 'Ecclesiastes': 12, 'Song of Solomon': 8, 'Isaiah': 66,
-      'Jeremiah': 52, 'Lamentations': 5, 'Ezekiel': 48, 'Daniel': 12,
-      'Hosea': 14, 'Joel': 3, 'Amos': 9, 'Obadiah': 1, 'Jonah': 4,
-      'Micah': 7, 'Nahum': 3, 'Habakkuk': 3, 'Zephaniah': 3, 'Haggai': 2,
-      'Zechariah': 14, 'Malachi': 4,
-      'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28,
-      'Romans': 16, '1 Corinthians': 16, '2 Corinthians': 13, 'Galatians': 6,
-      'Ephesians': 6, 'Philippians': 4, 'Colossians': 4, '1 Thessalonians': 5,
-      '2 Thessalonians': 3, '1 Timothy': 6, '2 Timothy': 4, 'Titus': 3,
-      'Philemon': 1, 'Hebrews': 13, 'James': 5, '1 Peter': 5, '2 Peter': 3,
-      '1 John': 5, '2 John': 1, '3 John': 1, 'Jude': 1, 'Revelation': 22
-    };
 
     // Bible book subtitles
     const bibleSubtitles = {
@@ -620,6 +591,76 @@
       'Revelation': 'Final Victory'
     };
 
+    // Bible book background colors
+    const bibleColors = {
+      'Genesis': 'genesis-bg',
+      'Exodus': 'exodus-bg',
+      'Leviticus': 'leviticus-bg',
+      'Numbers': 'numbers-bg',
+      'Deuteronomy': 'deuteronomy-bg',
+      'Joshua': 'joshua-bg',
+      'Judges': 'judges-bg',
+      'Ruth': 'ruth-bg',
+      '1 Samuel': 'samuel1-bg',
+      '2 Samuel': 'samuel2-bg',
+      '1 Kings': 'kings1-bg',
+      '2 Kings': 'kings2-bg',
+      '1 Chronicles': 'chronicles1-bg',
+      '2 Chronicles': 'chronicles2-bg',
+      'Ezra': 'ezra-bg',
+      'Nehemiah': 'nehemiah-bg',
+      'Esther': 'esther-bg',
+      'Job': 'job-bg',
+      'Psalms': 'psalms-bg',
+      'Proverbs': 'proverbs-bg',
+      'Ecclesiastes': 'ecclesiastes-bg',
+      'Song of Solomon': 'song-bg',
+      'Isaiah': 'isaiah-bg',
+      'Jeremiah': 'jeremiah-bg',
+      'Lamentations': 'lamentations-bg',
+      'Ezekiel': 'ezekiel-bg',
+      'Daniel': 'daniel-bg',
+      'Hosea': 'hosea-bg',
+      'Joel': 'joel-bg',
+      'Amos': 'amos-bg',
+      'Obadiah': 'obadiah-bg',
+      'Jonah': 'jonah-bg',
+      'Micah': 'micah-bg',
+      'Nahum': 'nahum-bg',
+      'Habakkuk': 'habakkuk-bg',
+      'Zephaniah': 'zephaniah-bg',
+      'Haggai': 'haggai-bg',
+      'Zechariah': 'zechariah-bg',
+      'Malachi': 'malachi-bg',
+      'Matthew': 'matthew-bg',
+      'Mark': 'mark-bg',
+      'Luke': 'luke-bg',
+      'John': 'john-bg',
+      'Acts': 'acts-bg',
+      'Romans': 'romans-bg',
+      '1 Corinthians': 'corinthians1-bg',
+      '2 Corinthians': 'corinthians2-bg',
+      'Galatians': 'galatians-bg',
+      'Ephesians': 'ephesians-bg',
+      'Philippians': 'philippians-bg',
+      'Colossians': 'colossians-bg',
+      '1 Thessalonians': 'thessalonians1-bg',
+      '2 Thessalonians': 'thessalonians2-bg',
+      '1 Timothy': 'timothy1-bg',
+      '2 Timothy': 'timothy2-bg',
+      'Titus': 'titus-bg',
+      'Philemon': 'philemon-bg',
+      'Hebrews': 'hebrews-bg',
+      'James': 'james-bg',
+      '1 Peter': 'peter1-bg',
+      '2 Peter': 'peter2-bg',
+      '1 John': 'john1-bg',
+      '2 John': 'john2-bg',
+      '3 John': 'john3-bg',
+      'Jude': 'jude-bg',
+      'Revelation': 'revelation-bg'
+    };
+
     // Mobile sidebar toggle
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebarContent = document.querySelector('.sidebar-content');
@@ -642,6 +683,7 @@
 
         const bookName = this.getAttribute('data-book');
         const subtitle = bibleSubtitles[bookName] || 'Bible Study';
+        const colorClass = bibleColors[bookName] || 'default-bg';
 
         if (bookName === 'Genesis') {
           // Show Genesis content
@@ -655,16 +697,12 @@
           // Update book title with subtitle
           bookTitle.textContent = `${bookName}: ${subtitle}`;
 
-          // Generate chapters list
-          const numChapters = bibleChapters[bookName] || 1;
-          let chaptersHTML = '<ul class="chapter-grid">';
-
-          for (let i = 1; i <= numChapters; i++) {
-            chaptersHTML += `<li><a href="#" class="chapter-link">${i}</a></li>`;
-          }
-
-          chaptersHTML += '</ul>';
-          chaptersList.innerHTML = chaptersHTML;
+          // Update background color
+          const titleCard = comingSoonTemplate.querySelector('.current-part');
+          // Remove all background classes
+          titleCard.className = 'current-part';
+          // Add the specific background class
+          titleCard.classList.add(colorClass);
 
           // Close mobile sidebar after selection on small screens
           if (window.innerWidth < 768) {
