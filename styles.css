@@ -2625,3 +2625,16 @@ footer {
     order: 1;
   }
 }
+
+/* Genesis课程页面自定义样式 */
+.lesson-content-section {
+  padding-top: 20px; /* 减少顶部间距，使内容整体上移 */
+}
+
+.lesson-navigation-buttons {
+  text-align: right; /* 将Continue按钮固定在右侧 */
+}
+
+.lesson-card-header h2 {
+  color: white !important; /* 确保所有标题为白色 */
+}

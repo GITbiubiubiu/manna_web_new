@@ -47,20 +47,6 @@
     </div>
 </header>
 
-<!-- Lesson Navigation -->
-<div class="lesson-navigation">
-    <div class="container">
-        <div class="lesson-breadcrumb">
-            <a href="/bible-lessons">Bible Lessons</a> &gt;
-            <a href="/bible-lessons#genesis">Genesis</a> &gt;
-            <span>Genesis 1</span>
-        </div>
-        <div class="lesson-title">
-            <h1>Genesis 1: Seven Days of Creation</h1>
-        </div>
-    </div>
-</div>
-
 <!-- Lesson Content -->
 <section class="lesson-content-section">
     <div class="container lesson-container">
@@ -78,7 +64,7 @@
                 <div class="lesson-card">
                     <div class="lesson-card-header">
                         <h2>The Creation of Light and the Heavens</h2>
-                        <div class="lesson-reference">Genesis 1:1-8</div>
+                        <div class="lesson-reference" data-verses="1-8">Genesis 1:1-8</div>
                     </div>
                     <div class="lesson-card-body">
                         <div class="key-verse">
@@ -110,7 +96,7 @@
                 <div class="lesson-card">
                     <div class="lesson-card-header">
                         <h2>The Formation of Land, Seas, and Vegetation</h2>
-                        <div class="lesson-reference">Genesis 1:9-19</div>
+                        <div class="lesson-reference" data-verses="9-19">Genesis 1:9-19</div>
                     </div>
                     <div class="lesson-card-body">
                         <div class="key-verse">
@@ -143,7 +129,7 @@
                 <div class="lesson-card">
                     <div class="lesson-card-header">
                         <h2>The Creation of Living Creatures</h2>
-                        <div class="lesson-reference">Genesis 1:20-25</div>
+                        <div class="lesson-reference" data-verses="20-25">Genesis 1:20-25</div>
                     </div>
                     <div class="lesson-card-body">
                         <div class="key-verse">
@@ -176,7 +162,7 @@
                 <div class="lesson-card">
                     <div class="lesson-card-header">
                         <h2>The Creation of Humanity</h2>
-                        <div class="lesson-reference">Genesis 1:26-31</div>
+                        <div class="lesson-reference" data-verses="26-31">Genesis 1:26-31</div>
                     </div>
                     <div class="lesson-card-body">
                         <div class="key-verse">
@@ -209,7 +195,7 @@
                 <div class="lesson-card quiz-card">
                     <div class="lesson-card-header">
                         <h2>Test Your Knowledge</h2>
-                        <div class="lesson-reference">Genesis 1</div>
+                        <div class="lesson-reference" data-verses="1-31">Genesis 1</div>
                     </div>
                     <div class="lesson-card-body">
                         <div class="quiz-container">
@@ -409,8 +395,37 @@
         const sections = document.querySelectorAll('.lesson-section');
         const progressBar = document.querySelector('.progress-fill');
         const progressText = document.querySelector('.progress-text');
+        const bibleVerses = document.querySelectorAll('.bible-content p');
         let currentSectionIndex = 0;
         const totalSections = sections.length - 1; // Excluding quiz section
+
+        // 高亮并滚动到指定的经文
+        function highlightVerses(verseRange) {
+            // 移除之前的高亮
+            bibleVerses.forEach(verse => {
+                verse.classList.remove('highlighted');
+            });
+
+            if (verseRange) {
+                const [start, end] = verseRange.split('-').map(v => parseInt(v));
+                const endVerse = end || start;
+
+                // 添加高亮到引用的经文
+                for (let i = start - 1; i < endVerse; i++) {
+                    if (bibleVerses[i]) {
+                        bibleVerses[i].classList.add('highlighted');
+
+                        // 滚动到第一个高亮的经文
+                        if (i === start - 1) {
+                            bibleVerses[i].scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                        }
+                    }
+                }
+            }
+        }
 
         // Update progress
         function updateProgress() {
@@ -426,9 +441,11 @@
             sections.forEach(section => {
                 section.classList.add('hidden');
             });
-            document.getElementById(sectionId).classList.remove('hidden');
 
-            // Update current section index
+            const currentSection = document.getElementById(sectionId);
+            currentSection.classList.remove('hidden');
+
+            // 更新当前部分索引
             for (let i = 0; i < sections.length; i++) {
                 if (sections[i].id === sectionId) {
                     currentSectionIndex = i;
@@ -436,9 +453,16 @@
                 }
             }
 
+            // 自动高亮相关经文
+            const reference = currentSection.querySelector('.lesson-reference');
+            if (reference) {
+                const verseRange = reference.getAttribute('data-verses');
+                highlightVerses(verseRange);
+            }
+
             updateProgress();
 
-            // Scroll to top of section
+            // 滚动到部分顶部
             window.scrollTo({
                 top: document.querySelector('.lesson-content').offsetTop - 100,
                 behavior: 'smooth'
@@ -460,6 +484,13 @@
                 showSection(prevSectionId);
             });
         });
+
+        // 初始化第一部分的经文高亮
+        const initialReference = document.querySelector('#section1 .lesson-reference');
+        if (initialReference) {
+            const verseRange = initialReference.getAttribute('data-verses');
+            highlightVerses(verseRange);
+        }
 
         // Quiz functionality
         const quizForm = document.getElementById('quiz-form');
@@ -550,38 +581,6 @@
                 fontSize -= 2;
                 bibleContent.style.fontSize = `${fontSize}px`;
             }
-        });
-
-        // Highlight Bible verses when referenced
-        const bibleVerses = document.querySelectorAll('.bible-content p');
-
-        document.querySelectorAll('.lesson-reference').forEach(reference => {
-            reference.addEventListener('click', function() {
-                const verseRange = this.textContent.split(':')[1];
-                if (verseRange) {
-                    const [start, end] = verseRange.split('-').map(v => parseInt(v));
-
-                    // Remove previous highlights
-                    bibleVerses.forEach(verse => {
-                        verse.classList.remove('highlighted');
-                    });
-
-                    // Add highlights to referenced verses
-                    for (let i = start - 1; i < (end || start); i++) {
-                        if (bibleVerses[i]) {
-                            bibleVerses[i].classList.add('highlighted');
-
-                            // Scroll to first highlighted verse
-                            if (i === start - 1) {
-                                bibleVerses[i].scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'center'
-                                });
-                            }
-                        }
-                    }
-                }
-            });
         });
     });
 </script>
