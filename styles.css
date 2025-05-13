@@ -1165,25 +1165,33 @@ footer {
 }
 
 .lesson-path {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
 }
 
+/* Updated Lesson Card Styles */
 .lesson-card {
-  display: flex;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .lesson-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lesson-main-content {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .lesson-image {
@@ -1191,6 +1199,8 @@ footer {
   height: 80px;
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
 .lesson-image img {
@@ -1235,20 +1245,91 @@ footer {
 }
 
 .lesson-info {
-  padding: 15px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .lesson-info h3 {
   margin: 0 0 5px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #333;
 }
 
 .lesson-info p {
   margin: 0;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+}
+
+/* Subcards Styles */
+.lesson-subcards {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.subcard {
+  flex: 1;
+  min-width: 120px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.subcard:hover {
+  background-color: #e8edf5;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subcard:active {
+  transform: translateY(-1px);
+}
+
+.subcard-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.subcard-content h4 {
+  font-size: 0.95rem;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.subcard-content p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+.subcard.premium {
+  background-color: #f0e6ff;
+}
+
+.subcard.premium:hover {
+  background-color: #e6d9ff;
+}
+
+.subcard.locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lock-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
 }
 
 .path-connector {
@@ -1267,7 +1348,7 @@ footer {
 }
 
 .lesson-card.locked {
-  opacity: 0.7;
+  opacity: 0.8;
   border-left: 5px solid #9e9e9e;
 }
 
@@ -1294,23 +1375,72 @@ footer {
   box-shadow: 0 6px 15px rgba(33, 150, 243, 0.4);
 }
 
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.modal-content .download-app-btn {
+  margin-top: 10px;
+}
+
 /* Responsive adjustments for Bible Lessons */
 @media (max-width: 768px) {
   .series-title {
     font-size: 2rem;
   }
 
-  .lesson-image {
-    width: 100px;
-    height: 70px;
+  .lesson-subcards {
+    flex-direction: column;
   }
 
-  .lesson-info h3 {
-    font-size: 1rem;
-  }
-
-  .lesson-info p {
-    font-size: 0.8rem;
+  .subcard {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -1333,8 +1463,16 @@ footer {
     font-size: 1.6rem;
   }
 
+  .lesson-main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .lesson-image {
-    width: 80px;
-    height: 60px;
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 120px;
   }
 }
