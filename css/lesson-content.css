@@ -94,7 +94,7 @@
 
 .key-points li {
     position: relative;
-    padding-left: 28px; /* 为自定义图标留出空间 */
+    padding-left: 28px; /* 为自定义图标��出空间 */
     margin-bottom: 12px; /* 增加列表项之间的间距 */
     line-height: 1.5;
 }
@@ -128,34 +128,64 @@
 .app-promotion h3 {
     color: #333;
     margin-bottom: 15px;
+    font-size: 1.4rem;
 }
 
-.app-benefits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+/* 新的特性列表样式 */
+.app-features-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
 }
 
-.benefit-item {
-    display: flex;
-    align-items: center;
+.app-features-list li {
+    position: relative;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 10px;
     background-color: white;
-    padding: 10px 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    width: calc(50% - 10px);
 }
 
-.benefit-icon {
-    font-size: 24px;
-    margin-right: 10px;
+.app-features-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 12px;
+    color: #4caf50;
+    font-weight: bold;
 }
 
-.benefit-text {
-    font-size: 14px;
-    color: #555;
+/* 下载选项样式 */
+.download-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.qr-code {
+    margin-bottom: 15px;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.app-store-links {
+    display: flex;
+    justify-content: center;
+}
+
+.app-store-link img {
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.app-store-link img:hover {
+    transform: scale(1.05);
 }
 
 .download-app-btn {
@@ -167,6 +197,7 @@
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin: 5px;
 }
 
 .download-app-btn:hover {
@@ -588,6 +619,7 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 20px;
 }
 
 /* 确保测试题一次只显示一道 */
@@ -626,6 +658,14 @@
         flex-direction: column;
         gap: 10px;
     }
+
+    .download-options {
+        flex-direction: column;
+    }
+
+    .qr-code {
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -640,5 +680,9 @@
 
     .next-section-btn {
         order: 1;
+    }
+
+    .completion-card {
+        padding: 20px;
     }
 }

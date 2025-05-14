@@ -322,30 +322,26 @@
                     <div class="completion-icon">✓</div>
                     <h2>Lesson Complete!</h2>
                     <div class="app-promotion">
-                        <h3>Want a Better Learning Experience?</h3>
-                        <div class="app-benefits">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">📊</div>
-                                <div class="benefit-text">Automatic Progress Tracking</div>
+                        <h3>Download Manna App for More Features!</h3>
+                        <ul class="app-features-list">
+                            <li>More audio courses, Prayer, and Devotional content for Free</li>
+                            <li>Progress tracking, streak rewards, and grow closer to God</li>
+                            <li>Get answers to any Bible-related questions</li>
+                        </ul>
+                        <div class="download-options">
+                            <div class="qr-code">
+                                <img src="../public/images/qrcode.png" alt="QR Code to download Manna App">
                             </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">🔥</div>
-                                <div class="benefit-text">Streak Rewards for Motivation</div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">🎧</div>
-                                <div class="benefit-text">Rich Audio Content</div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon">❓</div>
-                                <div class="benefit-text">Real-time Bible Q&A</div>
+                            <div class="app-store-links">
+                                <a href="https://apps.apple.com/us/app/manna-bible-study-prayer/id1669523799" class="app-store-link">
+                                    <img src="../public/images/download.png" alt="Download on App Store">
+                                </a>
                             </div>
                         </div>
-                        <a href="/#download" class="download-app-btn">Download Manna App</a>
                     </div>
                     <p>Congratulations on completing Genesis 1. You've learned about God's creation of the world in seven days.</p>
                     <div class="completion-buttons">
-                        <a href="/bible-lessons/genesis2" class="btn btn-primary">Next Lesson: Genesis 2</a>
+                        <a href="/bible-lessons/genesis2" class="download-app-btn">Next Lesson: Genesis 2</a>
                         <a href="/bible-lessons" class="btn btn-secondary">Back to Lessons</a>
                     </div>
                 </div>
@@ -707,7 +703,8 @@
             document.getElementById('completion').classList.remove('hidden');
             progressBar.style.width = '100%';
             progressText.textContent = '100% Complete';
-            toggleBibleText(true);
+            // 隐藏圣经文本
+            toggleBibleText(false);
         });
 
         // 上一题按钮
