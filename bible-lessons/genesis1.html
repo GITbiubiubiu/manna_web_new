@@ -540,6 +540,11 @@
 
             updateProgress();
 
+            // 如果是测试模块，立即隐藏 Previous 按钮
+            if (sectionId === 'quiz') {
+                document.querySelector('.lesson-navigation-buttons .prev-section-btn').style.display = 'none';
+            }
+
             // 滚动到部分顶部
             window.scrollTo({
                 top: document.querySelector('.lesson-content').offsetTop - 100,
@@ -669,7 +674,7 @@
                 nextButton.addEventListener('click', function() {
                     showQuestion(parseInt(this.getAttribute('data-next')) - 1);
                 });
-                submitButton.parentNode.querySelector('.quiz-buttons-center').appendChild(nextButton);
+                submitButton.parentNode.appendChild(nextButton);
             } else {
                 // 如果是最后一个问题，添加查看结果按钮
                 nextButton.textContent = 'View Results';
