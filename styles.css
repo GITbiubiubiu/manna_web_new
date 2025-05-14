@@ -2283,15 +2283,14 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  width: 100%;
 }
 
-/* 当只有一个按钮时（如Continue按钮），确保它靠右对齐 */
-.lesson-navigation-buttons:has(.next-section-btn:only-child) {
-  justify-content: flex-end;
-}
-
-.next-section-btn,
+/* 确保Previous按钮左对齐 */
 .prev-section-btn {
+  margin-right: auto;
+  background-color: #e0e0e0;
+  color: #333;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -2300,22 +2299,25 @@ footer {
   transition: all 0.2s ease;
 }
 
+.prev-section-btn:hover {
+  background-color: #d0d0d0;
+}
+
+/* 确保Continue按钮右对齐 */
 .next-section-btn {
+  margin-left: auto;
   background-color: #2196f3;
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .next-section-btn:hover {
   background-color: #0d8aee;
-}
-
-.prev-section-btn {
-  background-color: #e0e0e0;
-  color: #333;
-}
-
-.prev-section-btn:hover {
-  background-color: #d0d0d0;
 }
 
 /* Bible Text Styles */
@@ -2634,13 +2636,6 @@ footer {
 /* Genesis课程页面自定义样式 */
 .lesson-content-section {
   padding-top: 20px; /* 减少顶部间距，使内容整体上移 */
-}
-
-.lesson-navigation-buttons {
-  text-align: right; /* 将Continue按钮固定在右侧 */
-  display: flex;
-  justify-content: flex-end; /* 确保按钮靠右对齐 */
-  margin-top: 20px;
 }
 
 .lesson-card-header h2 {
