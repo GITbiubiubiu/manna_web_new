@@ -234,7 +234,9 @@
                                     </div>
                                     <div class="quiz-feedback hidden"></div>
                                     <div class="quiz-controls">
-                                        <button type="button" class="submit-question-btn" data-question="1" data-verses="3-5">Submit Answer</button>
+                                        <div class="quiz-buttons-center">
+                                            <button type="button" class="submit-question-btn" data-question="1" data-verses="3-5">Submit Answer</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -264,8 +266,10 @@
                                     </div>
                                     <div class="quiz-feedback hidden"></div>
                                     <div class="quiz-controls">
-                                        <button type="button" class="prev-question-btn" data-prev="1">Previous</button>
-                                        <button type="button" class="submit-question-btn" data-question="2" data-verses="14-18">Submit Answer</button>
+                                        <div class="quiz-buttons-center">
+                                            <button type="button" class="prev-question-btn" data-prev="1">Previous</button>
+                                            <button type="button" class="submit-question-btn" data-question="2" data-verses="14-18">Submit Answer</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -295,8 +299,10 @@
                                     </div>
                                     <div class="quiz-feedback hidden"></div>
                                     <div class="quiz-controls">
-                                        <button type="button" class="prev-question-btn" data-prev="2">Previous</button>
-                                        <button type="button" class="submit-question-btn" data-question="3" data-verses="26-27">Submit Answer</button>
+                                        <div class="quiz-buttons-center">
+                                            <button type="button" class="prev-question-btn" data-prev="2">Previous</button>
+                                            <button type="button" class="submit-question-btn" data-question="3" data-verses="26-27">Submit Answer</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -305,8 +311,10 @@
                                 <h3>Your Results</h3>
                                 <p id="quiz-score"></p>
                                 <div id="quiz-feedback"></div>
-                                <button id="retry-quiz-btn">Try Again</button>
-                                <button id="complete-lesson-btn">Complete Lesson</button>
+                                <div class="quiz-result-buttons">
+                                    <button id="retry-quiz-btn">Try Again</button>
+                                    <button id="complete-lesson-btn">Complete Lesson</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -342,7 +350,7 @@
                     <p>Congratulations on completing Genesis 1. You've learned about God's creation of the world in seven days.</p>
                     <div class="completion-buttons">
                         <a href="/bible-lessons/genesis2" class="download-app-btn">Next Lesson: Genesis 2</a>
-                        <a href="/bible-lessons" class="btn btn-secondary">Back to Lessons</a>
+                        <a href="/bible-lessons" class="btn btn-secondary btn-aligned">Back to Lessons</a>
                     </div>
                 </div>
             </div>
@@ -424,6 +432,41 @@
     </div>
 </footer>
 
+<style>
+    .quiz-buttons-center {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .quiz-result-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .btn-aligned {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .next-question-btn {
+        background-color: #4a6da7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .next-question-btn:hover {
+        background-color: #3a5d97;
+    }
+</style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Navigation between sections
@@ -626,12 +669,12 @@
                 nextButton.addEventListener('click', function() {
                     showQuestion(parseInt(this.getAttribute('data-next')) - 1);
                 });
-                submitButton.parentNode.appendChild(nextButton);
+                submitButton.parentNode.querySelector('.quiz-buttons-center').appendChild(nextButton);
             } else {
                 // 如果是最后一个问题，添加查看结果按钮
                 nextButton.textContent = 'View Results';
                 nextButton.addEventListener('click', showResults);
-                submitButton.parentNode.appendChild(nextButton);
+                submitButton.parentNode.querySelector('.quiz-buttons-center').appendChild(nextButton);
             }
         }
 
