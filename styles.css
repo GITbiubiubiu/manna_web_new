@@ -197,23 +197,24 @@ nav ul li a.active {
   text-align: center;
 }
 
+/* 修改Study Now按钮样式，使其更大 */
 .study-now-btn {
   display: inline-block;
   background: linear-gradient(90deg, #ff6b6b, #ff8e53);
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* 增大字体大小 */
   font-weight: bold;
-  padding: 12px 36px;
+  padding: 15px 45px; /* 增大内边距 */
   border-radius: 30px;
-  margin-top: 20px;
+  margin-top: 25px; /* 增大上边距 */
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4); /* 增强阴影 */
   transition: all 0.3s ease;
 }
 
 .study-now-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+  transform: translateY(-5px); /* 增大悬停时的上移距离 */
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5); /* 增强悬停时的阴影 */
 }
 
 .benefits {
@@ -1499,22 +1500,26 @@ footer {
   transform: translateY(-1px);
 }
 
+/* 修改subcard内容垂直居中 */
 .subcard-content {
   display: flex;
   flex-direction: column;
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
   height: 100%;
+  text-align: center;
 }
 
 .subcard-content h4 {
-  font-size: 0.95rem;
   margin: 0 0 5px;
   color: #333;
+  font-size: 0.95rem;
 }
 
-.subcard-content p {
-  font-size: 0.8rem;
-  color: #666;
-  margin: 0;
+.lock-icon {
+  position: static; /* 改为静态定位，不再绝对定位 */
+  margin-top: 5px; /* 添加上边距 */
+  font-size: 14px;
 }
 
 .subcard.premium {
@@ -1528,13 +1533,6 @@ footer {
 .subcard.locked {
   opacity: 0.7;
   cursor: not-allowed;
-}
-
-.lock-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
 }
 
 .path-connector {
@@ -2059,3 +2057,5 @@ footer {
   height: 20px;
   margin: -10px auto 10px;
 }
+
+/* 在文件末尾添加以下样式，使final thought和prayer卡片内容垂直居中 */
