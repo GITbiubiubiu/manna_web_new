@@ -6,6 +6,7 @@
     <title>Genesis 1: Seven Days of Creation - Manna</title>
     <meta name="description" content="Study Genesis 1 with Manna's interactive Bible lessons. Learn about the seven days of creation in a structured, engaging format.">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/lesson-content.css">
     <link rel="icon" href="../public/images/icon.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DF5ZGFNKTB"></script>
@@ -186,7 +187,7 @@
                 </div>
                 <div class="lesson-navigation-buttons">
                     <button class="prev-section-btn" data-prev="section3">Previous</button>
-                    <button class="next-section-btn" data-next="quiz">Take Quiz</button>
+                    <button class="next-section-btn" data-next="quiz">Test My Mastery</button>
                 </div>
             </div>
 
@@ -194,7 +195,7 @@
             <div class="lesson-section hidden" id="quiz">
                 <div class="lesson-card quiz-card">
                     <div class="lesson-card-header">
-                        <h2>Test Your Knowledge</h2>
+                        <h2>Level Up Test</h2>
                         <div class="lesson-reference" data-verses="1-31">Genesis 1</div>
                     </div>
                     <div class="lesson-card-body">
@@ -320,6 +321,28 @@
                 <div class="completion-card">
                     <div class="completion-icon">✓</div>
                     <h2>Lesson Complete!</h2>
+                    <div class="app-promotion">
+                        <h3>想要更好的学习体验？</h3>
+                        <div class="app-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📊</div>
+                                <div class="benefit-text">自动记录学习进度</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🔥</div>
+                                <div class="benefit-text">连胜奖励激励学习</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎧</div>
+                                <div class="benefit-text">丰富的音频内容</div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">❓</div>
+                                <div class="benefit-text">圣经问题实时解答</div>
+                            </div>
+                        </div>
+                        <a href="/#download" class="download-app-btn">下载 Manna App</a>
+                    </div>
                     <p>Congratulations on completing Genesis 1. You've learned about God's creation of the world in seven days.</p>
                     <div class="completion-buttons">
                         <a href="/bible-lessons/genesis2" class="btn btn-primary">Next Lesson: Genesis 2</a>
@@ -332,7 +355,7 @@
         <!-- Right Side: Bible Text -->
         <div class="bible-text">
             <div class="bible-header">
-                <h2>Genesis 1 (KJV)</h2>
+                <h2>Genesis 1</h2>
                 <div class="bible-controls">
                     <button id="increase-font">A+</button>
                     <button id="decrease-font">A-</button>
@@ -586,6 +609,7 @@
                 input.disabled = true;
             });
             submitButton.disabled = true;
+            submitButton.style.display = 'none'; // 隐藏提交按钮
 
             // 显示反馈
             if (selectedOption.value === answers[`q${questionNumber}`]) {
@@ -665,6 +689,7 @@
 
             document.querySelectorAll('.submit-question-btn').forEach(button => {
                 button.disabled = false;
+                button.style.display = '';
             });
 
             document.querySelectorAll('.next-question-btn').forEach(button => {
@@ -706,6 +731,8 @@
         function initQuiz() {
             showQuestion(0);
             toggleBibleText(false);
+            // 隐藏 Previous 按钮
+            document.querySelector('.lesson-navigation-buttons .prev-section-btn').style.display = 'none';
         }
 
         // 当进入测验部分时初始化
