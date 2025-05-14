@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis 6 - Manna Bible Study</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/lesson-content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../public/images/icon.png" alt="Manna Logo">
+                <h1>Manna</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../bible-lessons.html">Lessons</a></li>
+                    <li><a href="../prayers.html">Prayers</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <h1>Genesis 6</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="lessonProgress"></div>
+            </div>
+            <div class="progress-text">
+                <span id="progressText">0% Complete</span>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="lesson-section" id="section1">
+            <div class="lesson-card">
+                <div class="lesson-card-header">
+                    <h2>The Wickedness of Humanity</h2>
+                    <span class="bible-reference">Genesis 6:1-5</span>
+                </div>
+                <div class="key-verse">
+                    <p><strong>Key Verse:</strong> Genesis 6:5</p>
+                </div>
+                <div class="key-points">
+                    <h3>Key Points:</h3>
+                    <ul>
+                        <li>Humanity becomes increasingly corrupt and violent</li>
+                        <li>God observes the widespread evil in human hearts</li>
+                        <li>God decides to limit human lifespan to 120 years</li>
+                    </ul>
+                </div>
+                <div class="lesson-navigation">
+                    <button class="read-more-btn" onclick="toggleDetail(1)">Read More</button>
+                    <button class="next-section-btn" onclick="nextSection(1)">Next Section</button>
+                </div>
+            </div>
+            <div class="lesson-detail" id="detail1">
+                <p>The first section describes a time when humanity had become deeply corrupt. People were doing terrible things, and their thoughts were constantly focused on evil. God saw how bad things had gotten and decided that humans would no longer live as long as they had been. This shows that God cares about justice and will not ignore wrongdoing forever. The situation had gotten so bad that God needed to take action.</p>
+                <button class="close-detail-btn" onclick="toggleDetail(1)">Close</button>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="lesson-section" id="section2">
+            <div class="lesson-card">
+                <div class="lesson-card-header">
+                    <h2>Noah Finds Favor with God</h2>
+                    <span class="bible-reference">Genesis 6:6-10</span>
+                </div>
+                <div class="key-verse">
+                    <p><strong>Key Verse:</strong> Genesis 6:8</p>
+                </div>
+                <div class="key-points">
+                    <h3>Key Points:</h3>
+                    <ul>
+                        <li>God is grieved by human wickedness and regrets creating them</li>
+                        <li>Noah stands out as a righteous and blameless man</li>
+                        <li>God chooses Noah to preserve life through the coming judgment</li>
+                    </ul>
+                </div>
+                <div class="lesson-navigation">
+                    <button class="read-more-btn" onclick="toggleDetail(2)">Read More</button>
+                    <button class="next-section-btn" onclick="nextSection(2)">Next Section</button>
+                </div>
+            </div>
+            <div class="lesson-detail" id="detail2">
+                <p>In the next part, we see that God was deeply saddened by the evil in the world. He regretted making humans because of their wickedness. However, there was one man named Noah who was different. He lived in a way that pleased God, avoiding the corruption around him. Because of Noah's faithfulness, God chose him for a special mission. This teaches us that even in dark times, individuals can make a difference by living rightly.</p>
+                <button class="close-detail-btn" onclick="toggleDetail(2)">Close</button>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="lesson-section" id="section3">
+            <div class="lesson-card">
+                <div class="lesson-card-header">
+                    <h2>God's Plan to Destroy the Earth</h2>
+                    <span class="bible-reference">Genesis 6:11-22</span>
+                </div>
+                <div class="key-verse">
+                    <p><strong>Key Verse:</strong> Genesis 6:13</p>
+                </div>
+                <div class="key-points">
+                    <h3>Key Points:</h3>
+                    <ul>
+                        <li>God announces His decision to destroy all living creatures</li>
+                        <li>Noah is instructed to build an ark to save his family and animals</li>
+                        <li>God establishes a covenant with Noah for future preservation</li>
+                    </ul>
+                </div>
+                <div class="lesson-navigation">
+                    <button class="read-more-btn" onclick="toggleDetail(3)">Read More</button>
+                    <button class="take-quiz-btn" onclick="showQuiz()">Take Quiz</button>
+                </div>
+            </div>
+            <div class="lesson-detail" id="detail3">
+                <p>The final section explains God's plan to cleanse the earth with a great flood. He told Noah exactly how to build a huge boat to save his family and pairs of every animal. Noah obeyed God's instructions without question, showing great trust. This story highlights that God provides a way of salvation for those who follow Him, even when judgment is coming. It also shows that obedience to God brings protection and hope.</p>
+                <button class="close-detail-btn" onclick="toggleDetail(3)">Close</button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section" id="quizSection">
+            <div class="quiz-card">
+                <h2>Test Your Understanding</h2>
+                <div class="quiz-question" id="question1">
+                    <p><strong>1. What did God observe about humanity's thoughts?</strong></p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="A"> A. They were constantly good
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="B"> B. They were focused on evil
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="C"> C. They were indifferent
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="D"> D. They were changing daily
+                        </label>
+                    </div>
+                    <div class="hint-container">
+                        <button class="hint-btn" onclick="showHint(1)">Need a Hint?</button>
+                        <p class="hint" id="hint1">Genesis 6:5</p>
+                    </div>
+                </div>
+
+                <div class="quiz-question" id="question2">
+                    <p><strong>2. Why was Noah chosen by God?</strong></p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="A"> A. He was the strongest man
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="B"> B. He was righteous and blameless
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="C"> C. He was the oldest living
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="D"> D. He was the wealthiest
+                        </label>
+                    </div>
+                    <div class="hint-container">
+                        <button class="hint-btn" onclick="showHint(2)">Need a Hint?</button>
+                        <p class="hint" id="hint2">Genesis 6:8-9</p>
+                    </div>
+                </div>
+
+                <div class="quiz-question" id="question3">
+                    <p><strong>3. What was Noah instructed to build?</strong></p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="A"> A. A temple
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="B"> B. A city wall
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="C"> C. An ark
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="D"> D. A tower
+                        </label>
+                    </div>
+                    <div class="hint-container">
+                        <button class="hint-btn" onclick="showHint(3)">Need a Hint?</button>
+                        <p class="hint" id="hint3">Genesis 6:14</p>
+                    </div>
+                </div>
+
+                <button class="submit-quiz-btn" onclick="submitQuiz()">Submit Answers</button>
+            </div>
+            <div class="quiz-results" id="quizResults">
+                <h2>Quiz Results</h2>
+                <p id="quizScore"></p>
+                <div id="quizFeedback"></div>
+                <button class="complete-lesson-btn" onclick="completeLesson()">Complete Lesson</button>
+            </div>
+        </section>
+
+        <!-- Completion Section -->
+        <section class="completion-section" id="completionSection">
+            <div class="completion-card">
+                <div class="completion-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Lesson Completed!</h2>
+                </div>
+                <div class="completion-content">
+                    <p>You've completed the Genesis 6 lesson. Great job!</p>
+                    <div class="completion-stats">
+                        <div class="stat">
+                            <i class="fas fa-book"></i>
+                            <p>3 Sections Studied</p>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-question-circle"></i>
+                            <p>3 Questions Answered</p>
+                        </div>
+                        <div class="stat" id="streakStat">
+                            <i class="fas fa-fire"></i>
+                            <p>1 Day Streak</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="completion-actions">
+                    <a href="../bible-lessons.html" class="back-to-lessons-btn">Back to Lessons</a>
+                    <a href="genesis7.html" class="next-lesson-btn">Next Lesson</a>
+                </div>
+                <div class="final-thought-card">
+                    <div class="final-thought-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="final-thought-content">
+                        <h3>Final Thought</h3>
+                        <p>Noah's story reminds us that even when surrounded by evil, we can choose to live righteously. God notices those who remain faithful and provides a way through judgment.</p>
+                    </div>
+                </div>
+                <div class="prayer-card">
+                    <div class="prayer-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <div class="prayer-content">
+                        <h3>Prayer</h3>
+                        <p>Lord, help me to stand firm in my faith even when those around me choose wrong paths. Give me the courage to obey You completely, even when Your instructions seem difficult. Thank You for providing salvation through Jesus, our ark of safety. Amen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../public/images/icon.png" alt="Manna Logo">
+                    <h2>Manna</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../bible-lessons.html">Lessons</a></li>
+                        <li><a href="../prayers.html">Prayers</a></li>
+                        <li><a href="../resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@mannabible.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Manna Bible Study. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Track progress
+        let sectionsCompleted = 0;
+        const totalSections = 3;
+        
+        function updateProgress() {
+            const progressPercentage = Math.round((sectionsCompleted / totalSections) * 100);
+            document.getElementById('lessonProgress').style.width = progressPercentage + '%';
+            document.getElementById('progressText').textContent = progressPercentage + '% Complete';
+        }
+        
+        function nextSection(sectionNum) {
+            // Mark current section as completed if not already
+            if (sectionNum > sectionsCompleted) {
+                sectionsCompleted = sectionNum;
+                updateProgress();
+            }
+            
+            // Scroll to next section
+            const nextSectionId = 'section' + (sectionNum + 1);
+            const nextSection = document.getElementById(nextSectionId);
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            } else if (sectionNum === totalSections) {
+                // If this was the last section, show the quiz
+                showQuiz();
+            }
+        }
+        
+        function toggleDetail(detailNum) {
+            const detailElement = document.getElementById('detail' + detailNum);
+            if (detailElement.style.display === 'block') {
+                detailElement.style.display = 'none';
+            } else {
+                detailElement.style.display = 'block';
+                // Mark section as read when detail is opened
+                if (detailNum > sectionsCompleted) {
+                    sectionsCompleted = detailNum;
+                    updateProgress();
+                }
+            }
+        }
+        
+        function showHint(questionNum) {
+            const hintElement = document.getElementById('hint' + questionNum);
+            hintElement.style.display = 'block';
+        }
+        
+        function showQuiz() {
+            document.getElementById('quizSection').style.display = 'block';
+            document.getElementById('quizSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function submitQuiz() {
+            // Get selected answers
+            const q1Answer = document.querySelector('input[name="q1"]:checked')?.value;
+            const q2Answer = document.querySelector('input[name="q2"]:checked')?.value;
+            const q3Answer = document.querySelector('input[name="q3"]:checked')?.value;
+            
+            // Check if all questions are answered
+            if (!q1Answer || !q2Answer || !q3Answer) {
+                alert('Please answer all questions before submitting.');
+                return;
+            }
+            
+            // Check answers
+            const correctAnswers = {
+                q1: 'B',
+                q2: 'B',
+                q3: 'C'
+            };
+            
+            let score = 0;
+            let feedback = '';
+            
+            if (q1Answer === correctAnswers.q1) score++;
+            else feedback += '<p>Question 1: Incorrect. The correct answer is B. They were focused on evil.</p>';
+            
+            if (q2Answer === correctAnswers.q2) score++;
+            else feedback += '<p>Question 2: Incorrect. The correct answer is B. He was righteous and blameless.</p>';
+            
+            if (q3Answer === correctAnswers.q3) score++;
+            else feedback += '<p>Question 3: Incorrect. The correct answer is C. An ark.</p>';
+            
+            // Display results
+            document.getElementById('quizScore').textContent = `You scored ${score} out of 3`;
+            document.getElementById('quizFeedback').innerHTML = feedback;
+            document.getElementById('quizResults').style.display = 'block';
+            
+            // Mark all sections as completed
+            sectionsCompleted = totalSections;
+            updateProgress();
+        }
+        
+        function completeLesson() {
+            document.getElementById('completionSection').style.display = 'block';
+            document.getElementById('completionSection').scrollIntoView({ behavior: 'smooth' });
+            
+            // Update streak (in a real app, this would be stored in a database)
+            const streak = localStorage.getItem('bibleStudyStreak') ? parseInt(localStorage.getItem('bibleStudyStreak')) : 0;
+            const lastStudyDate = localStorage.getItem('lastStudyDate');
+            const today = new Date().toDateString();
+            
+            if (lastStudyDate !== today) {
+                const newStreak = streak + 1;
+                localStorage.setItem('bibleStudyStreak', newStreak);
+                localStorage.setItem('lastStudyDate', today);
+                document.getElementById('streakStat').innerHTML = `<i class="fas fa-fire"></i><p>${newStreak} Day Streak</p>`;
+            }
+        }
+        
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>
