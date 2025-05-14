@@ -463,11 +463,21 @@
     font-size: 0.9rem;
 }
 
+/* 确保测验提示默认隐藏 */
+.quiz-hint.hidden {
+    display: none;
+}
+
 #quiz-results {
     margin-top: 30px;
     padding: 20px;
     background-color: #f5f7fa;
     border-radius: 10px;
+}
+
+/* 确保测验结果默认隐藏 */
+#quiz-results.hidden {
+    display: none;
 }
 
 #quiz-results h3 {
