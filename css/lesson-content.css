@@ -206,6 +206,15 @@
     background-color: #45a049;
 }
 
+/* 添加新的 app-promotion-text 样式 */
+.app-promotion-text {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 @media (max-width: 768px) {
     .benefit-item {
         width: 100%;
