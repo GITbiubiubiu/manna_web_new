@@ -1,688 +1,1562 @@
-/* 测验进度条样式 */
-.quiz-progress {
-margin-top: 20px;
-margin-bottom: 20px;
-}
-
-.quiz-progress-text {
-display: block;
-margin-bottom: 5px;
-font-weight: 500;
-}
-
-.quiz-progress-bar {
-height: 8px;
-background-color: #e0e0e0;
-border-radius: 4px;
-overflow: hidden;
-}
-
-.quiz-progress-fill {
-height: 100%;
-background-color: #6b46c1;
-border-radius: 4px;
-transition: width 0.3s ease;
-}
-
-/* 测验反馈样式 */
-.quiz-feedback {
-margin: 15px 0;
-padding: 10px;
-border-radius: 4px;
-}
-
-.correct {
-color: #22c55e;
-}
-
-.incorrect {
-color: #ef4444;
-}
-
-/* 测验控制按钮样式 */
-.quiz-controls {
-display: flex;
-justify-content: space-between;
-margin-top: 20px;
-}
-
-.quiz-controls button {
-padding: 8px 16px;
-border: none;
-border-radius: 4px;
-background-color: #6b46c1;
-color: white;
-cursor: pointer;
-transition: background-color 0.2s;
-}
-
-.quiz-controls button:hover {
-background-color: #5a32a3;
-}
-
-.quiz-controls button:disabled {
-background-color: #d1d5db;
-cursor: not-allowed;
-}
-
-.prev-question-btn {
-background-color: #4b5563 !important;
-}
-
-.next-question-btn {
-background-color: #22c55e !important;
-}
-
-.next-question-btn:hover {
-background-color: #16a34a !important;
-}
-
-/* Genesis课程页面自定义样式 */
-.lesson-content-section {
-padding-top: 20px; /* 减少顶部间距，使内容整体上移 */
-}
-
-.lesson-card-header h2 {
-color: white !important; /* 确保所有标题为白色 */
-}
-
-/* 美化Key Points列表样式 */
-.key-points ul {
-padding-left: 0; /* 移除默认的左边距 */
-list-style-type: none; /* 移除默认的列表标记 */
-}
-
-.key-points li {
-position: relative;
-padding-left: 28px; /* 为自定义图标留出空间 */
-margin-bottom: 12px; /* 增加列表项之间的间距 */
-line-height: 1.5;
-}
-
-.key-points li:before {
-content: "•"; /* 使用圆点作为列表标记 */
-position: absolute;
-left: 8px;
-color: #9b59b6; /* 使用紫色，与标题颜色协调 */
-font-size: 18px; /* 增大标记大小 */
-font-weight: bold;
-}
-
-.key-points h3 {
-color: #9b59b6; /* 与列表标记颜色一致 */
-font-size: 1.2rem;
-margin-bottom: 15px; /* 增加标题与列表之间的间距 */
-border-bottom: 1px solid #f0f0f0; /* 添加下划线 */
-padding-bottom: 8px;
-}
-
-/* App推广模块样式 */
-.app-promotion {
-background-color: #f8f9fa;
-border-radius: 10px;
-padding: 20px;
-margin: 20px 0;
-text-align: center;
-}
-
-.app-promotion h3 {
-color: #333;
-margin-bottom: 15px;
-font-size: 1.4rem;
-}
-
-/* 新的特性列表样式 */
-.app-features-list {
-list-style-type: none;
-padding: 0;
-margin: 0 0 20px 0;
-text-align: left;
-}
-
-.app-features-list li {
-position: relative;
-padding: 10px 10px 10px 35px;
-margin-bottom: 10px;
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.app-features-list li:before {
-content: "✓";
-position: absolute;
-left: 12px;
-color: #4caf50;
-font-weight: bold;
-}
-
-/* 下载选项样式 */
-.download-options {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 20px 0;
-}
-
-.qr-code {
-margin-bottom: 15px;
-}
-
-.qr-code img {
-width: 150px;
-height: 150px;
-border-radius: 8px;
-}
-
-.app-store-links {
-display: flex;
-justify-content: center;
-}
-
-.app-store-link img {
-height: 40px;
-transition: transform 0.2s;
-}
-
-.app-store-link img:hover {
-transform: scale(1.05);
-}
-
-.download-app-btn {
-display: inline-block;
-background-color: #4caf50;
-color: white;
-padding: 12px 24px;
-border-radius: 25px;
-text-decoration: none;
-font-weight: bold;
-transition: background-color 0.3s;
-margin: 5px;
-}
-
-.download-app-btn:hover {
-background-color: #45a049;
-}
-
-@media (max-width: 768px) {
-.benefit-item {
-width: 100%;
-}
-}
-
-/* Lesson Navigation */
-.lesson-navigation {
-background-color: #f5f7fa;
-padding: 20px 0;
-border-bottom: 1px solid #e0e0e0;
-}
-
-.lesson-breadcrumb {
-font-size: 0.9rem;
-color: #666;
-margin-bottom: 10px;
-}
-
-.lesson-breadcrumb a {
-color: #0078d7;
-text-decoration: none;
-}
-
-.lesson-breadcrumb a:hover {
-text-decoration: underline;
-}
-
-.lesson-title h1 {
-margin: 0;
-font-size: 2rem;
-color: #333;
-text-align: left;
-}
-
-/* Lesson Content Layout */
-.lesson-content-section {
-padding: 40px 0;
-background-color: #f9f9f9;
-min-height: calc(100vh - 300px);
-}
-
-.lesson-container {
-display: flex;
-gap: 30px;
-max-width: 1400px;
-}
-
-.lesson-content {
-flex: 1;
-max-width: 800px;
-}
-
-.bible-text {
-flex: 0.6;
-background-color: white;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-height: fit-content;
-position: sticky;
-top: 100px;
-max-height: calc(100vh - 120px);
-overflow-y: auto;
-}
-
-/* Progress Bar */
-.lesson-progress {
-margin-bottom: 20px;
-}
-
-.progress-bar {
-height: 8px;
-background-color: #e0e0e0;
-border-radius: 4px;
-overflow: hidden;
-}
-
-.progress-fill {
-height: 100%;
-background: linear-gradient(90deg, #4fc3f7, #2196f3);
-transition: width 0.3s ease;
-}
-
-.progress-text {
-font-size: 0.9rem;
-color: #666;
-margin-top: 5px;
-text-align: right;
-}
-
-/* Lesson Cards */
-.lesson-section {
-margin-bottom: 30px;
-transition: opacity 0.3s ease;
-}
-
-.lesson-section.hidden {
-display: none;
-}
-
-.lesson-card-header {
-padding: 20px;
-background: linear-gradient(135deg, #8e44ad, #9b59b6);
-color: white;
-}
-
-.lesson-card-header h2 {
-margin: 0;
-font-size: 1.5rem;
-text-align: left;
-}
-
-.lesson-reference {
-font-size: 0.9rem;
-margin-top: 5px;
-opacity: 0.9;
-cursor: pointer;
-}
-
-.lesson-reference:hover {
-text-decoration: underline;
-}
-
-.lesson-card-body {
-padding: 20px;
-}
-
-.key-verse {
-margin-bottom: 20px;
-}
-
-.key-verse blockquote {
-font-style: italic;
-border-left: 3px solid #9b59b6;
-padding-left: 15px;
-margin-left: 0;
-color: #555;
-}
-
-.key-verse cite {
-display: block;
-text-align: right;
-font-size: 0.9rem;
-margin-top: 5px;
-color: #777;
-}
-
-.lesson-detail {
-background-color: #f5f7fa;
-padding: 20px;
-border-radius: 10px;
-margin-bottom: 20px;
-}
-
-.lesson-detail p {
-line-height: 1.7;
-color: #444;
-}
-
-/* Navigation Buttons */
-.lesson-navigation-buttons {
-display: flex;
-justify-content: space-between;
-margin-top: 20px;
-width: 100%;
-}
-
-/* 确保Previous按钮左对齐 */
-.prev-section-btn {
-margin-right: auto;
-background-color: #e0e0e0;
-color: #333;
-padding: 10px 20px;
-border-radius: 5px;
-border: none;
-cursor: pointer;
-font-weight: 500;
-transition: all 0.2s ease;
-}
-
-.prev-section-btn:hover {
-background-color: #d0d0d0;
-}
-
-/* 确保Continue按钮右对齐 */
-.next-section-btn {
-margin-left: auto;
-background-color: #2196f3;
-color: white;
-padding: 10px 20px;
-border-radius: 5px;
-border: none;
-cursor: pointer;
-font-weight: 500;
-transition: all 0.2s ease;
-}
-
-.next-section-btn:hover {
-background-color: #0d8aee;
-}
-
-/* Bible Text Styles */
-.bible-header {
-padding: 15px 20px;
-border-bottom: 1px solid #e0e0e0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.bible-header h2 {
-margin: 0;
-font-size: 1.3rem;
-color: #333;
-}
-
-.bible-controls button {
-background-color: #f0f0f0;
-border: none;
-border-radius: 4px;
-padding: 5px 10px;
-margin-left: 5px;
-cursor: pointer;
-transition: background-color 0.2s ease;
-}
-
-.bible-controls button:hover {
-background-color: #e0e0e0;
-}
-
-.bible-content {
-padding: 20px;
-line-height: 1.8;
-font-size: 16px;
-}
-
-.bible-content p {
-margin-bottom: 15px;
-}
-
-.bible-content sup {
-color: #9b59b6;
-font-weight: 500;
-margin-right: 3px;
-}
-
-.bible-content p.highlighted {
-background-color: #fff3cd;
-padding: 5px;
-border-radius: 3px;
-}
-
-/* Quiz Styles */
-.quiz-card .lesson-card-header {
-background: linear-gradient(135deg, #2980b9, #3498db);
-}
-
-.quiz-question {
-margin-bottom: 30px;
-}
-
-.quiz-question h3 {
-font-size: 1.2rem;
-margin-bottom: 15px;
-color: #333;
-}
-
-.quiz-options {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-
-.quiz-option {
-display: flex;
-align-items: center;
-}
-
-.quiz-option input[type="radio"] {
-margin-right: 10px;
-}
-
-.quiz-hint {
-margin-top: 10px;
-padding: 10px;
-background-color: #e8f4fd;
-border-radius: 5px;
-font-size: 0.9rem;
-}
-
-/* 确保测验提示默认隐藏 */
-.quiz-hint.hidden {
-display: none;
-}
-
-#quiz-results {
-margin-top: 30px;
-padding: 20px;
-background-color: #f5f7fa;
-border-radius: 10px;
-}
-
-/* 确保测验结果默认隐藏 */
-#quiz-results.hidden {
-display: none;
-}
-
-#quiz-results h3 {
-margin-top: 0;
-margin-bottom: 15px;
-font-size: 1.3rem;
-}
-
-#quiz-score {
-font-size: 1.1rem;
-font-weight: 500;
-margin-bottom: 15px;
-}
-
-#quiz-feedback p {
-margin-bottom: 10px;
-padding: 8px;
-border-radius: 5px;
-}
-
-#quiz-feedback p.correct {
-background-color: #e8f5e9;
-color: #2e7d32;
-}
-
-#quiz-feedback p.incorrect {
-background-color: #ffebee;
-color: #c62828;
-}
-
-#quiz-feedback p.unanswered {
-background-color: #fff8e1;
-color: #f57f17;
-}
-
-#retry-quiz-btn,
-#complete-lesson-btn {
-padding: 10px 20px;
-border-radius: 5px;
-border: none;
-cursor: pointer;
-font-weight: 500;
-margin-right: 10px;
-transition: all 0.2s ease;
-}
-
-#retry-quiz-btn {
-background-color: #f0f0f0;
-color: #333;
-}
-
-#retry-quiz-btn:hover {
-background-color: #e0e0e0;
-}
-
-#complete-lesson-btn {
-background-color: #4caf50;
-color: white;
-}
-
-#complete-lesson-btn:hover {
-background-color: #43a047;
-}
-
-/* Completion Message */
-.lesson-completion {
-text-align: center;
-padding: 40px 0;
-}
-
-/* 确保 Lesson Completion 模块默认隐藏 */
-.lesson-completion.hidden {
-display: none;
-}
-
-.completion-card {
-background-color: white;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-padding: 40px;
-max-width: 600px;
-margin: 0 auto;
-}
-
-.completion-icon {
-font-size: 3rem;
-color: white;
-background-color: #4caf50;
-width: 80px;
-height: 80px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 0 auto 20px;
-}
-
-.completion-card h2 {
-margin-bottom: 15px;
-}
-
-.completion-card p {
-margin-bottom: 30px;
-color: #555;
-}
-
-.completion-buttons {
-display: flex;
-justify-content: center;
-gap: 15px;
-margin-top: 20px;
-}
-
-/* 确保测试题一次只显示一道 */
-.quiz-question.hidden {
-display: none;
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-.lesson-container {
-flex-direction: column;
-}
-
-.bible-text {
-position: static;
-max-height: none;
-margin-top: 30px;
-}
-}
-
-@media (max-width: 768px) {
-.lesson-title h1 {
-font-size: 1.8rem;
-}
-
-.lesson-card-header h2 {
-font-size: 1.3rem;
-}
-
-.quiz-controls {
-flex-direction: column;
-gap: 10px;
-}
-
-.completion-buttons {
-flex-direction: column;
-gap: 10px;
-}
-
-.download-options {
-flex-direction: column;
-}
-
-.qr-code {
-margin-bottom: 15px;
-}
-}
-
-@media (max-width: 480px) {
-.lesson-navigation-buttons {
-flex-direction: column;
-gap: 10px;
-}
-
-.prev-section-btn {
-order: 2;
-}
-
-.next-section-btn {
-order: 1;
-}
-
-.completion-card {
-padding: 20px;
-}
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Lessons - Manna</title>
+  <meta name="description" content="Interactive Bible lessons from Manna. Study the Bible in a fun, engaging way with our step-by-step lessons.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="public/images/icon.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DF5ZGFNKTB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DF5ZGFNKTB');
+  </script>
+</head>
+
+<body>
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">
+          <img src="public/images/icon.png" alt="Manna Icon">
+          <span>Manna</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><a href="/prayers">Prayers</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/#download">Download</a></li>
+        </ul>
+      </nav>
+      <div class="social-header">
+        <a href="https://discord.gg/NbQVtWeNMa"><img src="public/images/discard.png" alt="Discord"></a>
+        <a href="https://www.instagram.com/the_manna_app"><img src="public/images/ins.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@manna.app"><img src="public/images/tt.png" alt="TikTok"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Bible Lessons Section -->
+<section class="bible-lessons-section">
+  <div class="bible-container">
+    <!-- Bible Books Sidebar -->
+    <div class="bible-sidebar">
+      <div class="sidebar-header">
+        <h3>Bible Books</h3>
+        <button class="mobile-toggle" id="sidebarToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="testament-section">
+          <h4>Old Testament</h4>
+          <ul class="book-list">
+            <li><a href="#" class="active" data-book="Genesis">Genesis</a></li>
+            <li><a href="#" data-book="Exodus">Exodus</a></li>
+            <li><a href="#" data-book="Leviticus">Leviticus</a></li>
+            <li><a href="#" data-book="Numbers">Numbers</a></li>
+            <li><a href="#" data-book="Deuteronomy">Deuteronomy</a></li>
+            <li><a href="#" data-book="Joshua">Joshua</a></li>
+            <li><a href="#" data-book="Judges">Judges</a></li>
+            <li><a href="#" data-book="Ruth">Ruth</a></li>
+            <li><a href="#" data-book="1 Samuel">1 Samuel</a></li>
+            <li><a href="#" data-book="2 Samuel">2 Samuel</a></li>
+            <li><a href="#" data-book="1 Kings">1 Kings</a></li>
+            <li><a href="#" data-book="2 Kings">2 Kings</a></li>
+            <li><a href="#" data-book="1 Chronicles">1 Chronicles</a></li>
+            <li><a href="#" data-book="2 Chronicles">2 Chronicles</a></li>
+            <li><a href="#" data-book="Ezra">Ezra</a></li>
+            <li><a href="#" data-book="Nehemiah">Nehemiah</a></li>
+            <li><a href="#" data-book="Esther">Esther</a></li>
+            <li><a href="#" data-book="Job">Job</a></li>
+            <li><a href="#" data-book="Psalms">Psalms</a></li>
+            <li><a href="#" data-book="Proverbs">Proverbs</a></li>
+            <li><a href="#" data-book="Ecclesiastes">Ecclesiastes</a></li>
+            <li><a href="#" data-book="Song of Solomon">Song of Solomon</a></li>
+            <li><a href="#" data-book="Isaiah">Isaiah</a></li>
+            <li><a href="#" data-book="Jeremiah">Jeremiah</a></li>
+            <li><a href="#" data-book="Lamentations">Lamentations</a></li>
+            <li><a href="#" data-book="Ezekiel">Ezekiel</a></li>
+            <li><a href="#" data-book="Daniel">Daniel</a></li>
+            <li><a href="#" data-book="Hosea">Hosea</a></li>
+            <li><a href="#" data-book="Joel">Joel</a></li>
+            <li><a href="#" data-book="Amos">Amos</a></li>
+            <li><a href="#" data-book="Obadiah">Obadiah</a></li>
+            <li><a href="#" data-book="Jonah">Jonah</a></li>
+            <li><a href="#" data-book="Micah">Micah</a></li>
+            <li><a href="#" data-book="Nahum">Nahum</a></li>
+            <li><a href="#" data-book="Habakkuk">Habakkuk</a></li>
+            <li><a href="#" data-book="Zephaniah">Zephaniah</a></li>
+            <li><a href="#" data-book="Haggai">Haggai</a></li>
+            <li><a href="#" data-book="Zechariah">Zechariah</a></li>
+            <li><a href="#" data-book="Malachi">Malachi</a></li>
+          </ul>
+        </div>
+
+        <div class="testament-section">
+          <h4>New Testament</h4>
+          <ul class="book-list">
+            <li><a href="#" data-book="Matthew">Matthew</a></li>
+            <li><a href="#" data-book="Mark">Mark</a></li>
+            <li><a href="#" data-book="Luke">Luke</a></li>
+            <li><a href="#" data-book="John">John</a></li>
+            <li><a href="#" data-book="Acts">Acts</a></li>
+            <li><a href="#" data-book="Romans">Romans</a></li>
+            <li><a href="#" data-book="1 Corinthians">1 Corinthians</a></li>
+            <li><a href="#" data-book="2 Corinthians">2 Corinthians</a></li>
+            <li><a href="#" data-book="Galatians">Galatians</a></li>
+            <li><a href="#" data-book="Ephesians">Ephesians</a></li>
+            <li><a href="#" data-book="Philippians">Philippians</a></li>
+            <li><a href="#" data-book="Colossians">Colossians</a></li>
+            <li><a href="#" data-book="1 Thessalonians">1 Thessalonians</a></li>
+            <li><a href="#" data-book="2 Thessalonians">2 Thessalonians</a></li>
+            <li><a href="#" data-book="1 Timothy">1 Timothy</a></li>
+            <li><a href="#" data-book="2 Timothy">2 Timothy</a></li>
+            <li><a href="#" data-book="Titus">Titus</a></li>
+            <li><a href="#" data-book="Philemon">Philemon</a></li>
+            <li><a href="#" data-book="Hebrews">Hebrews</a></li>
+            <li><a href="#" data-book="James">James</a></li>
+            <li><a href="#" data-book="1 Peter">1 Peter</a></li>
+            <li><a href="#" data-book="2 Peter">2 Peter</a></li>
+            <li><a href="#" data-book="1 John">1 John</a></li>
+            <li><a href="#" data-book="2 John">2 John</a></li>
+            <li><a href="#" data-book="3 John">3 John</a></li>
+            <li><a href="#" data-book="Jude">Jude</a></li>
+            <li><a href="#" data-book="Revelation">Revelation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="bible-main-content">
+
+      <!-- Genesis Content (Default View) -->
+      <div id="genesis-content" class="book-content active">
+        <div class="current-part genesis-bg">
+          <h2 class="series-title">Genesis: The Dawn of Creation</h2>
+        </div>
+
+        <div class="lesson-path">
+          <!-- Lesson 1 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course1_light.webp" alt="Creation Scene">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 1-2</h3>
+                <p>The Creation Story</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis1" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 1</h4>
+                  <p>Seven Days of Creation</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis2" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 2</h4>
+                  <p>Garden of Eden</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 2 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course2_light.webp" alt="Adam and Eve">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 3-4</h3>
+                <p>The Fall and First Murder</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis3" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 3</h4>
+                  <p>The Fall of Mankind</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis4" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 4</h4>
+                  <p>Cain and Abel</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 3 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course3_light.webp" alt="Building the Ark">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 5-6</h3>
+                <p>Genealogy and Noah's Ark</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis5" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 5</h4>
+                  <p>Adam's Descendants</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis6" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 6</h4>
+                  <p>Building the Ark</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 4 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course4_light.webp" alt="Noah's Ark">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 7-8</h3>
+                <p>The Great Flood</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis7" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 7</h4>
+                  <p>The Flood Begins</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis8" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 8</h4>
+                  <p>The Flood Recedes</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 5 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course5_light.webp" alt="Rainbow Covenant">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 9-10</h3>
+                <p>God's Covenant with Noah</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis9" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 9</h4>
+                  <p>Rainbow Promise</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis10" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 10</h4>
+                  <p>Nations Spread</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 6 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course6_light.webp" alt="Tower of Babel">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 11-12</h3>
+                <p>Tower of Babel and Abram</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis11" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 11</h4>
+                  <p>Tower of Babel</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis12" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 12</h4>
+                  <p>Call of Abram</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 7 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course7_light.webp" alt="Abram and Lot">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 13-14</h3>
+                <p>Abram and Lot Separate</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis13" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 13</h4>
+                  <p>Parting Ways</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis14" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 14</h4>
+                  <p>Rescuing Lot</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 8 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course8_light.webp" alt="God's Covenant with Abram">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 15-16</h3>
+                <p>God's Covenant and Hagar</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis15" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 15</h4>
+                  <p>Covenant Promise</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis16" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 16</h4>
+                  <p>Hagar and Ishmael</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 9 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course9_light.webp" alt="Abraham and Sarah">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 17-18</h3>
+                <p>Covenant of Circumcision</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis17" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 17</h4>
+                  <p>Name Change</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis18" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 18</h4>
+                  <p>Three Visitors</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 10 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course10_light.webp" alt="Sodom and Gomorrah">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 19-20</h3>
+                <p>Sodom and Gomorrah</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis19" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 19</h4>
+                  <p>City Destruction</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis20" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 20</h4>
+                  <p>Abraham and Abimelech</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 11 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course11_light.webp" alt="Isaac's Birth">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 21-22</h3>
+                <p>Isaac's Birth and Sacrifice</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis21" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 21</h4>
+                  <p>Isaac is Born</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis22" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 22</h4>
+                  <p>Abraham's Test</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 12 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course12_light.webp" alt="Sarah's Death">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 23-24</h3>
+                <p>Sarah's Death and Isaac's Wife</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis23" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 23</h4>
+                  <p>Sarah's Burial</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis24" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 24</h4>
+                  <p>Finding Rebekah</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 13 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course13_light.webp" alt="Abraham's Family">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 25-26</h3>
+                <p>Abraham's Death and Isaac's Life</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis25" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 25</h4>
+                  <p>Jacob and Esau</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis26" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 26</h4>
+                  <p>Isaac and Abimelech</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 14 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course14_light.webp" alt="Jacob's Deception">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 27-28</h3>
+                <p>Jacob's Deception and Dream</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis27" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 27</h4>
+                  <p>Stolen Blessing</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis28" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 28</h4>
+                  <p>Jacob's Ladder</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 15 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course15_light.webp" alt="Jacob and Rachel">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 29-30</h3>
+                <p>Jacob's Marriages and Children</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis29" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 29</h4>
+                  <p>Jacob's Wives</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis30" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 30</h4>
+                  <p>Jacob's Prosperity</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 16 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course16_light.webp" alt="Jacob Returns Home">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 31-32</h3>
+                <p>Jacob Flees and Wrestles</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis31" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 31</h4>
+                  <p>Fleeing from Laban</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis32" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 32</h4>
+                  <p>Wrestling with God</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 17 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course17_light.webp" alt="Jacob and Esau Reunite">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 33-34</h3>
+                <p>Reconciliation and Revenge</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis33" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 33</h4>
+                  <p>Brothers Reunite</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis34" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 34</h4>
+                  <p>Dinah and Shechem</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 18 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course18_light.webp" alt="Jacob Returns to Bethel">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 35-36</h3>
+                <p>Return to Bethel and Esau's Family</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis35" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 35</h4>
+                  <p>Jacob at Bethel</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis36" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 36</h4>
+                  <p>Esau's Descendants</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 19 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course19_light.webp" alt="Joseph's Dreams">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 37-38</h3>
+                <p>Joseph's Dreams and Judah</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis37" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 37</h4>
+                  <p>Joseph Sold</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis38" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 38</h4>
+                  <p>Judah and Tamar</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 20 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course20_light.webp" alt="Joseph in Egypt">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 39-40</h3>
+                <p>Joseph in Egypt and Prison</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis39" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 39</h4>
+                  <p>Potiphar's House</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis40" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 40</h4>
+                  <p>Prison Dreams</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 21 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course21_light.webp" alt="Joseph Interprets Dreams">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 41-42</h3>
+                <p>Pharaoh's Dreams and Brothers' Visit</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis41" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 41</h4>
+                  <p>Joseph's Rise</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis42" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 42</h4>
+                  <p>Brothers in Egypt</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 22 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course22_light.webp" alt="Joseph's Brothers Return">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 43-44</h3>
+                <p>Second Journey to Egypt</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis43" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 43</h4>
+                  <p>Return with Benjamin</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis44" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 44</h4>
+                  <p>Silver Cup Test</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 23 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course23_light.webp" alt="Joseph Reveals Himself">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 45-46</h3>
+                <p>Joseph Reveals Himself</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis45" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 45</h4>
+                  <p>The Revelation</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis46" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 46</h4>
+                  <p>Jacob to Egypt</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 24 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course24_light.webp" alt="Jacob in Egypt">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 47-48</h3>
+                <p>Jacob in Egypt and Blessings</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis47" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 47</h4>
+                  <p>Settling in Goshen</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis48" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 48</h4>
+                  <p>Blessing Ephraim and Manasseh</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="path-connector"></div>
+
+          <!-- Lesson 25 -->
+          <div class="lesson-card completed">
+            <div class="lesson-main-content">
+              <div class="lesson-image">
+                <img src="https://s3.bongmi.com/manna/course_img/light/series2_course25_light.webp" alt="Jacob's Death">
+              </div>
+              <div class="lesson-info">
+                <h3>Genesis 49-50</h3>
+                <p>Jacob's and Joseph's Deaths</p>
+              </div>
+            </div>
+            <div class="lesson-subcards">
+              <a href="/bible-lessons/genesis49" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 49</h4>
+                  <p>Jacob's Prophecies</p>
+                </div>
+              </a>
+              <a href="/bible-lessons/genesis50" class="subcard">
+                <div class="subcard-content">
+                  <h4>Genesis 50</h4>
+                  <p>Burial and Forgiveness</p>
+                </div>
+              </a>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Final Thought</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+              <div class="subcard premium">
+                <div class="subcard-content">
+                  <h4>Prayer</h4>
+                  <p>Unlock in app</p>
+                  <div class="lock-icon">🔒</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming Soon Template (For other books) -->
+      <div id="coming-soon-template" class="book-content">
+        <div class="current-part">
+          <h2 class="series-title book-title">Book Title: Book Subtitle</h2>
+        </div>
+
+        <div class="coming-soon-container">
+          <div class="coming-soon-content">
+            <h3>Coming Soon...</h3>
+            <p>We're working hard to bring you in-depth studies for this book of the Bible.</p>
+            <p>In the meantime, download our app for access to more Bible studies and resources.</p>
+
+            <div class="download-app-section">
+              <div class="qr-code">
+                <img src="public/images/qrcode.png" alt="QR Code to download Manna app">
+                <p>Scan to download</p>
+              </div>
+              <div class="app-store-links">
+                <a href="https://apps.apple.com/us/app/manna-daily-bible-study/id6450114007" class="app-store">
+                  <img src="public/images/download.png" alt="Download on App Store">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal for premium content -->
+<div id="premium-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Premium Content</h3>
+    <p>This content is available exclusively in the Manna app.</p>
+    <a href="/#download" class="download-app-btn">Download Now</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Links</h4>
+        <div class="social-links">
+          <a href="https://discord.gg/NbQVtWeNMa"><img src="public/images/discard.png" alt="Discord"></a>
+          <a href="https://www.instagram.com/the_manna_app"><img src="public/images/ins.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@manna.app"><img src="public/images/tt.png" alt="TikTok"></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><a href="mailto:support@themanna.app">support@themanna.app</a></p>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <div class="legal">
+          <a href="https://s.femometer.com/html_template/3027.html">Privacy Policy</a>
+          <a href="https://s.femometer.com/html_template/3028.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Baymed Limited. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Modal functionality
+    const modal = document.getElementById('premium-modal');
+    const premiumCards = document.querySelectorAll('.subcard.premium');
+    const closeModal = document.querySelector('.close-modal');
+
+    premiumCards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.style.display = 'flex';
+      });
+    });
+
+    closeModal.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Bible books navigation
+    const bookLinks = document.querySelectorAll('.book-list a');
+    const genesisContent = document.getElementById('genesis-content');
+    const comingSoonTemplate = document.getElementById('coming-soon-template');
+    const bookTitle = comingSoonTemplate.querySelector('.book-title');
+
+    // Bible book subtitles
+    const bibleSubtitles = {
+      'Genesis': 'The Dawn of Creation',
+      'Exodus': 'Journey to Freedom',
+      'Leviticus': 'Holy Living',
+      'Numbers': 'Wilderness Journey',
+      'Deuteronomy': 'Second Law',
+      'Joshua': 'Conquering the Land',
+      'Judges': 'Cycles of Rebellion',
+      'Ruth': 'Loyal Love',
+      '1 Samuel': 'Rise of Kings',
+      '2 Samuel': 'David\'s Reign',
+      '1 Kings': 'Kingdom Divided',
+      '2 Kings': 'Kingdom Falls',
+      '1 Chronicles': 'David\'s Legacy',
+      '2 Chronicles': 'Temple History',
+      'Ezra': 'Return from Exile',
+      'Nehemiah': 'Rebuilding Walls',
+      'Esther': 'Providence of God',
+      'Job': 'Faith Through Suffering',
+      'Psalms': 'Songs of Worship',
+      'Proverbs': 'Wisdom for Life',
+      'Ecclesiastes': 'Meaning of Life',
+      'Song of Solomon': 'Divine Love',
+      'Isaiah': 'Messiah Foretold',
+      'Jeremiah': 'Weeping Prophet',
+      'Lamentations': 'Tears for Jerusalem',
+      'Ezekiel': 'Visions of Glory',
+      'Daniel': 'Dreams and Kingdoms',
+      'Hosea': 'Faithful Love',
+      'Joel': 'Day of the Lord',
+      'Amos': 'Call for Justice',
+      'Obadiah': 'Pride Before Fall',
+      'Jonah': 'Reluctant Prophet',
+      'Micah': 'What God Requires',
+      'Nahum': 'Nineveh\'s Doom',
+      'Habakkuk': 'Faith and Doubt',
+      'Zephaniah': 'Day of Judgment',
+      'Haggai': 'Rebuild the Temple',
+      'Zechariah': 'Messiah Coming',
+      'Malachi': 'Return to Me',
+      'Matthew': 'King of Jews',
+      'Mark': 'Servant of All',
+      'Luke': 'Son of Man',
+      'John': 'Son of God',
+      'Acts': 'Church Begins',
+      'Romans': 'Righteousness by Faith',
+      '1 Corinthians': 'Church Problems',
+      '2 Corinthians': 'Ministry Defense',
+      'Galatians': 'Freedom in Christ',
+      'Ephesians': 'Unity in Christ',
+      'Philippians': 'Joy in Christ',
+      'Colossians': 'Supremacy of Christ',
+      '1 Thessalonians': 'Christ\'s Return',
+      '2 Thessalonians': 'Stand Firm',
+      '1 Timothy': 'Church Leadership',
+      '2 Timothy': 'Faithful Service',
+      'Titus': 'Sound Doctrine',
+      'Philemon': 'Christian Forgiveness',
+      'Hebrews': 'Better Covenant',
+      'James': 'Faith Works',
+      '1 Peter': 'Suffering Saints',
+      '2 Peter': 'False Teachers',
+      '1 John': 'Walking in Light',
+      '2 John': 'Truth and Love',
+      '3 John': 'Hospitality',
+      'Jude': 'Contend for Faith',
+      'Revelation': 'Final Victory'
+    };
+
+    // Bible book background colors
+    const bibleColors = {
+      'Genesis': 'genesis-bg',
+      'Exodus': 'exodus-bg',
+      'Leviticus': 'leviticus-bg',
+      'Numbers': 'numbers-bg',
+      'Deuteronomy': 'deuteronomy-bg',
+      'Joshua': 'joshua-bg',
+      'Judges': 'judges-bg',
+      'Ruth': 'ruth-bg',
+      '1 Samuel': 'samuel1-bg',
+      '2 Samuel': 'samuel2-bg',
+      '1 Kings': 'kings1-bg',
+      '2 Kings': 'kings2-bg',
+      '1 Chronicles': 'chronicles1-bg',
+      '2 Chronicles': 'chronicles2-bg',
+      'Ezra': 'ezra-bg',
+      'Nehemiah': 'nehemiah-bg',
+      'Esther': 'esther-bg',
+      'Job': 'job-bg',
+      'Psalms': 'psalms-bg',
+      'Proverbs': 'proverbs-bg',
+      'Ecclesiastes': 'ecclesiastes-bg',
+      'Song of Solomon': 'song-bg',
+      'Isaiah': 'isaiah-bg',
+      'Jeremiah': 'jeremiah-bg',
+      'Lamentations': 'lamentations-bg',
+      'Ezekiel': 'ezekiel-bg',
+      'Daniel': 'daniel-bg',
+      'Hosea': 'hosea-bg',
+      'Joel': 'joel-bg',
+      'Amos': 'amos-bg',
+      'Obadiah': 'obadiah-bg',
+      'Jonah': 'jonah-bg',
+      'Micah': 'micah-bg',
+      'Nahum': 'nahum-bg',
+      'Habakkuk': 'habakkuk-bg',
+      'Zephaniah': 'zephaniah-bg',
+      'Haggai': 'haggai-bg',
+      'Zechariah': 'zechariah-bg',
+      'Malachi': 'malachi-bg',
+      'Matthew': 'matthew-bg',
+      'Mark': 'mark-bg',
+      'Luke': 'luke-bg',
+      'John': 'john-bg',
+      'Acts': 'acts-bg',
+      'Romans': 'romans-bg',
+      '1 Corinthians': 'corinthians1-bg',
+      '2 Corinthians': 'corinthians2-bg',
+      'Galatians': 'galatians-bg',
+      'Ephesians': 'ephesians-bg',
+      'Philippians': 'philippians-bg',
+      'Colossians': 'colossians-bg',
+      '1 Thessalonians': 'thessalonians1-bg',
+      '2 Thessalonians': 'thessalonians2-bg',
+      '1 Timothy': 'timothy1-bg',
+      '2 Timothy': 'timothy2-bg',
+      'Titus': 'titus-bg',
+      'Philemon': 'philemon-bg',
+      'Hebrews': 'hebrews-bg',
+      'James': 'james-bg',
+      '1 Peter': 'peter1-bg',
+      '2 Peter': 'peter2-bg',
+      '1 John': 'john1-bg',
+      '2 John': 'john2-bg',
+      '3 John': 'john3-bg',
+      'Jude': 'jude-bg',
+      'Revelation': 'revelation-bg'
+    };
+
+    // Mobile sidebar toggle
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarContent = document.querySelector('.sidebar-content');
+
+    sidebarToggle.addEventListener('click', function() {
+      sidebarContent.classList.toggle('active');
+      sidebarToggle.classList.toggle('active');
+    });
+
+    // Handle book clicks
+    bookLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Remove active class from all links
+        bookLinks.forEach(l => l.classList.remove('active'));
+
+        // Add active class to clicked link
+        this.classList.add('active');
+
+        const bookName = this.getAttribute('data-book');
+        const subtitle = bibleSubtitles[bookName] || 'Bible Study';
+        const colorClass = bibleColors[bookName] || 'default-bg';
+
+        if (bookName === 'Genesis') {
+          // Show Genesis content
+          genesisContent.classList.add('active');
+          comingSoonTemplate.classList.remove('active');
+        } else {
+          // Show coming soon template with chapters
+          genesisContent.classList.remove('active');
+          comingSoonTemplate.classList.add('active');
+
+          // Update book title with subtitle
+          bookTitle.textContent = `${bookName}: ${subtitle}`;
+
+          // Update background color
+          const titleCard = comingSoonTemplate.querySelector('.current-part');
+          // Remove all background classes
+          titleCard.className = 'current-part';
+          // Add the specific background class
+          titleCard.classList.add(colorClass);
+
+          // Close mobile sidebar after selection on small screens
+          if (window.innerWidth < 768) {
+            sidebarContent.classList.remove('active');
+            sidebarToggle.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Handle chapter clicks
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('chapter-link')) {
+        e.preventDefault();
+        modal.style.display = 'flex';
+      }
+    });
+
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+      const imgOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px 200px 0px"
+      };
+
+      const imgObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            const src = img.getAttribute('data-src');
+            if (src) {
+              img.src = src;
+              img.removeAttribute('data-src');
+            }
+            imgObserver.unobserve(img);
+          }
+        });
+      }, imgOptions);
+
+      document.querySelectorAll('.lesson-image img').forEach(img => {
+        const currentSrc = img.src;
+        img.setAttribute('data-src', currentSrc);
+        img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
+        imgObserver.observe(img);
+      });
+    }
+  });
+</script>
+</body>
+</html>

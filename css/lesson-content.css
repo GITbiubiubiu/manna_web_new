@@ -94,7 +94,7 @@
 
 .key-points li {
     position: relative;
-    padding-left: 28px; /* 为自定义图标��出空间 */
+    padding-left: 28px; /* 为自定义图标留出空间 */
     margin-bottom: 12px; /* 增加列表项之间的间距 */
     line-height: 1.5;
 }
