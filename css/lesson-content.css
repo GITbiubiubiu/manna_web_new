@@ -538,6 +538,11 @@
     padding: 40px 0;
 }
 
+/* 确保 Lesson Completion 模块默认隐藏 */
+.lesson-completion.hidden {
+    display: none;
+}
+
 .completion-card {
     background-color: white;
     border-radius: 10px;
@@ -573,6 +578,11 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+}
+
+/* 确保测试题一次只显示一道 */
+.quiz-question.hidden {
+    display: none;
 }
 
 /* Responsive Styles */

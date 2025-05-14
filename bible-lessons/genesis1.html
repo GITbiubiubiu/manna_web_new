@@ -283,7 +283,7 @@
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q3c" name="q3" value="C">
-                                            <label for="q3c">C. They do not need food</label>
+                                            <label for="q3c">They do not need food</label>
                                         </div>
                                         <div class="quiz-option">
                                             <input type="radio" id="q3d" name="q3" value="D">
@@ -729,7 +729,15 @@
 
         // 初始化测验
         function initQuiz() {
-            showQuestion(0);
+            // 确保只显示第一个问题，其他都隐藏
+            quizQuestions.forEach((question, i) => {
+                if (i === 0) {
+                    question.classList.remove('hidden');
+                } else {
+                    question.classList.add('hidden');
+                }
+            });
+
             toggleBibleText(false);
             // 隐藏 Previous 按钮
             document.querySelector('.lesson-navigation-buttons .prev-section-btn').style.display = 'none';
