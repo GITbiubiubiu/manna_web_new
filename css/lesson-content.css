@@ -168,7 +168,7 @@
 }
 
 .qr-code {
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .qr-code img {
@@ -179,6 +179,7 @@
 .app-store-links {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .app-store-link img {
@@ -627,6 +628,7 @@
     margin: 0;
     font-size: 28px;
     font-weight: 600;
+    color: white;
 }
 
 .completion-content {
