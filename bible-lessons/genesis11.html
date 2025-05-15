@@ -448,9 +448,7 @@
       let currentSectionIndex = 0;
       const totalSections = sections.length - 1; // Excluding quiz section
       
-      // 高亮并滚动到指定的经文
       function highlightVerses(verseRange) {
-        // 移除之前的高亮
         bibleVerses.forEach(verse => {
           verse.classList.remove('highlighted');
         });
@@ -459,12 +457,10 @@
           const [start, end] = verseRange.split('-').map(v => parseInt(v));
           const endVerse = end || start;
           
-          // 添加高亮到引用的经文
           for (let i = start - 1; i < endVerse; i++) {
             if (bibleVerses[i]) {
               bibleVerses[i].classList.add('highlighted');
               
-              // 滚动到第一个高亮的经文
               if (i === start - 1) {
                 bibleVerses[i].scrollIntoView({
                   behavior: 'smooth',
@@ -494,7 +490,6 @@
         const currentSection = document.getElementById(sectionId);
         currentSection.classList.remove('hidden');
         
-        // 更新当前部分索引
         for (let i = 0; i < sections.length; i++) {
           if (sections[i].id === sectionId) {
             currentSectionIndex = i;
@@ -502,7 +497,6 @@
           }
         }
         
-        // 自动高亮相关经文
         const reference = currentSection.querySelector('.lesson-reference');
         if (reference) {
           const verseRange = reference.getAttribute('data-verses');
@@ -511,17 +505,13 @@
         
         updateProgress();
 
-        // 如果是测试模块，立即隐藏所有 Previous 按钮
         if (sectionId === 'quiz') {
-          // 隐藏底部导航中的 Previous 按钮
           document.querySelector('#quiz .lesson-navigation-buttons .prev-section-btn').style.display = 'none';
-          // 隐藏问题中的 Previous 按钮
           document.querySelectorAll('.prev-question-btn').forEach(button => {
             button.style.display = 'none';
           });
         }
         
-        // 滚动到部分顶部
         window.scrollTo({
           top: document.querySelector('.lesson-content').offsetTop - 100,
           behavior: 'smooth'
@@ -544,7 +534,6 @@
         });
       });
       
-      // 初始化第一部分的经文高亮
       const initialReference = document.querySelector('#section1 .lesson-reference');
       if (initialReference) {
         const verseRange = initialReference.getAttribute('data-verses');
@@ -566,7 +555,6 @@
       let userAnswers = {};
       let questionSubmitted = {};
 
-      // 初始化时隐藏圣经文本
       function toggleBibleText(show) {
         if (show) {
           bibleTextSection.style.display = 'block';
@@ -575,7 +563,6 @@
         }
       }
 
-      // 显示指定问题
       function showQuestion(index) {
         quizQuestions.forEach((question, i) => {
           if (i === index) {
@@ -585,16 +572,13 @@
           }
         });
         
-        // 更新进度条
         currentQuestionIndex = index;
         quizProgressText.textContent = `Question ${index + 1} of ${quizQuestions.length}`;
         quizProgressFill.style.width = `${((index + 1) / quizQuestions.length) * 100}%`;
         
-        // 如果问题已提交，显示圣经文本，否则隐藏
         toggleBibleText(questionSubmitted[index + 1]);
       }
 
-      // 提交问题答案
       function submitQuestion(questionNumber, verseRange) {
         const questionIndex = questionNumber - 1;
         const selectedOption = document.querySelector(`input[name="q${questionNumber}"]:checked`);
@@ -617,21 +601,17 @@
           return;
         }
         
-        // 记录用户答案
         userAnswers[`q${questionNumber}`] = selectedOption.value;
         questionSubmitted[questionNumber] = true;
         
-        // 显示提示和反馈
         hintElement.classList.remove('hidden');
         
-        // 禁用选项和提交按钮
         document.querySelectorAll(`#question${questionNumber} input[type="radio"]`).forEach(input => {
           input.disabled = true;
         });
         submitButton.disabled = true;
-        submitButton.style.display = 'none'; // 隐藏提交按钮
+        submitButton.style.display = 'none'; 
         
-        // 显示反馈
         if (selectedOption.value === answers[`q${questionNumber}`]) {
           feedbackElement.innerHTML = '<p class="correct">Correct!</p>';
         } else {
@@ -639,11 +619,9 @@
         }
         feedbackElement.classList.remove('hidden');
         
-        // 显示圣经文本并高亮相关经文
         toggleBibleText(true);
         highlightVerses(verseRange);
         
-        // 如果不是最后一个问题，添加下一题按钮
         if (questionNumber < quizQuestions.length) {
           nextButton.textContent = 'Next Question';
           nextButton.setAttribute('data-next', questionNumber + 1);
@@ -652,14 +630,12 @@
           });
           submitButton.parentNode.appendChild(nextButton);
         } else {
-          // 如果是最后一个问题，添加查看结果按钮
           nextButton.textContent = 'View Results';
           nextButton.addEventListener('click', showResults);
           submitButton.parentNode.appendChild(nextButton);
         }
       }
 
-      // 显示测验结果
       function showResults() {
         const answers = {
           q1: 'B',
@@ -670,7 +646,6 @@
         let score = 0;
         let feedback = '';
         
-        // 检查答案
         for (const question in answers) {
           if (userAnswers[question] === answers[question]) {
             score++;
@@ -680,32 +655,28 @@
           }
         }
         
-        // 显示结果
         quizScore.textContent = `You scored ${score} out of 3`;
         quizFeedback.innerHTML = feedback;
         
-        // 隐藏问题，显示结果
         quizQuestions.forEach(question => {
           question.classList.add('hidden');
         });
         quizResults.classList.remove('hidden');
       }
 
-      // 重置测验
       retryQuizBtn.addEventListener('click', function() {
         quizForm.reset();
         quizResults.classList.add('hidden');
         userAnswers = {};
         questionSubmitted = {};
         
-        // 重置所有问题状态
         document.querySelectorAll('.quiz-hint').forEach(element => {
           element.classList.add('hidden');
         });
         
         document.querySelectorAll('.quiz-feedback').forEach(element => {
           element.classList.add('hidden');
-          element.innerHTML = ''; // 清空反馈内容
+          element.innerHTML = ''; 
         });
         
         document.querySelectorAll('.quiz-question input[type="radio"]').forEach(input => {
@@ -721,22 +692,18 @@
           button.remove();
         });
         
-        // 显示第一个问题
         showQuestion(0);
         toggleBibleText(false);
       });
 
-      // 完成课程
       completeLessonBtn.addEventListener('click', function() {
         document.getElementById('quiz').classList.add('hidden');
         document.getElementById('completion').classList.remove('hidden');
         progressBar.style.width = '100%';
         progressText.textContent = '100% Complete';
-        // 隐藏圣经文本
         toggleBibleText(false);
       });
 
-      // 上一题按钮
       document.querySelectorAll('.prev-question-btn').forEach(button => {
         button.addEventListener('click', function() {
           const prevQuestionIndex = parseInt(this.getAttribute('data-prev')) - 1;
@@ -744,7 +711,6 @@
         });
       });
 
-      // 提交答案按钮
       document.querySelectorAll('.submit-question-btn').forEach(button => {
         button.addEventListener('click', function() {
           const questionNumber = parseInt(this.getAttribute('data-question'));
@@ -753,9 +719,7 @@
         });
       });
 
-      // 初始化测验
       function initQuiz() {
-        // 确保只显示第一个问题，其他都隐藏
         quizQuestions.forEach((question, i) => {
           if (i === 0) {
             question.classList.remove('hidden');
@@ -764,18 +728,14 @@
           }
         });
         
-        // 隐藏所有提示
         document.querySelectorAll('.quiz-hint').forEach(hint => {
           hint.classList.add('hidden');
         });
         
-        // 隐藏结果部分
         document.getElementById('quiz-results').classList.add('hidden');
         
-        // 隐藏底部导航中的 Previous 按钮
         document.querySelector('#quiz .lesson-navigation-buttons .prev-section-btn').style.display = 'none';
         
-        // 隐藏所有问题中的 Previous 按钮
         document.querySelectorAll('.prev-question-btn').forEach(button => {
           button.style.display = 'none';
         });
@@ -783,9 +743,8 @@
         toggleBibleText(false);
       }
 
-      // 当进入测验部分时初始化
       document.querySelector('[data-next="quiz"]').addEventListener('click', function() {
-        setTimeout(initQuiz, 100); // 给DOM更新一点时间
+        setTimeout(initQuiz, 100);
       });
       
       // Bible text font size controls
