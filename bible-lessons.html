@@ -36,6 +36,39 @@
     padding: 12px 24px;
     font-size: 16px;
   }
+
+  /* Locked lesson card styles */
+  .lesson-card.locked {
+    opacity: 0.7;
+    border-left: 5px solid #9e9e9e;
+    cursor: not-allowed;
+  }
+
+  .lesson-card.locked .lesson-image::after {
+    content: "🔒";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lesson-card.locked .subcard {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .lesson-card.locked .subcard:hover {
+    background-color: #f0e6ff;
+    transform: translateY(-3px);
+  }
 </style>
 </head>
 
@@ -594,18 +627,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis21" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 21</h4>
                     <p>Isaac is Born</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis22" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 22</h4>
                     <p>Abraham's Test</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -624,7 +657,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 12 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course12_light.webp" alt="Sarah's Death">
@@ -635,18 +668,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis23" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 23</h4>
                     <p>Sarah's Burial</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis24" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 24</h4>
                     <p>Finding Rebekah</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -665,7 +698,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 13 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course13_light.webp" alt="Abraham's Family">
@@ -676,18 +709,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis25" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 25</h4>
                     <p>Jacob and Esau</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis26" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 26</h4>
                     <p>Isaac and Abimelech</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -706,7 +739,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 14 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course14_light.webp" alt="Jacob's Deception">
@@ -717,18 +750,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis27" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 27</h4>
                     <p>Stolen Blessing</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis28" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 28</h4>
                     <p>Jacob's Ladder</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -747,7 +780,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 15 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course15_light.webp" alt="Jacob and Rachel">
@@ -758,18 +791,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis29" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 29</h4>
                     <p>Jacob's Wives</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis30" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 30</h4>
                     <p>Jacob's Prosperity</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -788,7 +821,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 16 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course16_light.webp" alt="Jacob Returns Home">
@@ -799,18 +832,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis31" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 31</h4>
                     <p>Fleeing from Laban</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis32" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 32</h4>
                     <p>Wrestling with God</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -829,7 +862,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 17 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course17_light.webp" alt="Jacob and Esau Reunite">
@@ -840,18 +873,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis33" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 33</h4>
                     <p>Brothers Reunite</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis34" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 34</h4>
                     <p>Dinah and Shechem</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -870,7 +903,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 18 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course18_light.webp" alt="Jacob Returns to Bethel">
@@ -881,18 +914,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis35" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 35</h4>
                     <p>Jacob at Bethel</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis36" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 36</h4>
                     <p>Esau's Descendants</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -911,7 +944,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 19 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course19_light.webp" alt="Joseph's Dreams">
@@ -922,18 +955,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis37" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 37</h4>
                     <p>Joseph Sold</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis38" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 38</h4>
                     <p>Judah and Tamar</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -952,7 +985,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 20 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course20_light.webp" alt="Joseph in Egypt">
@@ -963,18 +996,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis39" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 39</h4>
                     <p>Potiphar's House</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis40" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 40</h4>
                     <p>Prison Dreams</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -993,7 +1026,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 21 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course21_light.webp" alt="Joseph Interprets Dreams">
@@ -1004,18 +1037,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis41" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 41</h4>
                     <p>Joseph's Rise</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis42" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 42</h4>
                     <p>Brothers in Egypt</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -1034,7 +1067,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 22 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course22_light.webp" alt="Joseph's Brothers Return">
@@ -1045,18 +1078,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis43" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 43</h4>
                     <p>Return with Benjamin</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis44" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 44</h4>
                     <p>Silver Cup Test</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -1075,7 +1108,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 23 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course23_light.webp" alt="Joseph Reveals Himself">
@@ -1086,18 +1119,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis45" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 45</h4>
                     <p>The Revelation</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis46" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 46</h4>
                     <p>Jacob to Egypt</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -1116,7 +1149,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 24 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course24_light.webp" alt="Jacob in Egypt">
@@ -1127,18 +1160,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis47" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 47</h4>
                     <p>Settling in Goshen</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis48" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 48</h4>
                     <p>Blessing Ephraim and Manasseh</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -1157,7 +1190,7 @@
             <div class="path-connector"></div>
             
             <!-- Lesson 25 -->
-            <div class="lesson-card completed">
+            <div class="lesson-card locked">
               <div class="lesson-main-content">
                 <div class="lesson-image">
                   <img src="https://s3.bongmi.com/manna/course_img/light/series2_course25_light.webp" alt="Jacob's Death">
@@ -1168,18 +1201,18 @@
                 </div>
               </div>
               <div class="lesson-subcards">
-                <a href="/bible-lessons/genesis49" class="subcard">
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 49</h4>
                     <p>Jacob's Prophecies</p>
                   </div>
-                </a>
-                <a href="/bible-lessons/genesis50" class="subcard">
+                </div>
+                <div class="subcard locked">
                   <div class="subcard-content">
                     <h4>Genesis 50</h4>
                     <p>Burial and Forgiveness</p>
                   </div>
-                </a>
+                </div>
                 <div class="subcard premium">
                   <div class="subcard-content">
                     <h4>Final Thought</h4>
@@ -1289,6 +1322,15 @@
         if (e.target === modal) {
           modal.style.display = 'none';
         }
+      });
+
+      // Handle locked lesson subcards
+      const lockedSubcards = document.querySelectorAll('.lesson-card.locked .subcard');
+      lockedSubcards.forEach(card => {
+        card.addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.style.display = 'flex';
+        });
       });
       
       // Bible books navigation
