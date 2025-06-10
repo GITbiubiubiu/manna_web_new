@@ -111,6 +111,10 @@
       "source": "/resources/easter-2025",
       "destination": "/resources/easter-2025.html"
     },
+    {
+      "source": "/resources/how-to-study-the-bible",
+      "destination": "/resources/how-to-study-the-bible.html"
+    },
     { "source": "/", "destination": "/index.html" }
   ],
   "trailingSlash": false
