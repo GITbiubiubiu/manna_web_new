@@ -2059,3 +2059,69 @@ footer {
 }
 
 /* 在文件末尾添加以下样式，使final thought和prayer卡片内容垂直居中 */
+
+/* Download Platforms Styles */
+.download-platforms {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.platform-section {
+  text-align: center;
+  min-width: 200px;
+}
+
+.platform-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.waitlist-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.waitlist-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  display: inline-block;
+}
+
+.waitlist-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.waitlist-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .download-platforms {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .platform-section {
+    min-width: auto;
+  }
+}
