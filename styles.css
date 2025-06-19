@@ -527,11 +527,37 @@ nav ul li a.active {
 
 .download-content {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*
+.download-content {
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
+*/
 
+.qr-code {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.qr-code img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.qr-code p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/*
 .qr-code img {
   width: 200px;
   height: 200px;
@@ -541,6 +567,7 @@ nav ul li a.active {
 .qr-code p {
   color: #666;
 }
+*/
 
 .app-store img {
   height: 60px;
