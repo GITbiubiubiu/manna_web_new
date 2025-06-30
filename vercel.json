@@ -115,6 +115,14 @@
       "source": "/resources/how-to-study-the-bible",
       "destination": "/resources/how-to-study-the-bible.html"
     },
+    {
+      "source": "/resources/morning-prayers",
+      "destination": "/resources/morning-prayers.html"
+    },
+    {
+      "source": "/resources/catholic-prayers-jesuit-resource",
+      "destination": "/resources/catholic-prayers-jesuit-resource.html"
+    },
     { "source": "/", "destination": "/index.html" }
   ],
   "trailingSlash": false
