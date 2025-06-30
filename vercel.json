@@ -1,115 +1,248 @@
 {
   "rewrites": [
-    { "source": "/bible-lessons", "destination": "/bible-lessons.html" },
-    { "source": "/bible-lessons/genesis1", "destination": "/bible-lessons/genesis1.html" },
-    { "source": "/bible-lessons/genesis2", "destination": "/bible-lessons/genesis2.html" },
-    { "source": "/bible-lessons/genesis3", "destination": "/bible-lessons/genesis3.html" },
-    { "source": "/bible-lessons/genesis4", "destination": "/bible-lessons/genesis4.html" },
-    { "source": "/bible-lessons/genesis5", "destination": "/bible-lessons/genesis5.html" },
-    { "source": "/bible-lessons/genesis6", "destination": "/bible-lessons/genesis6.html" },
-    { "source": "/bible-lessons/genesis7", "destination": "/bible-lessons/genesis7.html" },
-    { "source": "/bible-lessons/genesis8", "destination": "/bible-lessons/genesis8.html" },
-    { "source": "/bible-lessons/genesis9", "destination": "/bible-lessons/genesis9.html" },
-    { "source": "/bible-lessons/genesis10", "destination": "/bible-lessons/genesis10.html" },
-    { "source": "/bible-lessons/genesis11", "destination": "/bible-lessons/genesis11.html" },
-    { "source": "/bible-lessons/genesis12", "destination": "/bible-lessons/genesis12.html" },
-    { "source": "/bible-lessons/genesis13", "destination": "/bible-lessons/genesis13.html" },
-    { "source": "/bible-lessons/genesis14", "destination": "/bible-lessons/genesis14.html" },
-    { "source": "/bible-lessons/genesis15", "destination": "/bible-lessons/genesis15.html" },
-    { "source": "/bible-lessons/genesis16", "destination": "/bible-lessons/genesis16.html" },
-    { "source": "/bible-lessons/genesis17", "destination": "/bible-lessons/genesis17.html" },
-    { "source": "/bible-lessons/genesis18", "destination": "/bible-lessons/genesis18.html" },
-    { "source": "/bible-lessons/genesis19", "destination": "/bible-lessons/genesis19.html" },
-    { "source": "/bible-lessons/genesis20", "destination": "/bible-lessons/genesis20.html" },
-    { "source": "/bible-lessons/genesis21", "destination": "/bible-lessons/genesis21.html" },
-    { "source": "/bible-lessons/genesis22", "destination": "/bible-lessons/genesis22.html" },
-    { "source": "/prayers", "destination": "/prayers.html" },
-    { "source": "/prayers/prayer-for-healing", "destination": "/prayers/prayer-for-healing.html" },
-    { "source": "/prayers/prayer-for-strength", "destination": "/prayers/prayer-for-strength.html" },
-    { "source": "/prayers/prayer-for-protection", "destination": "/prayers/prayer-for-protection.html" },
-    { "source": "/prayers/prayer-for-healing/gratitude", "destination": "/prayers/prayer-for-healing/gratitude.html" },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/bible-lessons",
+      "destination": "/bible-lessons.html"
+    },
+    {
+      "source": "/bible-lessons/genesis1",
+      "destination": "/bible-lessons/genesis1.html"
+    },
+    {
+      "source": "/bible-lessons/genesis2",
+      "destination": "/bible-lessons/genesis2.html"
+    },
+    {
+      "source": "/bible-lessons/genesis3",
+      "destination": "/bible-lessons/genesis3.html"
+    },
+    {
+      "source": "/bible-lessons/genesis4",
+      "destination": "/bible-lessons/genesis4.html"
+    },
+    {
+      "source": "/bible-lessons/genesis5",
+      "destination": "/bible-lessons/genesis5.html"
+    },
+    {
+      "source": "/bible-lessons/genesis6",
+      "destination": "/bible-lessons/genesis6.html"
+    },
+    {
+      "source": "/bible-lessons/genesis7",
+      "destination": "/bible-lessons/genesis7.html"
+    },
+    {
+      "source": "/bible-lessons/genesis8",
+      "destination": "/bible-lessons/genesis8.html"
+    },
+    {
+      "source": "/bible-lessons/genesis9",
+      "destination": "/bible-lessons/genesis9.html"
+    },
+    {
+      "source": "/bible-lessons/genesis10",
+      "destination": "/bible-lessons/genesis10.html"
+    },
+    {
+      "source": "/bible-lessons/genesis11",
+      "destination": "/bible-lessons/genesis11.html"
+    },
+    {
+      "source": "/bible-lessons/genesis12",
+      "destination": "/bible-lessons/genesis12.html"
+    },
+    {
+      "source": "/bible-lessons/genesis13",
+      "destination": "/bible-lessons/genesis13.html"
+    },
+    {
+      "source": "/bible-lessons/genesis14",
+      "destination": "/bible-lessons/genesis14.html"
+    },
+    {
+      "source": "/bible-lessons/genesis15",
+      "destination": "/bible-lessons/genesis15.html"
+    },
+    {
+      "source": "/bible-lessons/genesis16",
+      "destination": "/bible-lessons/genesis16.html"
+    },
+    {
+      "source": "/bible-lessons/genesis17",
+      "destination": "/bible-lessons/genesis17.html"
+    },
+    {
+      "source": "/bible-lessons/genesis18",
+      "destination": "/bible-lessons/genesis18.html"
+    },
+    {
+      "source": "/bible-lessons/genesis19",
+      "destination": "/bible-lessons/genesis19.html"
+    },
+    {
+      "source": "/bible-lessons/genesis20",
+      "destination": "/bible-lessons/genesis20.html"
+    },
+    {
+      "source": "/bible-lessons/genesis21",
+      "destination": "/bible-lessons/genesis21.html"
+    },
+    {
+      "source": "/bible-lessons/genesis22",
+      "destination": "/bible-lessons/genesis22.html"
+    },
+    {
+      "source": "/prayers",
+      "destination": "/prayers.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing",
+      "destination": "/prayers/prayer-for-healing.html"
+    },
     {
       "source": "/prayers/prayer-for-healing/acute-illness",
       "destination": "/prayers/prayer-for-healing/acute-illness.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/addiction",
+      "destination": "/prayers/prayer-for-healing/addiction.html"
     },
     {
       "source": "/prayers/prayer-for-healing/chronic-disease",
       "destination": "/prayers/prayer-for-healing/chronic-disease.html"
     },
     {
-      "source": "/prayers/prayer-for-healing/post-surgery",
-      "destination": "/prayers/prayer-for-healing/post-surgery.html"
-    },
-    {
       "source": "/prayers/prayer-for-healing/emotional-trauma",
       "destination": "/prayers/prayer-for-healing/emotional-trauma.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/end-of-life",
+      "destination": "/prayers/prayer-for-healing/end-of-life.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/family-support",
+      "destination": "/prayers/prayer-for-healing/family-support.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/gratitude",
+      "destination": "/prayers/prayer-for-healing/gratitude.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/pediatric",
+      "destination": "/prayers/prayer-for-healing/pediatric.html"
+    },
+    {
+      "source": "/prayers/prayer-for-healing/post-surgery",
+      "destination": "/prayers/prayer-for-healing/post-surgery.html"
     },
     {
       "source": "/prayers/prayer-for-healing/spiritual-rebellion",
       "destination": "/prayers/prayer-for-healing/spiritual-rebellion.html"
     },
-    { "source": "/prayers/prayer-for-healing/addiction", "destination": "/prayers/prayer-for-healing/addiction.html" },
     {
-      "source": "/prayers/prayer-for-healing/family-support",
-      "destination": "/prayers/prayer-for-healing/family-support.html"
+      "source": "/prayers/prayer-for-protection",
+      "destination": "/prayers/prayer-for-protection.html"
     },
-    { "source": "/prayers/prayer-for-healing/pediatric", "destination": "/prayers/prayer-for-healing/pediatric.html" },
-    {
-      "source": "/prayers/prayer-for-healing/end-of-life",
-      "destination": "/prayers/prayer-for-healing/end-of-life.html"
-    },
-    { "source": "/prayers/prayer-for-strength/illness", "destination": "/prayers/prayer-for-strength/illness.html" },
-    { "source": "/prayers/prayer-for-strength/grief", "destination": "/prayers/prayer-for-strength/grief.html" },
-    {
-      "source": "/prayers/prayer-for-strength/financial",
-      "destination": "/prayers/prayer-for-strength/financial.html"
-    },
-    { "source": "/prayers/prayer-for-strength/faith", "destination": "/prayers/prayer-for-strength/faith.html" },
-    {
-      "source": "/prayers/prayer-for-strength/workplace",
-      "destination": "/prayers/prayer-for-strength/workplace.html"
-    },
-    {
-      "source": "/prayers/prayer-for-strength/caregiver",
-      "destination": "/prayers/prayer-for-strength/caregiver.html"
-    },
-    { "source": "/prayers/prayer-for-strength/survivor", "destination": "/prayers/prayer-for-strength/survivor.html" },
-    {
-      "source": "/prayers/prayer-for-strength/social-justice",
-      "destination": "/prayers/prayer-for-strength/social-justice.html"
-    },
-    { "source": "/prayers/prayer-for-protection/travel", "destination": "/prayers/prayer-for-protection/travel.html" },
-    { "source": "/prayers/prayer-for-protection/home", "destination": "/prayers/prayer-for-protection/home.html" },
-    {
-      "source": "/prayers/prayer-for-protection/spiritual",
-      "destination": "/prayers/prayer-for-protection/spiritual.html"
-    },
-    { "source": "/prayers/prayer-for-protection/family", "destination": "/prayers/prayer-for-protection/family.html" },
-    { "source": "/prayers/prayer-for-protection/health", "destination": "/prayers/prayer-for-protection/health.html" },
     {
       "source": "/prayers/prayer-for-protection/environment",
       "destination": "/prayers/prayer-for-protection/environment.html"
     },
     {
+      "source": "/prayers/prayer-for-protection/family",
+      "destination": "/prayers/prayer-for-protection/family.html"
+    },
+    {
+      "source": "/prayers/prayer-for-protection/health",
+      "destination": "/prayers/prayer-for-protection/health.html"
+    },
+    {
+      "source": "/prayers/prayer-for-protection/home",
+      "destination": "/prayers/prayer-for-protection/home.html"
+    },
+    {
       "source": "/prayers/prayer-for-protection/justice",
       "destination": "/prayers/prayer-for-protection/justice.html"
     },
-    { "source": "/prayers/prayer-for-protection/mental", "destination": "/prayers/prayer-for-protection/mental.html" },
-    { "source": "/resources", "destination": "/resources.html" },
+    {
+      "source": "/prayers/prayer-for-protection/mental",
+      "destination": "/prayers/prayer-for-protection/mental.html"
+    },
+    {
+      "source": "/prayers/prayer-for-protection/spiritual",
+      "destination": "/prayers/prayer-for-protection/spiritual.html"
+    },
+    {
+      "source": "/prayers/prayer-for-protection/travel",
+      "destination": "/prayers/prayer-for-protection/travel.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength",
+      "destination": "/prayers/prayer-for-strength.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/caregiver",
+      "destination": "/prayers/prayer-for-strength/caregiver.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/faith",
+      "destination": "/prayers/prayer-for-strength/faith.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/financial",
+      "destination": "/prayers/prayer-for-strength/financial.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/grief",
+      "destination": "/prayers/prayer-for-strength/grief.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/illness",
+      "destination": "/prayers/prayer-for-strength/illness.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/social-justice",
+      "destination": "/prayers/prayer-for-strength/social-justice.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/survivor",
+      "destination": "/prayers/prayer-for-strength/survivor.html"
+    },
+    {
+      "source": "/prayers/prayer-for-strength/workplace",
+      "destination": "/prayers/prayer-for-strength/workplace.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources.html"
+    },
+    {
+      "source": "/resources/ash-wednesday",
+      "destination": "/resources/ash-wednesday.html"
+    },
     {
       "source": "/resources/bible-study-guide-beginners",
       "destination": "/resources/bible-study-guide-beginners.html"
     },
-    { "source": "/resources/bible-verses-strength", "destination": "/resources/bible-verses-strength.html" },
     {
       "source": "/resources/bible-verses-healing",
       "destination": "/resources/bible-verses-healing.html"
     },
-    { "source": "/resources/ash-wednesday", "destination": "/resources/ash-wednesday.html" },
-    { "source": "/resources/the-10-commandments", "destination": "/resources/the-10-commandments.html" },
+    {
+      "source": "/resources/bible-verses-strength",
+      "destination": "/resources/bible-verses-strength.html"
+    },
     {
       "source": "/resources/easter-2025",
       "destination": "/resources/easter-2025.html"
+    },
+    {
+      "source": "/resources/the-10-commandments",
+      "destination": "/resources/the-10-commandments.html"
     },
     {
       "source": "/resources/how-to-study-the-bible",
@@ -123,7 +256,13 @@
       "source": "/resources/catholic-prayers-jesuit-resource",
       "destination": "/resources/catholic-prayers-jesuit-resource.html"
     },
-    { "source": "/", "destination": "/index.html" }
-  ],
-  "trailingSlash": false
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/service.html"
+    }
+  ]
 }
