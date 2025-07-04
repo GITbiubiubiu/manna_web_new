@@ -707,7 +707,7 @@ footer {
   opacity: 0.9;
 }
 
-.cta-section .cta-btn {
+.cta-btn {
   background: linear-gradient(90deg, #ff6b6b, #ff8e53);
   color: white;
   padding: 15px 40px;
