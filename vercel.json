@@ -1,12 +1,28 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
       "source": "/bible-lessons",
       "destination": "/bible-lessons.html"
+    },
+    {
+      "source": "/prayers",
+      "destination": "/prayers.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources.html"
+    },
+    {
+      "source": "/download",
+      "destination": "/download.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/service.html"
     },
     {
       "source": "/bible-lessons/genesis1",
@@ -95,10 +111,6 @@
     {
       "source": "/bible-lessons/genesis22",
       "destination": "/bible-lessons/genesis22.html"
-    },
-    {
-      "source": "/prayers",
-      "destination": "/prayers.html"
     },
     {
       "source": "/prayers/prayer-for-healing",
@@ -217,10 +229,6 @@
       "destination": "/prayers/prayer-for-strength/workplace.html"
     },
     {
-      "source": "/resources",
-      "destination": "/resources.html"
-    },
-    {
       "source": "/resources/ash-wednesday",
       "destination": "/resources/ash-wednesday.html"
     },
@@ -241,28 +249,20 @@
       "destination": "/resources/easter-2025.html"
     },
     {
-      "source": "/resources/the-10-commandments",
-      "destination": "/resources/the-10-commandments.html"
-    },
-    {
       "source": "/resources/how-to-study-the-bible",
       "destination": "/resources/how-to-study-the-bible.html"
     },
     {
-      "source": "/resources/morning-prayers",
-      "destination": "/resources/morning-prayers.html"
+      "source": "/resources/the-10-commandments",
+      "destination": "/resources/the-10-commandments.html"
     },
     {
       "source": "/resources/catholic-prayers-jesuit-resource",
       "destination": "/resources/catholic-prayers-jesuit-resource.html"
     },
     {
-      "source": "/privacy",
-      "destination": "/privacy.html"
-    },
-    {
-      "source": "/service",
-      "destination": "/service.html"
+      "source": "/resources/morning-prayers",
+      "destination": "/resources/morning-prayers.html"
     }
   ]
 }
