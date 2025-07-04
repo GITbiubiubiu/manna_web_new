@@ -519,38 +519,101 @@ nav ul li a.active {
   transform: translateY(-3px);
 }
 
-/* Download styles */
-.download {
-  background-color: #f9f9f9;
+/* Download styles - Simple version for download page */
+.download-simple {
+  background-color: white;
+  padding: 100px 0;
   text-align: center;
 }
 
-.download-content {
+.download-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.download-platforms {
   display: flex;
-  justify-content: center;
+  gap: 60px;
   align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.platform-section {
+  text-align: center;
+  min-width: 250px;
+}
+
+.platform-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.waitlist-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.waitlist-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 35px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  display: inline-block;
+}
+
+.waitlist-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.waitlist-text {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  max-width: 250px;
+  line-height: 1.5;
 }
 
 .qr-code {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
 .qr-code img {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .qr-code p {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
 }
 
 .app-store img {
-  height: 60px;
+  height: 70px;
   transition: transform 0.3s;
+  margin-bottom: 20px;
 }
 
 .app-store img:hover {
@@ -625,6 +688,42 @@ footer {
   opacity: 0.7;
 }
 
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-section .cta-btn {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cta-section .cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
 /* Responsive styles */
 @media (max-width: 992px) {
   .feature-cards {
@@ -677,6 +776,15 @@ footer {
   .prayer-category-icon {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+
+  .download-platforms {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .platform-section {
+    min-width: auto;
   }
 }
 
@@ -2062,272 +2170,4 @@ footer {
   width: 2px;
   height: 20px;
   margin: -10px auto 10px;
-}
-
-/* Download Platforms Styles */
-.download-platforms {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.platform-section {
-  text-align: center;
-  min-width: 200px;
-}
-
-.platform-section h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.waitlist-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.waitlist-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 15px 30px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  display: inline-block;
-}
-
-.waitlist-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-  text-decoration: none;
-  color: white;
-}
-
-.waitlist-text {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0;
-  max-width: 200px;
-}
-
-/* Download Page Specific Styles */
-.download-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 100px 0;
-}
-
-.download-hero-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 50px;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-.download-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.feature-highlight {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-}
-
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.feature-highlight h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  color: white;
-}
-
-.feature-highlight p {
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-}
-
-.app-screenshots {
-  background-color: #f9f9f9;
-  padding: 80px 0;
-}
-
-.screenshots-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.screenshot-item {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.screenshot-item:hover {
-  transform: translateY(-10px);
-}
-
-.screenshot-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.screenshot-item h4 {
-  padding: 20px 20px 10px;
-  margin: 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.screenshot-item p {
-  padding: 0 20px 20px;
-  margin: 0;
-  color: #666;
-  line-height: 1.6;
-}
-
-.final-cta {
-  background: linear-gradient(135deg, #4fc3f7, #2196f3);
-  color: white;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.final-cta h2 {
-  color: white;
-  margin-bottom: 20px;
-}
-
-.final-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-btn.primary {
-  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
-  color: white;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-}
-
-.cta-btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
-}
-
-.cta-btn.secondary {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.cta-btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px);
-}
-
-/* Homepage CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.cta-section h2 {
-  color: white;
-  margin-bottom: 20px;
-}
-
-.cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-}
-
-.cta-section .cta-btn {
-  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
-  color: white;
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-  transition: all 0.3s ease;
-}
-
-.cta-section .cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
-}
-
-@media (max-width: 768px) {
-  .download-platforms {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .platform-section {
-    min-width: auto;
-  }
-
-  .download-features {
-    grid-template-columns: 1fr;
-  }
-
-  .screenshots-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
 }
