@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manna - Daily Bible Study & Prayer App</title>
-  <meta name="description" content="Transform your spiritual journey with Manna - the daily Bible study and prayer app. Get personalized lessons, guided prayers, and track your spiritual growth.">
-  <meta name="keywords" content="Bible study app, daily devotions, Christian app, prayer app, spiritual growth, Bible lessons">
+  <title>Manna: Daily Bible Study</title>
+  <meta name="description" content="Manna is a gamified Bible study app offering daily prayers, quizzes game challenge, make Bible study a fun journey that easy to be consistenly done everyday.">
+  <meta name="keywords" content="Duolingo for Bible Study, Duolingo For Christians, bible study">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="public/images/icon.png">
   <!-- Google tag (gtag.js) -->
@@ -14,6 +14,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'G-DF5ZGFNKTB');
   </script>
   <script    
@@ -38,7 +39,7 @@
             <li><a href="/bible-lessons">Lessons</a></li>
             <li><a href="/prayers">Prayers</a></li>
             <li><a href="/resources">Resources</a></li>
-            <li><a href="/download">Download</a></li>
+            <li><a href="/#download">Download</a></li>
           </ul>
         </nav>
         <div class="social-header">
@@ -50,130 +51,143 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Banner -->
+  <section class="banner">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Transform Your Spiritual Journey</h1>
-          <p>Discover daily Bible lessons, guided prayers, and track your spiritual growth with Manna - your personal faith companion.</p>
-          <div class="hero-buttons">
-            <a href="/download" class="btn btn-primary">Get Started</a>
-            <a href="/bible-lessons" class="btn btn-secondary">Explore Lessons</a>
+      <div class="banner-content">
+        <h1 class="gradient-title" style="margin-top: -20px; margin-bottom: 30px;">The Duolingo for Bible Study</h1>
+        <ul class="benefits">
+          <li><i class="benefit-icon">✦</i> Beginner-Friendly Bible Insights</li>
+          <li><i class="benefit-icon">✦</i> Gamified Habit-Building</li>
+          <li><i class="benefit-icon">✦</i> Closer to God, Day by Day</li>
+        </ul>
+        <a href="/bible-lessons" class="study-now-btn">Study Now!</a>
+      </div>
+      <div class="banner-video">
+        <video autoplay loop muted playsinline>
+          <source src="https://s3.bongmi.com/manna/web/image/intro_img1_vedio.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Make Bible Study a Daily Habit</h2>
+      <p class="section-subtitle">Manna provides everything you need to make Bible study<br>a meaningful part of your daily routine.</p>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-content">
+            <h3>Easy to Understand</h3>
+            <p>Explore Scripture with expert-guided lessons and interactive stories that simplify complex themes, making Bible study engaging and accessible.</p>
+          </div>
+          <div class="feature-image">
+            <img src="public/images/features1.png" alt="Bible Study Series">
           </div>
         </div>
-        <div class="hero-image">
-          <img src="public/images/features1.png" alt="Manna App Interface">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <h2>Everything You Need for Spiritual Growth</h2>
-      <div class="features-grid">
-        <div class="feature">
-          <img src="public/images/features1.png" alt="Daily Bible Lessons">
-          <h3>Daily Bible Lessons</h3>
-          <p>Structured lessons that guide you through Scripture with clear explanations and practical applications for your daily life.</p>
-        </div>
-        <div class="feature">
-          <img src="public/images/features2.png" alt="Guided Prayers">
-          <h3>Guided Prayers</h3>
-          <p>Access prayers for every situation - healing, strength, protection, and thanksgiving. Let us guide your prayer journey.</p>
-        </div>
-        <div class="feature">
-          <img src="public/images/features3.png" alt="Progress Tracking">
-          <h3>Track Your Progress</h3>
-          <p>Monitor your spiritual growth with streaks, achievements, and detailed progress tracking to stay motivated.</p>
-        </div>
-        <div class="feature">
-          <img src="public/images/features4.png" alt="Community">
-          <h3>Join the Community</h3>
-          <p>Connect with fellow believers, share insights, and grow together in a supportive Christian community.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat">
-          <h3>10,000+</h3>
-          <p>Active Users</p>
-        </div>
-        <div class="stat">
-          <h3>500+</h3>
-          <p>Bible Lessons</p>
-        </div>
-        <div class="stat">
-          <h3>100+</h3>
-          <p>Prayer Categories</p>
-        </div>
-        <div class="stat">
-          <h3>4.8★</h3>
-          <p>App Store Rating</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="container">
-      <h2>What Our Users Say</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="testimonial-content">
-            <p>"Manna has completely transformed my daily devotions. The lessons are clear, engaging, and help me understand Scripture in a deeper way."</p>
+        <div class="feature-card">
+          <div class="feature-content">
+            <h3>Daily Bible Habit</h3>
+            <p>Build a consistent spiritual habit with 10-minute daily goals, reminders and streaks to keep you motivated and closer to God.</p>
           </div>
+          <div class="feature-image">
+            <img src="public/images/features2.png" alt="Daily Streaks">
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-content">
+            <h3>Bible Q&A</h3>
+            <p>Get instant, thoughtful responses to any Bible-related question through our AI assistant, designed to clarify doubts and deepen your understanding.</p>
+          </div>
+          <div class="feature-image">
+            <img src="public/images/features3.png" alt="Bible Chat">
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-content">
+            <h3>Audio Devotionals</h3>
+            <p>Absorb Scripture through bite-sized audio lessons and reflective devotionals, perfect for commutes, workouts, or moments of quiet reflection.</p>
+          </div>
+          <div class="feature-image">
+            <img src="public/images/features4.png" alt="Interactive Lessons">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>Wall of Love</h2>
+      <div class="badges">
+        <a href="https://www.producthunt.com/posts/manna" target="_blank">
+          <img src="public/images/badge1.png" alt="Manna - #1 Product of the Week in Education | Product Hunt" width="250" height="54">
+        </a>
+        <a href="https://www.producthunt.com/posts/manna" target="_blank">
+          <img src="public/images/badge2.png" alt="Manna - #3 Product of the Month in Education | Product Hunt" width="250" height="54">
+        </a>
+        <a href="http://www.aitoolnet.com" target="_blank">
+          <img src="http://www.aitoolnet.com/static/assets/images/logo.svg" width="200" height="60" alt="AI Tool Net">
+        </a>
+      </div>
+      
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <p>"I love this app! Thank the LORD for who made this because this is something that I have been in search for! This is more than helpful! Bless whoever did this, you don't even understand how helpful this really is! Especially for a beginner Christian like me!"</p>
           <div class="testimonial-author">
-            <img src="public/images/avatar1.png" alt="Sarah Johnson">
-            <div>
-              <strong>Sarah Johnson</strong>
-              <span>Daily User for 8 months</span>
+            <img src="public/images/avatar1.png" alt="Beyonce C." class="avatar">
+            <span>Beyonce C.</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>"Amazing app that will further your walk with Jesus! Turn any verse into a devotional and learn more about everything you read! It even has Bible quizzes to test your knowledge. This is the blessing I was looking for. Thank you for this great app!"</p>
+          <div class="testimonial-author">
+            <img src="public/images/avatar2.png" alt="Windbig88" class="avatar">
+            <span>Windbig88</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>"I love this app so much. it has helped me a lot to understand parts of the bible that were probably harder for me. it helps me really dig deep into the bible & motivates me to keep reading. I love the daily challenges & prayers!"</p>
+          <div class="testimonial-author">
+            <img src="public/images/avatar3.png" alt="deAna627" class="avatar">
+            <span>deAna627</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="download">
+    <div class="container">
+      <h2>Download Manna</h2>
+      <div class="download-content">
+        <div class="download-platforms">
+          <div class="platform-section">
+            <h3>iOS</h3>
+            <div class="app-store">
+              <a href="https://apps.apple.com/us/app/id6742866659">
+                <img src="public/images/download.png" alt="Download on App Store">
+              </a>
+            </div>
+            <div class="qr-code">
+              <img src="public/images/qrcode.png" alt="Download QR Code">
+              <p>Scan to download</p>
+            </div>
+          </div>
+          <div class="platform-section">
+            <h3>Android</h3>
+            <div class="waitlist-section">
+              <a href="https://www.waitforit.me/signup/4bdffb45/" class="waitlist-btn" target="_blank">
+                Join The Waitlist
+              </a>
+              <p class="waitlist-text">Be the first to know when Manna launches on Android!</p>
             </div>
           </div>
         </div>
-        <div class="testimonial">
-          <div class="testimonial-content">
-            <p>"I love how Manna keeps me accountable with my Bible reading. The streak feature motivates me to stay consistent in my spiritual journey."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="public/images/avatar2.png" alt="Michael Rodriguez">
-            <div>
-              <strong>Michael Rodriguez</strong>
-              <span>180-day streak holder</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-content">
-            <p>"The prayer section has been such a blessing. Having guided prayers for different situations has really deepened my prayer life."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="public/images/avatar3.png" alt="Jennifer Lee">
-            <div>
-              <strong>Jennifer Lee</strong>
-              <span>Prayer ministry leader</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Begin Your Journey?</h2>
-        <p>Join thousands of believers who are growing in their faith with Manna. Start your spiritual transformation today.</p>
-        <a href="/download" class="btn btn-primary btn-large">Download Manna Now</a>
       </div>
     </div>
   </section>
@@ -197,8 +211,8 @@
         <div class="footer-column">
           <h4>Legal</h4>
           <div class="legal">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/service">Terms of Service</a>
+            <a href="https://themanna.app/privacy.html">Privacy Policy</a>
+            <a href="https://themanna.app/service.html">Terms of Service</a>
           </div>
         </div>
       </div>
