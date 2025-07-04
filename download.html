@@ -17,11 +17,11 @@
     gtag('config', 'G-DF5ZGFNKTB');
 
     document.addEventListener('DOMContentLoaded', () => {
-      gtag('event', '', {
+      gtag('event', 'download_app', {
         page_location: location.href,
         page_path: location.pathname,
         page_title: document.title,
-        entry_timestamp: Date.now()
+        entry_timestamp: Date.now() 
       });
     });
   </script>
