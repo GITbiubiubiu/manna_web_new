@@ -15,6 +15,15 @@
     gtag('js', new Date());
 
     gtag('config', 'G-DF5ZGFNKTB');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      gtag('event', 'start_lesson', {
+        page_location: location.href,
+        page_path: location.pathname,
+        page_title: document.title,
+        entry_timestamp: Date.now()
+      });
+    });
   </script>
   <script    
     async src="https://scripts.ahalab.io/track.js"    
