@@ -261,6 +261,14 @@
       "destination": "/resources/catholic-prayers-jesuit-resource.html"
     },
     {
+      "source": "/resources/the-tower-of-babel",
+      "destination": "/resources/the-tower-of-babel.html"
+    },
+    {
+      "source": "/resources/what-is-manna-in-the-bible",
+      "destination": "/resources/what-is-manna-in-the-bible.html"
+    },
+    {
       "source": "/privacy",
       "destination": "/privacy.html"
     },

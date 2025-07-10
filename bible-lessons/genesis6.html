@@ -308,6 +308,7 @@
                 <li>Get answers to any Bible-related questions</li>
               </ul>
               <a href="/download" class="cta-btn">Download Manna Today</a>
+            </div>
             
             <div class="completion-buttons">
               <a href="/bible-lessons/genesis7" class="lesson-btn primary-btn">Next Lesson: Genesis 7</a>
@@ -406,7 +407,7 @@
         const [start, end] = verseRange.split('-').map(v => parseInt(v));
         const endVerse = end || start;
         
-        // 添加高亮到引用��经文
+        // 添加高亮到引用的经文
         for (let i = start - 1; i < endVerse; i++) {
           if (bibleVerses[i]) {
             bibleVerses[i].classList.add('highlighted');
