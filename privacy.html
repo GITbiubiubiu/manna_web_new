@@ -1,13 +1,24 @@
 <html>
 <head>
-    <title></title>
+    <title>Privacy Policy</title>
     <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/js-md5/build/md5.min.js"></script>
+    <style>
+      body.no-scroll {
+        overflow: hidden;
+      }
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+      }
+    </style>
 </head>
-<body class="lesson theme-type theme-typeundefined ios android">
-<h1 class="heading-1 ace-line old-record-id-doxcnFeQbSKP9KlGjpDAjJ5SOjb">Privacy Policy</h1>
+<body class="lesson theme-type theme-typeundefined ios android p-6 space-y-2">
+<h1 class="heading-1 ace-line old-record-id-doxcnFeQbSKP9KlGjpDAjJ5SOjb font-bold text-[1.2em]">Privacy Policy</h1>
 
-<div class="ace-line ace-line old-record-id-doxcnrFlO0zQNqgF5HaSuoGDPJg">Last Updated: November 30th, 2023</div>
+<div class="ace-line ace-line old-record-id-doxcnrFlO0zQNqgF5HaSuoGDPJg mb-[1em]">Last Updated: November 30th, 2023</div>
 
 <div class="ace-line ace-line old-record-id-doxcn8jIQWJ43hd2y7XXiczC9Jb">Baymed Limited (&ldquo;Baymed&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is committed to safeguarding the Personal Information that we collect and process about you when you use our mobile application&nbsp;<span class="text-only" data-eleid="3" style="white-space: pre;">Manna</span>&nbsp;(&ldquo;App&rdquo;, &ldquo;Service&rdquo;). This Privacy Policy applies to the Services and is intended to help you understand (i) how we collect and process your information, including Personal Information when you use the Services; (ii) how we use and disclose your Personal Information; (iii) how we protect your Personal Information; and (iv) the choices you may have concerning your Personal Information. Your privacy and the security of your Personal Information are very important to us. Please read this Privacy Policy carefully.</div>
 
@@ -82,7 +93,7 @@
 
 <div class="ace-line ace-line old-record-id-doxcnqAsnDUNAmEFSGE0OmYMNxb">Our lawful basis for processing your Personal Information for these purposes is the performance of our contract with you.</div>
 
-<div class="ace-line ace-line old-record-id-doxcnczQWK4jdwhxA8sWD62W2He" style="white-space: pre;"><strong>To Communicate With You</strong>. We may contact you via email, push notification or other means with critical user or service updates, with transactional messages, to inform you of technical issues or other information which is important to support the Services. We may also contact you for purposes of customer engagement and support (including to receive feedback and comments from you about the Services and inquire about any features you would like to see in future versions).</div>
+<div class="ace-line ace-line old-record-id-doxcnczQWK4jdwhxA8sWD62W2He" ><strong>To Communicate With You</strong>. We may contact you via email, push notification or other means with critical user or service updates, with transactional messages, to inform you of technical issues or other information which is important to support the Services. We may also contact you for purposes of customer engagement and support (including to receive feedback and comments from you about the Services and inquire about any features you would like to see in future versions).</div>
 
 <div class="ace-line ace-line old-record-id-doxcnrBhsQOjNbiWNzukrVrpwgb">We will contact you to send you marketing communications, ask for your satisfaction rate, or to offer you upgrades, promotions and additional products (our products or third parties&#39; products) that you may be interested in.</div>
 
@@ -120,7 +131,7 @@
 
 <div class="ace-line ace-line old-record-id-doxcnQHXAAJdU7xpPsMbzi1kvCd">Specific entities, among others, with which we may share your information, including Personal Information, the information we share and the purposes for which we share it are set forth below.</div>
 
-<div>
+<div class="table-wrapper">
     <table class="ace-table" data-ace-table-col-widths="180;281;281;308" style="border-width: initial; border-style: none; border-color: initial; border-collapse: collapse; table-layout: fixed; width: 500px;">
         <colgroup>
             <col width="180" />
@@ -309,5 +320,197 @@
 <h2 class="heading-2 ace-line old-record-id-doxcnDpJAIwaP5S78Oq46sNe2Fm"><u><strong>Versions in other languages than English</strong></u></h2>
 
 <div class="ace-line ace-line old-record-id-doxcnEH2ccY28xAlmiuOWYhVgmh">The original version of this Privacy Notice is written in English. To the extent a translated version of the Privacy Notice is in conflict with the English version, the English version shall prevail.</div>
+
+<div>
+  <div>
+    <button onclick="openDialog()" class="md:cursor-pointer text-yellow-500">
+      Delete My Account
+    </button>
+  </div>
+
+  <div class="dialog hidden fixed top-0 left-0 bg-[#00000080] w-full h-full flex justify-center items-center z-[1000]" id="delete-account-dialog" >
+    <form class="dialog-delete-account-content w-[90vw] md:w-[50vw] bg-white hidden rounded-2xl p-6" onsubmit="deleteAccount(event)">
+      <h2 class="text-[1.2em] font-[500]">Delete Your Account</h2>
+      <p class="text-[0.8em] mt-[.5em]">Are you sure that you want to delete your valid Femometer account? Please note that there is no option to restore the account or its data once your account deleted.</p>
+
+      <ul class=" mt-[.5em]">
+        <li class="list-disc list-inside">
+          Deleting your account will remove access to Manna, personal information, purchase, profile, content will be permanently deleted
+        </li>
+      </ul>
+      <label class="flex text-[0.8em]  mt-[1em]" for="contant-1">
+        <div class="pt-[.4em] mr-[.5em]">
+          <input required type="checkbox" name="contant-1" id="contant-1">
+        </div>
+        <p>
+          I agree to receive offers, updates and news from femometer.</p>
+      </label>
+
+      <label class="flex text-[0.8em]" for="contant-2">
+        <div class="pt-[.4em] mr-[.5em]">
+          <input required type="checkbox" name="contant-2" id="contant-2">
+        </div>
+        <p>
+          Yes, please delete my data</p>
+      </label>
+
+      <div class="delete-account-error-message text-red-500 text-[0.8em]"></div>
+
+      <div class="flex justify-center mt-[1em] gap-[1em]">
+        <button onclick="closeDialog(event)" class="w-full border-1 rounded h-[2em] md:cursor-pointer">Cancel</button>
+        <input class="w-full block h-[2em] bg-yellow-500 rounded md:cursor-pointer text-white" type="submit" value="Delete Account" class="delete-account-button" />
+      </div>
+    </form>
+
+    <div class="dialog-signin-dialog w-[90vw] md:w-[50vw] bg-white hidden rounded-2xl p-6 space-y-[.5em]">
+      <h2 class="text-[1.2em] font-[500]">Sign in</h2>
+
+      <input class="block w-full h-[2em] px-[0.5em] rounded bg-transparent border-1" type="email" placeholder="Email" />
+      <input class="block w-full h-[2em] px-[0.5em] rounded bg-transparent border-1" type="password" placeholder="Password" />
+      <p class="signin-error-message hidden text-red-500 text-[0.8em]"></p>
+      <button class="block w-full  h-[2em] bg-yellow-500 rounded md:cursor-pointer text-white" onclick="signin(event)">Sign in</button>
+    </div>
+
+
+    <div class="dialog-delete-success-content hidden w-[90vw] md:w-[50vw] bg-white hidden rounded-2xl p-6">
+      <h2 class="text-[1.2em] font-[500]">Account Deleted</h2>
+      <p class="text-[0.8em] mt-[.5em]">Your account has been successfully deleted.</p>
+      <div class="flex justify-center mt-[1em]">
+        <button onclick="closeDialog(event)" class="w-full border-1 rounded h-[2em] md:cursor-pointer">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  const isTestEnv = false
+  const ApiHost = isTestEnv ? 'https://api-staging.bongmi.com' : 'https://api.femometer.com';
+  const appFlag= 16777216
+
+
+
+  function openDialog(e) {
+    document.querySelector('.dialog').style.display = 'flex';
+    if (!localStorage.getItem('userToken')) {
+      document.querySelector('.dialog-signin-dialog').style.display = 'block';
+    } else {
+      document.querySelector('.dialog-delete-account-content').style.display = 'block';
+    }
+  }
+
+  function closeDialog(e) {
+    e?.stopPropagation();
+    e?.preventDefault();
+    document.querySelector('.dialog-delete-account-content').style.display = 'none';
+    document.querySelector('.dialog-delete-success-content').style.display = 'none';
+    document.querySelector('.dialog-signin-dialog').style.display = 'none';
+    document.querySelector('.signin-error-message').style.display = 'none';
+    document.querySelector('.delete-account-error-message').style.display = 'none';
+    document.querySelector('.dialog').style.display = 'none';
+  }
+
+  document.querySelector('#delete-account-dialog').addEventListener('mousedown', (e) => {
+    if (e.target.id === 'delete-account-dialog') {
+      closeDialog()
+    }
+  })
+
+  function clearUserToken() {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('userTokenExpire');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('appFlag');
+  }
+
+  if (localStorage.getItem('userTokenExpire') && Date.now() / 1000 > localStorage.getItem('userTokenExpire')) {
+    clearUserToken()
+  }
+
+  function signin(e) {
+    const userEmail = document.querySelector('.dialog-signin-dialog input[type="email"]').value;
+    const userPassword = document.querySelector('.dialog-signin-dialog input[type="password"]').value;
+    const password = md5(userPassword);
+
+    fetch(`${ApiHost}/v1/login?app_flag=${appFlag}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: userEmail,
+        password: password
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(res => res.json())
+    .then((res) => {
+      if (res?.errorMsg) {
+        throw new Error(res.errorMsg);
+      }
+      localStorage.setItem('userId', res.id);
+      localStorage.setItem('appFlag', res.appFlag);
+      document.querySelector('.dialog-signin-dialog').style.display = 'none';
+      document.querySelector('.dialog-delete-account-content').style.display = 'block';
+
+      fetch(`${ApiHost}/v1/web_access_token_by_password?user_id=${res.id}&password=${password}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
+      .then(res => res.json())
+      .then((res) => {
+        if (res?.errorMsg) {
+          throw new Error(res.errorMsg);
+        }
+        localStorage.setItem('userToken', res.token);
+        localStorage.setItem('userTokenExpire', res.expire);
+      }).catch(err => {
+        const errorElement = document.querySelector('.signin-error-message');
+        errorElement.textContent = 'Failed to get user token';
+        errorElement.style.display = 'block';
+      })
+
+    }).catch(err => {
+      const errorElement = document.querySelector('.signin-error-message');
+      errorElement.textContent = 'Failed to sign in';
+      errorElement.style.display = 'block';
+    })
+  }
+
+
+  function deleteAccount (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    const userToken = localStorage.getItem('userToken');
+    const userId = localStorage.getItem('userId');
+
+    if (!userToken || !userId) {
+      return;
+    }
+
+    fetch(`${ApiHost}/v1/user/${userId}?all=true&app_flag=${appFlag}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Authorization: `Lollypop-V2:${userToken}`
+      }
+    })
+    .then((res) => {
+      clearUserToken()
+      document.querySelector('.dialog-delete-account-content').style.display = 'none';
+      document.querySelector('.dialog-delete-success-content').style.display = 'block';
+    }).catch(err => {
+      const errorElement = document.querySelector('.delete-account-error-message');
+      errorElement.textContent = 'Failed to delete account';
+      errorElement.style.display = 'block';
+    })
+  }
+</script>
+
+
+
 </body>
 </html>
