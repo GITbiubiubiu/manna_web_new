@@ -1728,7 +1728,6 @@ html {
   cursor: not-allowed;
 }
 
-
 .path-connector {
   width: 3px;
   height: 30px;
@@ -2210,7 +2209,7 @@ html {
 }
 
 /* 修改连接线样式，将其改为虚线并添加动画效果 */
-/* 找到 .path-connector 样式并替换为以下内容： 
+/* 找到 .path-connector 样式并替换为以下内容： */
 
 .path-connector {
   width: 2px;
@@ -2250,34 +2249,4 @@ html {
   width: 2px;
   height: 20px;
   margin: -10px auto 10px;
-}
-
-/* Product Hunt Badge Responsive Styles */
-.social-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.social-header a img {
-  transition: opacity 0.3s ease;
-}
-
-.social-header a:hover img {
-  opacity: 0.8;
-}
-
-/* Responsive adjustments for Product Hunt badge */
-@media (max-width: 768px) {
-  .social-header a:first-child img {
-    width: 180px;
-    height: 39px;
-  }
-}
-
-@media (max-width: 480px) {
-  .social-header a:first-child img {
-    width: 150px;
-    height: 32px;
-  }
 }
